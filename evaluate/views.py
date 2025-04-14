@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from .utils import calculate_trust_score, read_config
 import json
 
+
 @csrf_exempt
 def evaluate_trust(request):
     if request.method == 'POST':

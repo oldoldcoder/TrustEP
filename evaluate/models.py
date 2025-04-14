@@ -17,7 +17,7 @@ class Dynamic(models.Model):
     device_type = models.IntegerField(default=0)
 
 
-class Direct(models.Model):
+class Security(models.Model):
     security_card = models.ForeignKey(Identity, on_delete=models.CASCADE)
     cert_dn = models.CharField(max_length=256)
     cert_sn = models.CharField(max_length=256)
@@ -33,6 +33,6 @@ class Unauthorized(models.Model):
     score = models.IntegerField(default=0)
     position = models.CharField(max_length=128)
     department = models.CharField(max_length=64)
-    api_id = models.CharField(64)
-    api_type = models.CharField(64)
+    api_id = models.CharField(max_length=64)
+    api_type = models.CharField(max_length=64)
     data_level = models.IntegerField(default=0)
