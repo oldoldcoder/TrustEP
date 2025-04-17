@@ -1,0 +1,200 @@
+# config.yaml
+
+fce_config:
+  t: 10  # 取最近T次记录
+  indicator_weights:
+    login_time: 0.1071        # 3/28
+    device_site: 0.1071    # 3/28
+    device_ip: 0.0714         # 2/28
+    cpu_id: 0.0357            # 1/28
+    disk_id: 0.0357           # 1/28
+    auth_type: 0.0357         # 1/28
+    device_type: 0.1071       # 3/28
+    cert_dn: 0.0357           # 1/28
+    cert_sn: 0.0357           # 1/28
+    soft_type: 0.0357         # 1/28
+    setup_type: 0.0357        # 1/28
+    os_type: 0.0714           # 2/28
+    enable_firewall: 0.1071   # 3/28
+    privilege_score: 0.1786   # 5/28（越权分数）
+
+  trust_levels:  # 模糊等级与其对应的权重
+    - level: high
+      weight: 0.9
+    - level: above_average
+      weight: 0.7
+    - level: average
+      weight: 0.5
+    - level: below_average
+      weight: 0.3
+    - level: low
+      weight: 0.1
+    - level: untrusted
+      weight: 0.0
+  history_score_weight:
+    w_now: 0.85 # 当前分数的权重
+    w_history:  # 历史占用了0.15
+      - w1: 0.02 # 最近五次占用的权重是2/100
+      - w2: 0.02
+      - w3: 0.02
+      - w4: 0.02
+      - w5: 0.02
+      - w6: 0.01 # 最后五次占用的权重是1/100
+      - w7: 0.01
+      - w8: 0.01
+      - w9: 0.01
+      - w10: 0.01
+
+  membership_functions:
+    # 以下为示例格式，具体函数你可以自定义为三角形、梯形或高斯型等
+    login_time:
+      threshold:  2 # 聚类的半径,单位小时
+      section:
+        - level: high
+          wegith: [ x,x ]
+        - level: above_average
+          wegith: [ x,x ]
+        - level: average
+          wegith: [ x,x ]
+        - level: below_average
+          wegith: [ x,x ]
+        - level: low
+          wegith: [ x,x ]
+    device_site:
+      threshold:  50 # 聚类的半径,单位是km
+      section:
+        - level: high
+          wegith: [ x,x ]
+        - level: above_average
+          wegith: [ x,x ]
+        - level: average
+          wegith: [ x,x ]
+        - level: below_average
+          wegith: [ x,x ]
+        - level: low
+          wegith: [ x,x ]
+    device_ip:
+      threshold: 5
+      section:
+        - level: high
+          wegith: [ 0,1 ]
+        - level: above_average
+          wegith: [ 2,2 ]
+        - level: average
+          wegith: [ 3,3 ]
+        - level: below_average
+          wegith: [ 4,4 ]
+        - level: low
+          wegith: [ 5,5 ]
+    cpu_id:
+      threshold: 5
+      section:
+        - level: high
+          wegith: [ 0,1 ]
+        - level: above_average
+          wegith: [ 2,2 ]
+        - level: average
+          wegith: [ 3,3 ]
+        - level: below_average
+          wegith: [ 4,4 ]
+        - level: low
+          wegith: [ 5,5 ]
+    disk_id:
+      threshold:  5
+      section:
+        - level: high
+          wegith: [ 0,1 ]
+        - level: above_average
+          wegith: [ 2,2 ]
+        - level: average
+          wegith: [ 3,3 ]
+        - level: below_average
+          wegith: [ 4,4 ]
+        - level: low
+          wegith: [ 5,5 ]
+    auth_type:
+      threshold:  3
+      section:
+        - level: high
+          wegith: [ 0,0 ]
+        - level: average
+          wegith: [ 1,2 ]
+        - level: low
+          wegith: [ 3,3 ]
+
+    device_type:
+      threshold:  3
+      section:
+        - level: high
+          wegith: [ 0,0 ]
+        - level: average
+          wegith: [ 1,2 ]
+        - level: low
+          wegith: [ 3,3 ]
+
+    cert_dn:
+      threshold:  # 聚类的半径
+      section:
+        - level: high
+          wegith: [ x,x ]
+        - level: above_average
+          wegith: [ x,x ]
+        - level: average
+          wegith: [ x,x ]
+        - level: below_average
+          wegith: [ x,x ]
+        - level: low
+          wegith: [ x,x ]
+    cert_sn:
+      threshold:  # 聚类的半径
+      section:
+        - level: high
+          wegith: [ x,x ]
+        - level: above_average
+          wegith: [ x,x ]
+        - level: average
+          wegith: [ x,x ]
+        - level: below_average
+          wegith: [ x,x ]
+        - level: low
+          wegith: [ x,x ]
+    soft_type:
+      threshold:  # 聚类的半径
+      section:
+        - level: high
+          wegith: [ x,x ]
+        - level: above_average
+          wegith: [ x,x ]
+        - level: average
+          wegith: [ x,x ]
+        - level: below_average
+          wegith: [ x,x ]
+        - level: low
+          wegith: [ x,x ]
+    setup_type:
+      threshold:  # 聚类的半径
+      section:
+        - level: high
+          wegith: [ x,x ]
+        - level: above_average
+          wegith: [ x,x ]
+        - level: average
+          wegith: [ x,x ]
+        - level: below_average
+          wegith: [ x,x ]
+        - level: low
+          wegith: [ x,x ]
+    os_type:
+      threshold: 3
+      section:
+        - level: high
+          wegith: [ 0,0 ]
+        - level: average
+          wegith: [ 1,2 ]
+        - level: low
+          wegith: [ 3,3 ]
+
+    oa_count: # 历史越权率 = (T - 越权次数) / T
+
+
+
