@@ -51,148 +51,148 @@ fce_config:
       threshold:  2 # 聚类的半径,单位小时
       section:
         - level: high
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: above_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: below_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: low
-          wegith: [ x,x ]
+          weight: [ x,x ]
     device_site:
       threshold:  50 # 聚类的半径,单位是km
       section:
         - level: high
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: above_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: below_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: low
-          wegith: [ x,x ]
+          weight: [ x,x ]
     device_ip:
       threshold: 5
       section:
         - level: high
-          wegith: [ 0,1 ]
+          weight: [ 0,1 ]
         - level: above_average
-          wegith: [ 2,2 ]
+          weight: [ 2,2 ]
         - level: average
-          wegith: [ 3,3 ]
+          weight: [ 3,3 ]
         - level: below_average
-          wegith: [ 4,4 ]
+          weight: [ 4,4 ]
         - level: low
-          wegith: [ 5,5 ]
+          weight: [ 5,5 ]
     cpu_id:
       threshold: 5
       section:
         - level: high
-          wegith: [ 0,1 ]
+          weight: [ 0,1 ]
         - level: above_average
-          wegith: [ 2,2 ]
+          weight: [ 2,2 ]
         - level: average
-          wegith: [ 3,3 ]
+          weight: [ 3,3 ]
         - level: below_average
-          wegith: [ 4,4 ]
+          weight: [ 4,4 ]
         - level: low
-          wegith: [ 5,5 ]
+          weight: [ 5,5 ]
     disk_id:
       threshold:  5
       section:
         - level: high
-          wegith: [ 0,1 ]
+          weight: [ 0,1 ]
         - level: above_average
-          wegith: [ 2,2 ]
+          weight: [ 2,2 ]
         - level: average
-          wegith: [ 3,3 ]
+          weight: [ 3,3 ]
         - level: below_average
-          wegith: [ 4,4 ]
+          weight: [ 4,4 ]
         - level: low
-          wegith: [ 5,5 ]
+          weight: [ 5,5 ]
     auth_type:
       threshold:  3
       section:
         - level: high
-          wegith: [ 0,0 ]
+          weight: [ 0,0 ]
         - level: average
-          wegith: [ 1,2 ]
+          weight: [ 1,2 ]
         - level: low
-          wegith: [ 3,3 ]
+          weight: [ 3,3 ]
 
     device_type:
       threshold:  3
       section:
         - level: high
-          wegith: [ 0,0 ]
+          weight: [ 0,0 ]
         - level: average
-          wegith: [ 1,2 ]
+          weight: [ 1,2 ]
         - level: low
-          wegith: [ 3,3 ]
+          weight: [ 3,3 ]
 
     cert_dn:
       threshold:  # 聚类的半径
       section:
         - level: high
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: above_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: below_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: low
-          wegith: [ x,x ]
+          weight: [ x,x ]
     cert_sn:
       threshold:  # 聚类的半径
       section:
         - level: high
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: above_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: below_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: low
-          wegith: [ x,x ]
+          weight: [ x,x ]
     soft_type:
       threshold:  # 聚类的半径
       section:
         - level: high
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: above_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: below_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: low
-          wegith: [ x,x ]
+          weight: [ x,x ]
     setup_type:
       threshold:  # 聚类的半径
       section:
         - level: high
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: above_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: below_average
-          wegith: [ x,x ]
+          weight: [ x,x ]
         - level: low
-          wegith: [ x,x ]
+          weight: [ x,x ]
     os_type:
       threshold: 3
       section:
         - level: high
-          wegith: [ 0,0 ]
+          weight: [ 0,0 ]
         - level: average
-          wegith: [ 1,2 ]
+          weight: [ 1,2 ]
         - level: low
-          wegith: [ 3,3 ]
+          weight: [ 3,3 ]
 
     oa_count: # 历史越权率 = (T - 越权次数) / T
 

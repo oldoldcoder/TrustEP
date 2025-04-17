@@ -81,6 +81,14 @@ DATABASES = {
         'PASSWORD': 'xdP.123456',
         'HOST': '117.72.114.221',
         'PORT': '3306',
+    },
+    "source": {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'SourceData',  # 数据库名
+        'USER': 'root',  # 用户名
+        'PASSWORD': 'xdP.123456',
+        'HOST': '117.72.114.221',
+        'PORT': '3306',
     }
 }
 
