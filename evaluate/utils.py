@@ -19,6 +19,10 @@ def calculate_trust_score(security_card_id, api_id, data_level):
 
 
 def get_first_data_from_database(security_card_id):
+    '''
+    从源数据库中取出security_card_id对应用户的第一条消息并存入default定义的存储历史状态数据表中
+    :param security_card_id: 个人唯一安全卡ID
+    '''
     user = User.objects.using('source').filter(security_card_id=security_card_id).first()
     data_id = user.id
     biometric = Biometric.objects.using('source').get(id=data_id)
