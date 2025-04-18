@@ -4,6 +4,7 @@ from pathlib import Path
 from .models import Local, TrustScore, User, Biometric, Device, Software, Api, Data
 from datetime import datetime
 from math import radians, cos, sin, asin, sqrt
+from datetime import datetime
 
 
 
@@ -16,20 +17,41 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     get_first_data_from_database(security_card_id)
     # 从大表读取数据
     data_total,trust_scores = get_recent_data_by_security_card(security_card_id,config["fce_config"]["t"])
+    """
+    数据处理阶段，首先是距离的聚类
+    """
     # 提取设备的经纬度
-    current_position = data_total[0].
-    positions = [
-        list(map(float, record.device_site.split(',')))
-        for record in data_total[1:]
-        if record.device_site
-    ]
+    latest_record = data_total[0]  # 最近一条记录
+    current_position = list(map(float, latest_record.device_site.split(',')))
 
+    positions = [
+            list(map(float, record.device_site.split(',')))
+            for record in data_total[1:]
+            if record.device_site
+        ]
+    judge_device_site = distance_to_nearest_cluster_center(positions, current_position)
+    """
+    数据处理阶段，其次是时间的聚类
+    """
+    current_login_time = latest_record.login_time
+    history_times =  [
+        obj.login_time.strftime("%Y-%m-%d %H:%M:%S") for obj in data_total
+    ]
+    judge_login_time = time_cluster_distance(history_times,current_login_time)
+
+    """
+    其他judge处理的部分
+    """
+
+
+    """
+    填充矩阵的函数
+    matrix is dict,key is wi,value is actual judgment
+    level list : high - 0,above_average - 1, average - 2,below_average - 3,low - 4,untrusted - 5
+    """
 
     # 模拟打分逻辑（替换为FCE算法）
     return round(random.uniform(60, 100), 2)
-
-# 聚类的算法
-def
 
 def get_first_data_from_database(security_card_id):
     user = User.objects.using('source').filter(security_card_id=security_card_id).first()
@@ -91,21 +113,23 @@ def get_recent_data_by_security_card(security_card_id,T):
     data_total_qs = (
         Local.objects
         .filter(security_card_id=security_card_id)
-        .order_by("-login_time")[:T]
+        .order_by("-login_time")[:T + 1]
     )
 
     # 从 tb_historical_trust_scores 查询
     historical_scores_qs = (
         TrustScore.objects
         .filter(security_card_id=security_card_id)
-        .order_by("-create_time")[:T]  # 你也可以换成其他排序，比如按时间字段，如果有的话
+        .order_by("-create_time")[:T + 1]  # 你也可以换成其他排序，比如按时间字段，如果有的话
     )
 
     return data_total_qs,historical_scores_qs
 
 
 
-# 聚类的算法
+"""
+聚类的算法:聚类距离
+"""
 
 def haversine(lon1, lat1, lon2, lat2):
     """
@@ -119,13 +143,11 @@ def haversine(lon1, lat1, lon2, lat2):
     r = 6371  # 地球半径 km
     return c * r
 
-
-def cluster_points(points, threshold_km):
+def cluster_points(points, threshold_km=50):
     """
     简易聚类算法：距离在 threshold_km 内的点聚为一类
     :param points: [[lon, lat], ...]
-    :param threshold_km: 聚类的距离阈值
-    :return: list of clusters, each cluster is a list of points
+    :return: list of clusters
     """
     clusters = []
     for point in points:
@@ -142,7 +164,6 @@ def cluster_points(points, threshold_km):
             clusters.append([point])
     return clusters
 
-
 def compute_centroid(cluster):
     """
     计算聚类中心点
@@ -151,18 +172,17 @@ def compute_centroid(cluster):
     lat_sum = sum(p[1] for p in cluster)
     return [lon_sum / len(cluster), lat_sum / len(cluster)]
 
-
-def distance_to_nearest_cluster_center(history_positions, current_position, threshold_km=50):
+def distance_to_nearest_cluster_center(history_positions, current_position):
     """
+    计算当前坐标到所有聚类中心的最短距离
     :param history_positions: list of [lon, lat]
     :param current_position: [lon, lat]
-    :param threshold_km: 最大聚类距离阈值
-    :return: 最近聚类中心的距离（单位 km）
+    :return: float 距离最近的聚类中心距离（单位 km）
     """
     if not history_positions:
         return -1
 
-    clusters = cluster_points(history_positions, threshold_km)
+    clusters = cluster_points(history_positions)  # 使用默认 threshold_km = 50
     centers = [compute_centroid(cluster) for cluster in clusters]
 
     distances = [
@@ -171,3 +191,55 @@ def distance_to_nearest_cluster_center(history_positions, current_position, thre
     ]
 
     return min(distances) if distances else -1
+"""
+聚类的算法:聚类时间
+"""
+
+def time_str_to_minutes(datetime_str):
+    """
+    输入格式: 'YYYY-MM-DD HH:MM:SS'
+    输出: 去掉日期后，转换为从00:00起的分钟数
+    """
+    dt = datetime.strptime(datetime_str, "%Y-%m-%d %H:%M:%S")
+    return dt.hour * 60 + dt.minute
+
+def cluster_time_centers(minute_list):
+    """
+    分别对 0-720 和 720-1440 分钟的时间做聚合，返回两个聚合中心
+    """
+    morning = [t for t in minute_list if t < 720]
+    afternoon = [t for t in minute_list if t >= 720]
+
+    morning_center = sum(morning) / len(morning) if morning else None
+    afternoon_center = sum(afternoon) / len(afternoon) if afternoon else None
+    return morning_center, afternoon_center
+
+def time_cluster_distance(historical_times, current_time):
+    """
+    主函数：返回当前时间与最近聚合中心的分钟差值，或为0（在两聚合中心之间）
+
+    :param historical_times: list of 'YYYY-MM-DD HH:MM:SS'
+    :param current_time: str，'YYYY-MM-DD HH:MM:SS'
+    :return: int，时间差（分钟）
+    """
+    history_minutes = [time_str_to_minutes(t) for t in historical_times]
+    current_minute = time_str_to_minutes(current_time)
+
+    # 得到两个聚合中心
+    morning_center, afternoon_center = cluster_time_centers(history_minutes)
+
+    # 如果有一个中心缺失，默认用另一个
+    if morning_center is None:
+        return abs(current_minute - afternoon_center)
+    if afternoon_center is None:
+        return abs(current_minute - morning_center)
+
+    # 在两个聚合中心之间
+    if morning_center <= current_minute <= afternoon_center:
+        return 0
+
+    # 取与当前时间较近的那个中心
+    distance_to_morning = abs(current_minute - morning_center)
+    distance_to_afternoon = abs(current_minute - afternoon_center)
+
+    return min(distance_to_morning, distance_to_afternoon)
