@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 class Local(models.Model):
@@ -7,15 +8,17 @@ class Local(models.Model):
     name = models.CharField(max_length=64)
     device_ip = models.CharField(max_length=64)
     device_site = models.CharField(max_length=64)
-    login_time = models.DateTimeField()
-    cpu_id = models.CharField(max_length=256)
-    disk_id = models.CharField(max_length=256)
+    login_time = models.DateTimeField(default=timezone.now)
+    cpu_id = models.CharField(max_length=256, default="")
+    disk_id = models.CharField(max_length=256, default="")
     auth_type = models.IntegerField(default=0)
     device_type = models.IntegerField(default=0)
-    cert_dn = models.CharField(max_length=256)
-    cert_sn = models.CharField(max_length=256)
-    soft_type = models.IntegerField(default=0)
-    setup_type = models.IntegerField(default=0)
+    cert = models.CharField(max_length=256, default="")
+    # cert_dn = models.CharField(max_length=256)
+    # cert_sn = models.CharField(max_length=256)
+    # 无法对应，先删除
+    # soft_type = models.IntegerField(default=0)
+    # setup_type = models.IntegerField(default=0)
     os_type = models.IntegerField(default=0)
     oa_count = models.IntegerField(default=0)
     oa_score = models.IntegerField(default=0)
@@ -69,8 +72,9 @@ class Device(models.Model):
     cpu_id = models.CharField(max_length=256)
     disk_id = models.CharField(max_length=256)
     device_type = models.IntegerField(default=0)
-    cert_dn = models.CharField(max_length=256)
-    cert_sn = models.CharField(max_length=256)
+    cert = models.CharField(max_length=256, default="")
+    # cert_dn = models.CharField(max_length=256)
+    # cert_sn = models.CharField(max_length=256)
 
     class Meta:
         db_table = 'device'
@@ -79,8 +83,9 @@ class Device(models.Model):
 
 class Software(models.Model):
     id = models.IntegerField(primary_key=True)
-    soft_type = models.IntegerField(default=0)
-    setup_type = models.IntegerField(default=0)
+    # 无法对应，先删除
+    # soft_type = models.IntegerField(default=0)
+    # setup_type = models.IntegerField(default=0)
     os_type = models.IntegerField(default=0)
 
     class Meta:
