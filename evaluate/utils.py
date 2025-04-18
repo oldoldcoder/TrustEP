@@ -24,7 +24,18 @@ def calculate_trust_score(security_card_id, api_id, data_level):
         if record.device_site
     ]
 
-
+    '''
+    根据次数完成等级定义
+    '''
+    judge_cpu_id = sum(data_total[i].cpu_id != data_total[i - 1].cpu_id for i in range(1, config["fce_config"]["t"]))
+    judge_disk_id = sum(data_total[i].disk_id != data_total[i - 1].disk_id for i in range(1, config["fce_config"]["t"]))
+    judge_auth_type = sum(data_total[i].auth_type != data_total[i - 1].auth_type for i in range(1, config["fce_config"]["t"]))
+    judge_device_type = sum(data_total[i].device_type != data_total[i - 1].device_type for i in range(1, config["fce_config"]["t"]))
+    judge_os_type = sum(data_total[i].os_type != data_total[i - 1].os_type for i in range(1, config["fce_config"]["t"]))
+    # 获得每个指标的信任等级，此处直接转化为分数
+    matrix = get_trust_level(config, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_os_type)
+    # 获得当次的信任分数
+    current_score = calculate_current_trust_score(config, matrix)
     # 模拟打分逻辑（替换为FCE算法）
     return round(random.uniform(60, 100), 2)
 
@@ -175,3 +186,47 @@ def distance_to_nearest_cluster_center(history_positions, current_position, thre
     ]
 
     return min(distances) if distances else -1
+
+
+def get_trust_level(config, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_os_type):
+    """
+    获取每个指标对应模糊等级的分数
+    :param config: 读取到的YAML文件
+    :param judge_cpu_id: 滑动窗口中CPU_ID变化次数
+    :param judge_disk_id: 滑动窗口中主板ID变化次数
+    :param judge_auth_type: 滑动窗口中认证类型的变化次数
+    :param judge_device_type: 滑动窗口的设备类型变化次数
+    :param judge_os_type:滑动窗口中操作类型变化次数
+    :return:包括每个指标对应模糊等级分数的字典
+    """
+    matrix = {}
+    trust_dict = {item["level"]: item["weight"] for item in config["fce_config"]["trust_levels"]}
+    def get_level_by_weight(config, str, weight):
+        if weight > config["fce_config"]["membership_functions"][str]["threshold"]:
+            return trust_dict["untrusted"]
+        for section in config["fce_config"]["membership_functions"][str]["section"]:
+            start, end = section["weight"]
+            if start <= weight <= end:
+                return trust_dict[section['level']]
+
+    matrix['cpu_id'] = get_level_by_weight(config, "cpu_id", judge_cpu_id)
+    matrix['disk_id'] = get_level_by_weight(config, "disk_id", judge_disk_id)
+    matrix['auth_type'] = get_level_by_weight(config, "auth_type", judge_auth_type)
+    matrix['device_type'] = get_level_by_weight(config, "device_type", judge_device_type)
+    matrix['os_type'] = get_level_by_weight(config, "os_type", judge_os_type)
+
+    return matrix
+
+
+def calculate_current_trust_score(config, matrix, trust_scores):
+    current_score = 0
+    weights_dict = config["fce_config"]["indicator_weights"]
+    for key, weight in weights_dict.item():
+        current_score += weight * matrix[key]
+
+    score = current_score * config["fce_config"]["history_score_weight"]["w_now"]
+    historical_weight = config["fce_config"]["history_score_weight"]["w_history"]
+    historical_scores = [item.score for item in trust_scores]
+    for weight, historical_score in zip(historical_weight, historical_scores):
+        score += weight * historical_score
+    return score
