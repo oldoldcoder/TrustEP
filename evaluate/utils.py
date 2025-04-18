@@ -17,13 +17,33 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     # 从大表读取数据
     data_total,trust_scores = get_recent_data_by_security_card(security_card_id,config["fce_config"]["t"])
     # 提取设备的经纬度
-    current_position = data_total[0].
+    latest_record = data_total[0]  # 最近一条记录
+    current_position = list(map(float, latest_record.device_site.split(',')))
+
     positions = [
         list(map(float, record.device_site.split(',')))
         for record in data_total[1:]
         if record.device_site
     ]
+    judge_device_site = distance_to_nearest_cluster_center(positions, current_position)
+    """
+    数据处理阶段，其次是时间的聚类
+    """
+    current_login_time = latest_record.login_time
+    history_times = [
+        obj.login_time.strftime("%Y-%m-%d %H:%M:%S") for obj in data_total
+    ]
+    judge_login_time = time_cluster_distance(history_times, current_login_time)
 
+    """
+    其他judge处理的部分
+    """
+    ip_set = set()
+    for obj in data_total:
+        ip_set.add(obj.device_ip)
+    judge_ip = len(ip_set)
+
+    judge_privilege_score =
     '''
     根据次数完成等级定义
     '''
@@ -34,13 +54,12 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     judge_os_type = sum(data_total[i].os_type != data_total[i - 1].os_type for i in range(1, config["fce_config"]["t"]))
     # 获得每个指标的信任等级，此处直接转化为分数
     matrix = get_trust_level(config, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_os_type)
-    # 获得当次的信任分数
-    current_score = calculate_current_trust_score(config, matrix)
+    # 获得信任分数
+    historical_scores = [item.score for item in trust_scores]
+    score = calculate_final_trust_score(config, matrix, historical_scores)
     # 模拟打分逻辑（替换为FCE算法）
-    return round(random.uniform(60, 100), 2)
+    return score
 
-# 聚类的算法
-def
 
 def get_first_data_from_database(security_card_id):
     '''
@@ -96,7 +115,7 @@ def read_config():
         return yaml.safe_load(f)
 
 
-def get_recent_data_by_security_card(security_card_id,T):
+def get_recent_data_by_security_card(security_card_id, T):
     """
     获取最近 T 条 tb_data_total 和 tb_historical_trust_scores 的记录
     :param security_card_id: 保障卡号
@@ -106,19 +125,22 @@ def get_recent_data_by_security_card(security_card_id,T):
     data_total_qs = (
         Local.objects
         .filter(security_card_id=security_card_id)
-        .order_by("-login_time")[:T]
+        .order_by("-login_time")[:T + 1]
     )
 
     # 从 tb_historical_trust_scores 查询
     historical_scores_qs = (
         TrustScore.objects
         .filter(security_card_id=security_card_id)
-        .order_by("-create_time")[:T]  # 你也可以换成其他排序，比如按时间字段，如果有的话
+        .order_by("-create_time")[:T + 1]  # 你也可以换成其他排序，比如按时间字段，如果有的话
     )
 
-    return data_total_qs,historical_scores_qs
+    return data_total_qs, historical_scores_qs
 
 
+"""
+聚类的算法:聚类距离
+"""
 
 # 聚类的算法
 
@@ -129,18 +151,17 @@ def haversine(lon1, lat1, lon2, lat2):
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
     dlon = lon2 - lon1
     dlat = lat2 - lat1
-    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+    a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
     c = 2 * asin(sqrt(a))
     r = 6371  # 地球半径 km
     return c * r
 
 
-def cluster_points(points, threshold_km):
+def cluster_points(points, threshold_km=50):
     """
     简易聚类算法：距离在 threshold_km 内的点聚为一类
     :param points: [[lon, lat], ...]
-    :param threshold_km: 聚类的距离阈值
-    :return: list of clusters, each cluster is a list of points
+    :return: list of clusters
     """
     clusters = []
     for point in points:
@@ -167,17 +188,17 @@ def compute_centroid(cluster):
     return [lon_sum / len(cluster), lat_sum / len(cluster)]
 
 
-def distance_to_nearest_cluster_center(history_positions, current_position, threshold_km=50):
+def distance_to_nearest_cluster_center(history_positions, current_position):
     """
+    计算当前坐标到所有聚类中心的最短距离
     :param history_positions: list of [lon, lat]
     :param current_position: [lon, lat]
-    :param threshold_km: 最大聚类距离阈值
-    :return: 最近聚类中心的距离（单位 km）
+    :return: float 距离最近的聚类中心距离（单位 km）
     """
     if not history_positions:
         return -1
 
-    clusters = cluster_points(history_positions, threshold_km)
+    clusters = cluster_points(history_positions)  # 使用默认 threshold_km = 50
     centers = [compute_centroid(cluster) for cluster in clusters]
 
     distances = [
@@ -186,6 +207,63 @@ def distance_to_nearest_cluster_center(history_positions, current_position, thre
     ]
 
     return min(distances) if distances else -1
+
+
+"""
+聚类的算法:聚类时间
+"""
+
+
+def time_str_to_minutes(datetime_str):
+    """
+    输入格式: 'YYYY-MM-DD HH:MM:SS'
+    输出: 去掉日期后，转换为从00:00起的分钟数
+    """
+    dt = datetime.strptime(datetime_str, "%Y-%m-%d %H:%M:%S")
+    return dt.hour * 60 + dt.minute
+
+
+def cluster_time_centers(minute_list):
+    """
+    分别对 0-720 和 720-1440 分钟的时间做聚合，返回两个聚合中心
+    """
+    morning = [t for t in minute_list if t < 720]
+    afternoon = [t for t in minute_list if t >= 720]
+
+    morning_center = sum(morning) / len(morning) if morning else None
+    afternoon_center = sum(afternoon) / len(afternoon) if afternoon else None
+    return morning_center, afternoon_center
+
+
+def time_cluster_distance(historical_times, current_time):
+    """
+    主函数：返回当前时间与最近聚合中心的分钟差值，或为0（在两聚合中心之间）
+
+    :param historical_times: list of 'YYYY-MM-DD HH:MM:SS'
+    :param current_time: str，'YYYY-MM-DD HH:MM:SS'
+    :return: int，时间差（分钟）
+    """
+    history_minutes = [time_str_to_minutes(t) for t in historical_times]
+    current_minute = time_str_to_minutes(current_time)
+
+    # 得到两个聚合中心
+    morning_center, afternoon_center = cluster_time_centers(history_minutes)
+
+    # 如果有一个中心缺失，默认用另一个
+    if morning_center is None:
+        return abs(current_minute - afternoon_center)
+    if afternoon_center is None:
+        return abs(current_minute - morning_center)
+
+    # 在两个聚合中心之间
+    if morning_center <= current_minute <= afternoon_center:
+        return 0
+
+    # 取与当前时间较近的那个中心
+    distance_to_morning = abs(current_minute - morning_center)
+    distance_to_afternoon = abs(current_minute - afternoon_center)
+
+    return min(distance_to_morning, distance_to_afternoon)
 
 
 def get_trust_level(config, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_os_type):
@@ -218,7 +296,7 @@ def get_trust_level(config, judge_cpu_id, judge_disk_id, judge_auth_type, judge_
     return matrix
 
 
-def calculate_current_trust_score(config, matrix, trust_scores):
+def calculate_final_trust_score(config, matrix, historical_scores):
     current_score = 0
     weights_dict = config["fce_config"]["indicator_weights"]
     for key, weight in weights_dict.item():
@@ -226,7 +304,6 @@ def calculate_current_trust_score(config, matrix, trust_scores):
 
     score = current_score * config["fce_config"]["history_score_weight"]["w_now"]
     historical_weight = config["fce_config"]["history_score_weight"]["w_history"]
-    historical_scores = [item.score for item in trust_scores]
     for weight, historical_score in zip(historical_weight, historical_scores):
         score += weight * historical_score
     return score
