@@ -7,7 +7,6 @@ from math import radians, cos, sin, asin, sqrt
 from datetime import datetime
 
 
-
 def calculate_trust_score(security_card_id, api_id, data_level):
     # 读取配置
     config = read_config()
@@ -16,7 +15,7 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     # 从数据库读数据到大表
     get_first_data_from_database(security_card_id)
     # 从大表读取数据
-    data_total,trust_scores = get_recent_data_by_security_card(security_card_id,config["fce_config"]["t"])
+    data_total, trust_scores = get_recent_data_by_security_card(security_card_id, config["fce_config"]["t"])
     """
     数据处理阶段，首先是距离的聚类
     """
@@ -25,25 +24,29 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     current_position = list(map(float, latest_record.device_site.split(',')))
 
     positions = [
-            list(map(float, record.device_site.split(',')))
-            for record in data_total[1:]
-            if record.device_site
-        ]
+        list(map(float, record.device_site.split(',')))
+        for record in data_total[1:]
+        if record.device_site
+    ]
     judge_device_site = distance_to_nearest_cluster_center(positions, current_position)
     """
     数据处理阶段，其次是时间的聚类
     """
     current_login_time = latest_record.login_time
-    history_times =  [
+    history_times = [
         obj.login_time.strftime("%Y-%m-%d %H:%M:%S") for obj in data_total
     ]
-    judge_login_time = time_cluster_distance(history_times,current_login_time)
+    judge_login_time = time_cluster_distance(history_times, current_login_time)
 
     """
     其他judge处理的部分
     """
+    ip_set = set()
+    for obj in data_total:
+        ip_set.add(obj.device_ip)
+    judge_ip = len(ip_set)
 
-
+    judge_privilege_score =
     """
     填充矩阵的函数
     matrix is dict,key is wi,value is actual judgment
@@ -52,6 +55,7 @@ def calculate_trust_score(security_card_id, api_id, data_level):
 
     # 模拟打分逻辑（替换为FCE算法）
     return round(random.uniform(60, 100), 2)
+
 
 def get_first_data_from_database(security_card_id):
     user = User.objects.using('source').filter(security_card_id=security_card_id).first()
@@ -103,7 +107,7 @@ def read_config():
         return yaml.safe_load(f)
 
 
-def get_recent_data_by_security_card(security_card_id,T):
+def get_recent_data_by_security_card(security_card_id, T):
     """
     获取最近 T 条 tb_data_total 和 tb_historical_trust_scores 的记录
     :param security_card_id: 保障卡号
@@ -123,13 +127,13 @@ def get_recent_data_by_security_card(security_card_id,T):
         .order_by("-create_time")[:T + 1]  # 你也可以换成其他排序，比如按时间字段，如果有的话
     )
 
-    return data_total_qs,historical_scores_qs
-
+    return data_total_qs, historical_scores_qs
 
 
 """
 聚类的算法:聚类距离
 """
+
 
 def haversine(lon1, lat1, lon2, lat2):
     """
@@ -138,10 +142,11 @@ def haversine(lon1, lat1, lon2, lat2):
     lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
     dlon = lon2 - lon1
     dlat = lat2 - lat1
-    a = sin(dlat / 2)**2 + cos(lat1) * cos(lat2) * sin(dlon / 2)**2
+    a = sin(dlat / 2) ** 2 + cos(lat1) * cos(lat2) * sin(dlon / 2) ** 2
     c = 2 * asin(sqrt(a))
     r = 6371  # 地球半径 km
     return c * r
+
 
 def cluster_points(points, threshold_km=50):
     """
@@ -164,6 +169,7 @@ def cluster_points(points, threshold_km=50):
             clusters.append([point])
     return clusters
 
+
 def compute_centroid(cluster):
     """
     计算聚类中心点
@@ -171,6 +177,7 @@ def compute_centroid(cluster):
     lon_sum = sum(p[0] for p in cluster)
     lat_sum = sum(p[1] for p in cluster)
     return [lon_sum / len(cluster), lat_sum / len(cluster)]
+
 
 def distance_to_nearest_cluster_center(history_positions, current_position):
     """
@@ -191,9 +198,12 @@ def distance_to_nearest_cluster_center(history_positions, current_position):
     ]
 
     return min(distances) if distances else -1
+
+
 """
 聚类的算法:聚类时间
 """
+
 
 def time_str_to_minutes(datetime_str):
     """
@@ -202,6 +212,7 @@ def time_str_to_minutes(datetime_str):
     """
     dt = datetime.strptime(datetime_str, "%Y-%m-%d %H:%M:%S")
     return dt.hour * 60 + dt.minute
+
 
 def cluster_time_centers(minute_list):
     """
@@ -213,6 +224,7 @@ def cluster_time_centers(minute_list):
     morning_center = sum(morning) / len(morning) if morning else None
     afternoon_center = sum(afternoon) / len(afternoon) if afternoon else None
     return morning_center, afternoon_center
+
 
 def time_cluster_distance(historical_times, current_time):
     """
