@@ -38,6 +38,7 @@ class TrustScore(models.Model):
     result_code = models.IntegerField(default=0)
     score = models.FloatField(default=0)
     create_time = models.DateTimeField()
+    result = models.IntegerField(default=0)
 
     class Meta:
         db_table = 'tb_historical_trust_scores'
@@ -109,4 +110,13 @@ class Data(models.Model):
 
     class Meta:
         db_table = 'data'
+        managed = False
+
+
+class Permission(models.Model):
+    id = models.IntegerField(primary_key=True)
+    result = models.IntegerField()
+
+    class Meta:
+        db_table = 'permission'
         managed = False

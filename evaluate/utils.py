@@ -1,10 +1,11 @@
-import random
-import yaml
-from pathlib import Path
-from .models import Local, TrustScore, User, Biometric, Device, Software, Api, Data
 from datetime import datetime
 from math import radians, cos, sin, asin, sqrt
+from pathlib import Path
+from cryptography import x509
+from cryptography.hazmat.backends import default_backend
+import yaml
 
+from .models import Local, TrustScore, User, Biometric, Device, Software, Api, Data, Permission
 
 
 def calculate_trust_score(security_card_id, api_id, data_level):
@@ -15,7 +16,7 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     # 从数据库读数据到大表
     get_first_data_from_database(security_card_id)
     # 从大表读取数据
-    data_total,trust_scores = get_recent_data_by_security_card(security_card_id,config["fce_config"]["t"])
+    data_total, trust_scores = get_recent_data_by_security_card(security_card_id,config["fce_config"]["t"])
     # 提取设备的经纬度
     latest_record = data_total[0]  # 最近一条记录
     current_position = list(map(float, latest_record.device_site.split(',')))
@@ -38,25 +39,33 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     """
     其他judge处理的部分
     """
-    ip_set = set()
-    for obj in data_total:
-        ip_set.add(obj.device_ip)
-    judge_ip = len(ip_set)
+    # ip_set = set()
+    # for obj in data_total:
+    #     ip_set.add(obj.device_ip)
+    # judge_ip = len(ip_set)
 
-    judge_privilege_score =
+    judge_privilege_score = trust_scores[0].result
+    judge_cert = 0
+    for i in range(0, config["fce_config"]["t"]):
+        before, after = parse_cert_time(data_total[i].cert)
+        if before <= data_total[i].login_time <= after:
+            judge_cert += 1
     '''
     根据次数完成等级定义
     '''
+    judge_device_ip = sum(data_total[i].device_ip != data_total[i - 1].device_ip for i in range(1, config["fce_config"]["t"]))
     judge_cpu_id = sum(data_total[i].cpu_id != data_total[i - 1].cpu_id for i in range(1, config["fce_config"]["t"]))
     judge_disk_id = sum(data_total[i].disk_id != data_total[i - 1].disk_id for i in range(1, config["fce_config"]["t"]))
     judge_auth_type = sum(data_total[i].auth_type != data_total[i - 1].auth_type for i in range(1, config["fce_config"]["t"]))
     judge_device_type = sum(data_total[i].device_type != data_total[i - 1].device_type for i in range(1, config["fce_config"]["t"]))
     judge_os_type = sum(data_total[i].os_type != data_total[i - 1].os_type for i in range(1, config["fce_config"]["t"]))
     # 获得每个指标的信任等级，此处直接转化为分数
-    matrix = get_trust_level(config, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_os_type)
+    matrix = get_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score)
     # 获得信任分数
     historical_scores = [item.score for item in trust_scores]
     score = calculate_final_trust_score(config, matrix, historical_scores)
+    trust_scores[0].score = score
+    trust_scores[0].save()
     # 模拟打分逻辑（替换为FCE算法）
     return score
 
@@ -73,6 +82,7 @@ def get_first_data_from_database(security_card_id):
     software = Software.objects.using('source').get(id=data_id)
     api = Api.objects.using('source').get(id=data_id)
     data = Data.objects.using('source').get(id=data_id)
+    permission = Permission.using('source').get(id=data_id)
 
     local = Local(
         tb_id=data_id,
@@ -102,7 +112,8 @@ def get_first_data_from_database(security_card_id):
         security_card_id=user.security_card_id,
         data_level=data.data_level,
         result_code=200,
-        create_time=device.login_time
+        create_time=device.login_time,
+        result=permission.result
     )
 
     local.save()
@@ -266,7 +277,7 @@ def time_cluster_distance(historical_times, current_time):
     return min(distance_to_morning, distance_to_afternoon)
 
 
-def get_trust_level(config, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_os_type):
+def get_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score):
     """
     获取每个指标对应模糊等级的分数
     :param config: 读取到的YAML文件
@@ -279,6 +290,7 @@ def get_trust_level(config, judge_cpu_id, judge_disk_id, judge_auth_type, judge_
     """
     matrix = {}
     trust_dict = {item["level"]: item["weight"] for item in config["fce_config"]["trust_levels"]}
+
     def get_level_by_weight(config, str, weight):
         if weight > config["fce_config"]["membership_functions"][str]["threshold"]:
             return trust_dict["untrusted"]
@@ -287,11 +299,16 @@ def get_trust_level(config, judge_cpu_id, judge_disk_id, judge_auth_type, judge_
             if start <= weight <= end:
                 return trust_dict[section['level']]
 
+    matrix['device_ip'] = get_level_by_weight(config, "device_ip", judge_device_ip)
+    matrix['device_site'] = get_level_by_weight(config, "device_site", judge_device_site)
+    matrix['login_time'] = get_level_by_weight(config, "login_time", judge_login_time)
     matrix['cpu_id'] = get_level_by_weight(config, "cpu_id", judge_cpu_id)
     matrix['disk_id'] = get_level_by_weight(config, "disk_id", judge_disk_id)
     matrix['auth_type'] = get_level_by_weight(config, "auth_type", judge_auth_type)
     matrix['device_type'] = get_level_by_weight(config, "device_type", judge_device_type)
+    matrix['cert'] = get_level_by_weight(config, "cert", judge_cert)
     matrix['os_type'] = get_level_by_weight(config, "os_type", judge_os_type)
+    matrix['privilege_score'] = 0.9 if judge_privilege_score else 0
 
     return matrix
 
@@ -307,3 +324,8 @@ def calculate_final_trust_score(config, matrix, historical_scores):
     for weight, historical_score in zip(historical_weight, historical_scores):
         score += weight * historical_score
     return score
+
+
+def parse_cert_time(cert_pem):
+    cert = x509.load_pem_x509_certificate(cert_pem.encode(), default_backend())
+    return cert.not_valid_before, cert.not_valid_after

@@ -158,6 +158,19 @@ fce_config:
           weight: [ x,x ]
         - level: low
           weight: [ x,x ]
+    cert:
+      threshold: 5 # 聚类的半径
+      section:
+        - level: high
+          weight: [ 0,1 ]
+        - level: above_average
+          weight: [ 2,2 ]
+        - level: average
+          weight: [ 3,3 ]
+        - level: below_average
+          weight: [ 4,4 ]
+        - level: low
+          weight: [ 5,5 ]
     soft_type:
       threshold:  # 聚类的半径
       section:
