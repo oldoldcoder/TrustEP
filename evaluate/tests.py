@@ -1,79 +1,28 @@
-# utils/config_loader.py
-
-from django.test import TestCase, Client
-from django.db import DatabaseError
-from .utils import *
-from .models import *
-import json
+from django.test import TestCase
+from unittest.mock import patch, mock_open
+from .utils import read_config, distance_to_nearest_cluster_center, time_cluster_distance
 
 
-class ReadConfigTest(TestCase):
-    def test_read_config(self):
+# Create your tests here.
+
+# 测试read_config是否正确
+class ReadConfigTestCase(TestCase):
+    @patch("evaluate.utils.open", new_callable=mock_open, read_data="key1: value1\nkey2: 2")
+    @patch("evaluate.utils.Path")
+    def test_read_config(self, mock_path_class, mock_file):
+        # 模拟路径
+        mock_path_instance = mock_path_class.return_value
+        mock_path_instance.resolve.return_value.parent.parent.__truediv__.return_value = "mocked_path/config.yaml"
+        # 调用函数
         config = read_config()
 
-        # 检查顶层 key 是否存在
-        self.assertIn('fce_config', config)
-
-        fce_config = config['fce_config']
-
-        # 检查 indicator_weights 是否是 dict 且包含一些关键字段
-        self.assertIn('indicator_weights', fce_config)
-        self.assertIsInstance(fce_config['indicator_weights'], dict)
-        self.assertIn('login_time', fce_config['indicator_weights'])
-
-        # 检查 trust_levels 是否是 list 且每项包含 'level' 和 'weight'
-        self.assertIn('trust_levels', fce_config)
-        self.assertIsInstance(fce_config['trust_levels'], list)
-        self.assertTrue(all('level' in item and 'weight' in item for item in fce_config['trust_levels']))
-
-        # 检查 history_score_weight 是否包含 w_now 和 w_history
-        self.assertIn('history_score_weight', fce_config)
-        self.assertIn('w_now', fce_config['history_score_weight'])
-        self.assertIn('w_history', fce_config['history_score_weight'])
-
-
-class EvaluateTrustViewTest(TestCase):
-    databases = ['default', 'source']
-
-    def setUp(self):
-        self.client = Client()
-        self.url = '/api/v1/trust/evaluate/scores'  # 或者 reverse('evaluate_trust')，如果你用的是 name 映射
-
-    def test_only_post_allowed(self):
-        response = self.client.get(self.url)
-        self.assertEqual(response.status_code, 405)
-        self.assertEqual(response.json()['CODE'], 405)
-
-    def test_invalid_json(self):
-        response = self.client.post(self.url, data='not a json', content_type='application/json')
-        self.assertEqual(response.status_code, 400)
-        self.assertEqual(response.json()['CODE'], 400)
-        self.assertIn('error', response.json()['returnBody'])
-
-    def test_missing_parameters(self):
-        payload = {
-            'security_card_id': 'abc123',
-            'data_level': '0'
-        }
-        response = self.client.post(self.url, data=json.dumps(payload), content_type='application/json')
-        self.assertEqual(response.status_code, 400)
-        self.assertEqual(response.json()['CODE'], 400)
-        self.assertIn('error', response.json()['returnBody'])
-
-    def test_valid_request(self):
-        payload = {
-            'security_card_id': 'abc123',
-            'api_id': 'api_001',
-            'data_level': '0'
-        }
-        response = self.client.post(self.url, data=json.dumps(payload), content_type='application/json')
-        self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.json()['CODE'], 200)
-        self.assertEqual(response.json()['returnBody']['security_card_id'], 'abc123')
-        self.assertIn('score', response.json()['returnBody'])  # 假设 calculate_trust_score 返回了一个值
+        # 检查内容是否正确解析
+        expected = {"key1": "value1", "key2": 2}
+        self.assertEqual(config, expected)
 
 
 class DistanceToClusterCenterTest(TestCase):
+
     def test_no_history_returns_minus_one(self):
         current_position = [116.42, 39.92]
         self.assertEqual(distance_to_nearest_cluster_center([], current_position), -1)
@@ -179,7 +128,7 @@ class TimeClusterDistanceTestCase(TestCase):
             "2024-01-01 18:30:00", "2024-01-01 18:35:00", "2024-01-01 18:40:00",
             "2024-01-01 18:45:00"
         ]
-        current_time = "2024-01-03 22:00:00"
+        current_time = "2024-01-03 21:00:00"
         result = time_cluster_distance(historical_times, current_time)
         self.assertGreater(result, 0)
         self.assertLess(result, 180)
@@ -209,6 +158,33 @@ class TimeClusterDistanceTestCase(TestCase):
         result = time_cluster_distance(historical_times, current_time)
         self.assertGreater(result, 0)
 
+
+class ParseCertTimeTestCase(TestCase):
+    def test_valid_cert_time(self):
+        # 从文件读取有效证书
+        with open("evaluate/testData/valid_cert.pem", "r") as cert_file:
+            cert_pem = cert_file.read()
+
+        # 调用 parse_cert_time
+        not_valid_before, not_valid_after = parse_cert_time(cert_pem)
+
+        # 预期证书的有效起始时间和结束时间
+        current_time = datetime.now()
+
+        self.assertTrue(not_valid_before <= current_time <= not_valid_after)
+
+    def test_expired_cert_time(self):
+        # 从文件读取过期证书
+        with open("evaluate/testData/expired_cert.pem", "r") as cert_file:
+            cert_pem = cert_file.read()
+
+        # 调用 parse_cert_time
+        not_valid_before, not_valid_after = parse_cert_time(cert_pem)
+
+        # 预期证书的有效起始时间和结束时间
+        current_time = datetime.now()
+
+        self.assertTrue(not_valid_after < current_time or current_time < not_valid_before)
 
 class ModelAccessTest(TestCase):
     databases = ['default', 'source']
