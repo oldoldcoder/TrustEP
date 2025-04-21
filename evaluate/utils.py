@@ -44,7 +44,7 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     #     ip_set.add(obj.device_ip)
     # judge_ip = len(ip_set)
 
-    judge_privilege_score = trust_scores[0].result
+    judge_privilege_score = data_total[0].oa_result
     judge_cert = 0
     for i in range(0, config["fce_config"]["t"]):
         before, after = parse_cert_time(data_total[i].cert)
@@ -104,7 +104,8 @@ def get_first_data_from_database(security_card_id):
         api_id=api.api_id,
         api_type=api.api_type,
         data_level=data.data_level,
-        department=user.department
+        department=user.department,
+        oa_result=permission.result
     )
 
     trust_score = TrustScore(
@@ -112,8 +113,7 @@ def get_first_data_from_database(security_card_id):
         security_card_id=user.security_card_id,
         data_level=data.data_level,
         result_code=200,
-        create_time=device.login_time,
-        result=permission.result
+        create_time=device.login_time
     )
 
     local.save()
