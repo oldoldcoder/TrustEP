@@ -1,6 +1,7 @@
 from django.test import TestCase
 from unittest.mock import patch, mock_open
-from .utils import read_config, distance_to_nearest_cluster_center, time_cluster_distance
+from .utils import read_config, distance_to_nearest_cluster_center, time_cluster_distance, parse_cert_time
+from datetime import datetime
 
 
 # Create your tests here.
@@ -128,7 +129,7 @@ class TimeClusterDistanceTestCase(TestCase):
             "2024-01-01 18:30:00", "2024-01-01 18:35:00", "2024-01-01 18:40:00",
             "2024-01-01 18:45:00"
         ]
-        current_time = "2024-01-03 22:00:00"
+        current_time = "2024-01-03 21:00:00"
         result = time_cluster_distance(historical_times, current_time)
         self.assertGreater(result, 0)
         self.assertLess(result, 180)
@@ -157,3 +158,31 @@ class TimeClusterDistanceTestCase(TestCase):
         current_time = "2024-01-04 20:00:00"
         result = time_cluster_distance(historical_times, current_time)
         self.assertGreater(result, 0)
+
+
+class ParseCertTimeTestCase(TestCase):
+    def test_valid_cert_time(self):
+        # 从文件读取有效证书
+        with open("evaluate/testData/valid_cert.pem", "r") as cert_file:
+            cert_pem = cert_file.read()
+
+        # 调用 parse_cert_time
+        not_valid_before, not_valid_after = parse_cert_time(cert_pem)
+
+        # 预期证书的有效起始时间和结束时间
+        current_time = datetime.now()
+
+        self.assertTrue(not_valid_before <= current_time <= not_valid_after)
+
+    def test_expired_cert_time(self):
+        # 从文件读取过期证书
+        with open("evaluate/testData/expired_cert.pem", "r") as cert_file:
+            cert_pem = cert_file.read()
+
+        # 调用 parse_cert_time
+        not_valid_before, not_valid_after = parse_cert_time(cert_pem)
+
+        # 预期证书的有效起始时间和结束时间
+        current_time = datetime.now()
+
+        self.assertTrue(not_valid_after < current_time or current_time < not_valid_before)
