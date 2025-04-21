@@ -14,9 +14,9 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     print("配置读取完毕，T值：", config["fce_config"]["t"])
     # 对于login_time,device_site内容进行聚类
     # 从数据库读数据到大表
-    get_first_data_from_database(security_card_id)
+    # get_first_data_from_database(security_card_id)
     # 从大表读取数据
-    data_total, trust_scores = get_recent_data_by_security_card(security_card_id,config["fce_config"]["t"])
+    data_total, trust_scores = get_recent_data_by_security_card(security_card_id, config["fce_config"]["t"])
     # 提取设备的经纬度
     latest_record = data_total[0]  # 最近一条记录
     current_position = list(map(float, latest_record.device_site.split(',')))

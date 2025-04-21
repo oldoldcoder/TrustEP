@@ -1,8 +1,9 @@
 # utils/config_loader.py
+
 from django.test import TestCase, Client
-from django.urls import reverse
-from unittest.mock import patch, mock_open
+from django.db import DatabaseError
 from .utils import *
+from .models import *
 import json
 
 
@@ -32,9 +33,11 @@ class ReadConfigTest(TestCase):
 
 
 class EvaluateTrustViewTest(TestCase):
+    databases = ['default', 'source']
+
     def setUp(self):
         self.client = Client()
-        self.url = 'api/v1/trust/evaluate/scores'  # 或者 reverse('evaluate_trust')，如果你用的是 name 映射
+        self.url = '/api/v1/trust/evaluate/scores'  # 或者 reverse('evaluate_trust')，如果你用的是 name 映射
 
     def test_only_post_allowed(self):
         response = self.client.get(self.url)
@@ -50,7 +53,7 @@ class EvaluateTrustViewTest(TestCase):
     def test_missing_parameters(self):
         payload = {
             'security_card_id': 'abc123',
-            'data_level': 0
+            'data_level': '0'
         }
         response = self.client.post(self.url, data=json.dumps(payload), content_type='application/json')
         self.assertEqual(response.status_code, 400)
@@ -61,7 +64,7 @@ class EvaluateTrustViewTest(TestCase):
         payload = {
             'security_card_id': 'abc123',
             'api_id': 'api_001',
-            'data_level': 0
+            'data_level': '0'
         }
         response = self.client.post(self.url, data=json.dumps(payload), content_type='application/json')
         self.assertEqual(response.status_code, 200)
@@ -69,8 +72,8 @@ class EvaluateTrustViewTest(TestCase):
         self.assertEqual(response.json()['returnBody']['security_card_id'], 'abc123')
         self.assertIn('score', response.json()['returnBody'])  # 假设 calculate_trust_score 返回了一个值
 
-class DistanceToClusterCenterTest(TestCase):
 
+class DistanceToClusterCenterTest(TestCase):
     def test_no_history_returns_minus_one(self):
         current_position = [116.42, 39.92]
         self.assertEqual(distance_to_nearest_cluster_center([], current_position), -1)
@@ -205,3 +208,16 @@ class TimeClusterDistanceTestCase(TestCase):
         current_time = "2024-01-04 20:00:00"
         result = time_cluster_distance(historical_times, current_time)
         self.assertGreater(result, 0)
+
+
+class ModelAccessTest(TestCase):
+    databases = ['default', 'source']
+
+    def test_model_table_accessible(self):
+        """测试数据表是否能正常读取"""
+        try:
+            obj = Local.objects.first()
+            # 断言无异常，并能正常访问数据库（哪怕没数据）
+            self.assertTrue(True)
+        except DatabaseError as e:
+            self.fail(f'数据库访问失败：{e}')
