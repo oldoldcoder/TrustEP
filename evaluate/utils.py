@@ -277,7 +277,10 @@ def time_cluster_distance(historical_times, current_time):
     return min(distance_to_morning, distance_to_afternoon)
 
 
-def get_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score):
+def get_trust_level(config, judge_device_ip, judge_device_site,
+                    judge_login_time, judge_cpu_id, judge_disk_id,
+                    judge_auth_type, judge_device_type, judge_cert,
+                    judge_os_type, judge_privilege_score):
     """
     获取每个指标对应模糊等级的分数
     :param config: 读取到的YAML文件
