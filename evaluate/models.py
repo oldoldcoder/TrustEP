@@ -26,6 +26,7 @@ class Local(models.Model):
     api_type = models.CharField(max_length=64)
     data_level = models.IntegerField(default=0)
     department = models.CharField(max_length=64)
+    oa_result = models.IntegerField(default=0)
 
     class Meta:
         db_table = 'tb_data_total'
@@ -38,7 +39,6 @@ class TrustScore(models.Model):
     result_code = models.IntegerField(default=0)
     score = models.FloatField(default=0)
     create_time = models.DateTimeField()
-    result = models.IntegerField(default=0)
 
     class Meta:
         db_table = 'tb_historical_trust_scores'
