@@ -1,4 +1,7 @@
+import base64
 import random
+import string
+import textwrap
 from datetime import datetime, timedelta
 
 medium = {
@@ -21,6 +24,66 @@ def random_login_time():
     return now - delta
 
 
+def random_device_site():
+    latitude = round(random.uniform(20.0, 53.0), 6)
+    longitude = round(random.uniform(73.0, 135.0), 6)
+    site = f"{latitude},{longitude}"
+    return site
+
+def random_ip():
+    ip = '.'.join(str(random.randint(0, 255)) for _ in range(4))
+    return ip
+
+
+def generate_cpu_id(num):
+    def random_hex(length):
+        return ''.join(random.choices('0123456789ABCDEF', k=length))
+
+    ids = []
+    for _ in range(num):
+        parts = [
+            random_hex(8),
+            random_hex(4),
+            random_hex(4),
+            random_hex(4),
+            random_hex(12)
+        ]
+        custom_id = '-'.join(parts)
+        ids.append(custom_id)
+    return ids
+
+
+def generate_disk_id(num):
+    ids = []
+    for _ in range(num):
+        prefix = ''.join(random.choices(string.ascii_uppercase, k=2))
+        digits = ''.join(random.choices(string.digits, k=7))
+        ids.append(prefix + digits)
+    return ids
+
+
+def generate_fake_certificate():
+    # 生成随机的原始“证书”字节内容（长度在1000字节左右，看起来更真实）
+    raw_bytes = bytes(random.getrandbits(8) for _ in range(random.randint(900, 1200)))
+
+    # Base64 编码
+    b64_encoded = base64.b64encode(raw_bytes).decode('ascii')
+
+    # 格式化为每行64字符，并在每行末尾添加 '\\n'
+    wrapped = '\\n'.join(textwrap.wrap(b64_encoded, width=64))
+
+    # 包裹证书头尾
+    certificate = f"-----BEGIN CERTIFICATE-----\\n{wrapped}\\n-----END CERTIFICATE-----"
+    return certificate
+
+
+def generate_os_type_arr(t, num):
+    arr = [1] * t
+    for i in random.sample(range(t), num):
+        arr[i] = 2
+    return arr
+
+
 # 模拟 5 个用户，每人 20 条记录
 users = [
     {"security_card_id": f"scid{i:03}", "name": f"user{i}", "department": f"dep{i%3}"} for i in range(3)
@@ -30,25 +93,32 @@ sql_statements = []
 i = 0
 
 for user in users:
+    random_os_type_num = random.choice(medium['os_type'])
+    login_time_arr = [random_login_time().strftime('%Y-%m-%d %H:%M:%S') for _ in range(random.choice(medium['login_time']))]
+    device_site_arr = [random_device_site() for _ in range(random.choice(medium['device_site']))]
+    device_ip_arr = [random_ip() for _ in range(random.choice(medium['device_ip']))]
+    cpu_id_arr = generate_cpu_id(random.choice(medium['cpu_id']))
+    disk_id_arr = generate_disk_id(random.choice(medium['disk_id']))
+    auth_type_arr = [random.randint(1, 8) for _ in range(random.choice(medium['auth_type']))]
+    device_type_arr = [random.randint(1, 9) for _ in range(random.choice(medium['device_type']))]
+    cert_arr = [generate_fake_certificate() for _ in range(random.choice(medium['cert']))]
+    os_type_arr = generate_os_type_arr(10, random_os_type_num)
     for _ in range(20):
-        login_time = random_login_time().strftime('%Y-%m-%d %H:%M:%S')
-        latitude = round(random.uniform(20.0, 53.0), 6)
-        longitude = round(random.uniform(73.0, 135.0), 6)
         values = {
             "tb_id": f"tb_{i}",
             "security_card_id": user["security_card_id"],
             "name": user["name"],
-            "device_ip": str(random.choice(medium["device_ip"])),
-            "device_site": f"{latitude},{longitude}",
-            "login_time": login_time,
-            "cpu_id": str(random.choice(medium["cpu_id"])),
-            "disk_id": str(random.choice(medium["disk_id"])),
-            "auth_type": random.choice(medium["auth_type"]),
-            "device_type": random.choice(medium["device_type"]),
-            "cert": str(random.choice(medium["cert"])),
-            "os_type": random.choice(medium["os_type"]),
-            "oa_count": random.randint(0, 10),
-            "oa_score": random.randint(0, 100),
+            "device_ip": random.choice(device_ip_arr),
+            "device_site": random.choice(device_site_arr),
+            "login_time": random.choice(login_time_arr),
+            "cpu_id": random.choice(cpu_id_arr),
+            "disk_id": random.choice(disk_id_arr),
+            "auth_type": random.choice(auth_type_arr),
+            "device_type": random.choice(device_type_arr),
+            "cert": str(random.choice(cert_arr)),
+            "os_type": random.choice(os_type_arr),
+            "oa_count": 0,
+            "oa_score": 1,
             "api_id": f"api_{random.randint(100,999)}",
             "api_type": random.choice(["GET", "POST"]),
             "data_level": random.randint(0, 3),
