@@ -178,7 +178,7 @@ for user in users:
 
         cols = ", ".join(values.keys())
         vals = ", ".join(f"'{v}'" if isinstance(v, str) else str(v) for v in values.values())
-        sql = f"INSERT INTO tb_data_local ({cols}) VALUES ({vals});"
+        sql = f"INSERT INTO tb_data_total ({cols}) VALUES ({vals});"
         sql_statements.append(sql)
 
 

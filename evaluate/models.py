@@ -13,7 +13,7 @@ class Local(models.Model):
     disk_id = models.CharField(max_length=256, default="")
     auth_type = models.IntegerField(default=0)
     device_type = models.IntegerField(default=0)
-    cert = models.CharField(max_length=256, default="")
+    cert = models.TextField(default='',)
     # cert_dn = models.CharField(max_length=256)
     # cert_sn = models.CharField(max_length=256)
     # 无法对应，先删除
