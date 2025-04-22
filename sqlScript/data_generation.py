@@ -1,7 +1,11 @@
-import base64
+# 生成中等级用户脚本
+
 import random
 import string
-import textwrap
+from cryptography import x509
+from cryptography.x509.oid import NameOID
+from cryptography.hazmat.primitives import hashes, serialization
+from cryptography.hazmat.primitives.asymmetric import rsa
 from datetime import datetime, timedelta
 
 medium = {
@@ -29,6 +33,7 @@ def random_device_site():
     longitude = round(random.uniform(73.0, 135.0), 6)
     site = f"{latitude},{longitude}"
     return site
+
 
 def random_ip():
     ip = '.'.join(str(random.randint(0, 255)) for _ in range(4))
@@ -62,19 +67,59 @@ def generate_disk_id(num):
     return ids
 
 
-def generate_fake_certificate():
-    # 生成随机的原始“证书”字节内容（长度在1000字节左右，看起来更真实）
-    raw_bytes = bytes(random.getrandbits(8) for _ in range(random.randint(900, 1200)))
+# def generate_fake_certificate():
+#     # 生成随机的原始“证书”字节内容（长度在1000字节左右，看起来更真实）
+#     raw_bytes = bytes(random.getrandbits(8) for _ in range(random.randint(900, 1200)))
+#
+#     # Base64 编码
+#     b64_encoded = base64.b64encode(raw_bytes).decode('ascii')
+#
+#     # 格式化为每行64字符，并在每行末尾添加 '\\n'
+#     wrapped = '\\n'.join(textwrap.wrap(b64_encoded, width=64))
+#
+#     # 包裹证书头尾
+#     certificate = f"-----BEGIN CERTIFICATE-----\\n{wrapped}\\n-----END CERTIFICATE-----"
+#     return certificate
+def generate_cert():
+    def build_cert(common_name, not_before, not_after):
+        key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+        subject = issuer = x509.Name([
+            x509.NameAttribute(NameOID.COUNTRY_NAME, u"CN"),
+            x509.NameAttribute(NameOID.STATE_OR_PROVINCE_NAME, u"TestProvince"),
+            x509.NameAttribute(NameOID.LOCALITY_NAME, u"TestCity"),
+            x509.NameAttribute(NameOID.ORGANIZATION_NAME, u"TestOrg"),
+            x509.NameAttribute(NameOID.COMMON_NAME, common_name),
+        ])
+        cert = (
+            x509.CertificateBuilder()
+            .subject_name(subject)
+            .issuer_name(issuer)
+            .public_key(key.public_key())
+            .serial_number(x509.random_serial_number())
+            .not_valid_before(not_before)
+            .not_valid_after(not_after)
+            .add_extension(x509.BasicConstraints(ca=True, path_length=None), critical=True)
+            .sign(key, hashes.SHA256())
+        )
+        return cert.public_bytes(serialization.Encoding.PEM).decode("utf-8")
 
-    # Base64 编码
-    b64_encoded = base64.b64encode(raw_bytes).decode('ascii')
+    now = datetime.utcnow()
 
-    # 格式化为每行64字符，并在每行末尾添加 '\\n'
-    wrapped = '\\n'.join(textwrap.wrap(b64_encoded, width=64))
+    # 生成一个有效证书：从现在开始有效，有效期一年
+    valid_cert = build_cert(
+        common_name="valid.example.com",
+        not_before=now,
+        not_after=now + timedelta(days=365)
+    )
 
-    # 包裹证书头尾
-    certificate = f"-----BEGIN CERTIFICATE-----\\n{wrapped}\\n-----END CERTIFICATE-----"
-    return certificate
+    # 生成一个过期证书：从两年前生效，一年前过期
+    expired_cert = build_cert(
+        common_name="expired.example.com",
+        not_before=now - timedelta(days=730),
+        not_after=now - timedelta(days=365)
+    )
+
+    return valid_cert, expired_cert
 
 
 def generate_os_type_arr(t, num):
@@ -93,15 +138,19 @@ sql_statements = []
 i = 0
 
 for user in users:
+    valid, invalid = generate_cert()
+    random_cert_num = random.choice(medium['cert'])
     random_os_type_num = random.choice(medium['os_type'])
-    login_time_arr = [random_login_time().strftime('%Y-%m-%d %H:%M:%S') for _ in range(random.choice(medium['login_time']))]
+    login_time_arr = \
+        [random_login_time().strftime('%Y-%m-%d %H:%M:%S') for _ in range(random.choice(medium['login_time']))]
     device_site_arr = [random_device_site() for _ in range(random.choice(medium['device_site']))]
     device_ip_arr = [random_ip() for _ in range(random.choice(medium['device_ip']))]
     cpu_id_arr = generate_cpu_id(random.choice(medium['cpu_id']))
     disk_id_arr = generate_disk_id(random.choice(medium['disk_id']))
     auth_type_arr = [random.randint(1, 8) for _ in range(random.choice(medium['auth_type']))]
     device_type_arr = [random.randint(1, 9) for _ in range(random.choice(medium['device_type']))]
-    cert_arr = [generate_fake_certificate() for _ in range(random.choice(medium['cert']))]
+    # cert_arr = [generate_fake_certificate() for _ in range(random.choice(medium['cert']))]
+    cert_arr = random.sample([valid] * (10 - random_cert_num) + [invalid] * random_cert_num, 10)
     os_type_arr = generate_os_type_arr(10, random_os_type_num)
     for _ in range(20):
         values = {
