@@ -53,14 +53,21 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     '''
     根据次数完成等级定义
     '''
-    judge_device_ip = sum(data_total[i].device_ip != data_total[i - 1].device_ip for i in range(1, config["fce_config"]["t"]))
-    judge_cpu_id = sum(data_total[i].cpu_id != data_total[i - 1].cpu_id for i in range(1, config["fce_config"]["t"]))
-    judge_disk_id = sum(data_total[i].disk_id != data_total[i - 1].disk_id for i in range(1, config["fce_config"]["t"]))
-    judge_auth_type = sum(data_total[i].auth_type != data_total[i - 1].auth_type for i in range(1, config["fce_config"]["t"]))
-    judge_device_type = sum(data_total[i].device_type != data_total[i - 1].device_type for i in range(1, config["fce_config"]["t"]))
-    judge_os_type = sum(data_total[i].os_type != data_total[i - 1].os_type for i in range(1, config["fce_config"]["t"]))
+    # judge_device_ip = sum(data_total[i].device_ip != data_total[i - 1].device_ip for i in range(1, config["fce_config"]["t"]))
+    # judge_cpu_id = sum(data_total[i].cpu_id != data_total[i - 1].cpu_id for i in range(1, config["fce_config"]["t"]))
+    # judge_disk_id = sum(data_total[i].disk_id != data_total[i - 1].disk_id for i in range(1, config["fce_config"]["t"]))
+    # judge_auth_type = sum(data_total[i].auth_type != data_total[i - 1].auth_type for i in range(1, config["fce_config"]["t"]))
+    # judge_device_type = sum(data_total[i].device_type != data_total[i - 1].device_type for i in range(1, config["fce_config"]["t"]))
+    # judge_os_type = sum(data_total[i].os_type != data_total[i - 1].os_type for i in range(1, config["fce_config"]["t"]))
+    judge_device_ip = len(set(data_total[i].device_ip for i in range(config["fce_config"]["t"])))
+    judge_cpu_id = len(set(data_total[i].cpu_id for i in range(config["fce_config"]["t"])))
+    judge_disk_id = len(set(data_total[i].disk_id for i in range(config["fce_config"]["t"])))
+    judge_auth_type = len(set(data_total[i].auth_type for i in range(config["fce_config"]["t"])))
+    judge_device_type = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"])))
+    judge_os_type = sum(1 for item in data_total if item.os_type == 1)
     # 获得每个指标的信任等级，此处直接转化为分数
-    matrix = get_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id, judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score)
+    matrix = get_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
+                             judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score)
     # 获得信任分数
     historical_scores = [item.score for item in trust_scores]
     score = calculate_final_trust_score(config, matrix, historical_scores)

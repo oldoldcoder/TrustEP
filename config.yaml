@@ -3,20 +3,16 @@
 fce_config:
   t: 10  # 取最近T次记录
   indicator_weights:
-    login_time: 0.1071        # 3/28
-    device_site: 0.1071    # 3/28
-    device_ip: 0.0714         # 2/28
-    cpu_id: 0.0357            # 1/28
-    disk_id: 0.0357           # 1/28
-    auth_type: 0.0357         # 1/28
-    device_type: 0.1071       # 3/28
-    cert_dn: 0.0357           # 1/28
-    cert_sn: 0.0357           # 1/28
-    soft_type: 0.0357         # 1/28
-    setup_type: 0.0357        # 1/28
-    os_type: 0.0714           # 2/28
-    enable_firewall: 0.1071   # 3/28
-    privilege_score: 0.1786   # 5/28（越权分数）
+    login_time: 0.15
+    device_site: 0.15
+    device_ip: 0.1
+    cpu_id: 0.05
+    disk_id: 0.05
+    auth_type: 0.05
+    device_type: 0.05
+    cert: 0.15
+    os_type: 0.05
+    oa_result: 0.2
 
   trust_levels:  # 模糊等级与其对应的权重
     - level: high

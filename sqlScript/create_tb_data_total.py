@@ -226,7 +226,8 @@ def generate_insert_statements_for_user():
     vsXeT2JyV+C9NHr5sJwfHUGH1KVsSWt3Zo7mkd8/qzmu
     -----END CERTIFICATE-----'''
     base_os_type = 1
-    oa_result = 1
+    # oa_result = 1
+    oa_result = 0
     api_id = str(uuid.uuid4())[:16]
     api_type = "POST"
     department = "test"
@@ -249,7 +250,7 @@ def generate_insert_statements_for_user():
         disk_id = base_disk_id
 
         # os_type 在指定索引变更
-        os_type = random.choice([2, 3]) if i in os_type_change_indices else base_os_type
+        os_type = 2 if i in os_type_change_indices else base_os_type
 
         sql = (
             f"INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, "

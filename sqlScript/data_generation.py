@@ -2,6 +2,8 @@
 
 import random
 import string
+import uuid
+
 from cryptography import x509
 from cryptography.x509.oid import NameOID
 from cryptography.hazmat.primitives import hashes, serialization
@@ -22,17 +24,34 @@ medium = {
 
 
 # 生成指定数量的随机 login_time（近30天内）
-def random_login_time():
+def random_login_time(num):
     now = datetime.now()
-    delta = timedelta(days=random.randint(0, 30), hours=random.randint(0, 23), minutes=random.randint(0, 59))
-    return now - delta
+    times = []
+    for i in range(10):
+        if i < num:
+            delta = timedelta(days=random.randint(0, 30), hours=random.randint(0, 23), minutes=random.randint(0, 59))
+        else:
+            delta = timedelta(minutes=random.randint(-3, 3))
+        login_time = (now + delta).strftime('%Y-%m-%d %H:%M:%S')
+        times.append(login_time)
+
+    return random.sample(times, 10)
 
 
-def random_device_site():
-    latitude = round(random.uniform(20.0, 53.0), 6)
-    longitude = round(random.uniform(73.0, 135.0), 6)
-    site = f"{latitude},{longitude}"
-    return site
+def random_device_site(num, base_latitude, base_longitude):
+    sites = []
+    for i in range(num):
+        if i < num:
+            abnormal_latitude = round(random.uniform(20.0, 53.0), 6)
+            abnormal_longitude = round(random.uniform(73.0, 135.0), 6)
+            abnormal_site = f"{abnormal_latitude},{abnormal_longitude}"
+            sites.append(abnormal_site)
+        else:
+            normal_latitude = round(base_latitude + random.uniform(-0.001, 0.001), 6)
+            normal_longitude = round(base_longitude + random.uniform(-0.001, 0.001), 6)
+            normal_site = f"{normal_latitude},{normal_longitude}"
+            sites.append(normal_site)
+    return random.sample(sites, 10)
 
 
 def random_ip():
@@ -41,21 +60,24 @@ def random_ip():
 
 
 def generate_cpu_id(num):
-    def random_hex(length):
-        return ''.join(random.choices('0123456789ABCDEF', k=length))
-
-    ids = []
-    for _ in range(num):
-        parts = [
-            random_hex(8),
-            random_hex(4),
-            random_hex(4),
-            random_hex(4),
-            random_hex(12)
-        ]
-        custom_id = '-'.join(parts)
-        ids.append(custom_id)
-    return ids
+    # def random_hex(length):
+    #     return ''.join(random.choices('0123456789ABCDEF', k=length))
+    #
+    # ids = []
+    # for _ in range(num):
+    #     parts = [
+    #         random_hex(8),
+    #         random_hex(4),
+    #         random_hex(4),
+    #         random_hex(4),
+    #         random_hex(12)
+    #     ]
+    #     custom_id = '-'.join(parts)
+    #     ids.append(custom_id)
+    base = [str(uuid.uuid4()) for _ in range(num)]
+    ids = base.copy()
+    ids += random.choices(base, k=(10 - num))
+    return sorted(ids)
 
 
 def generate_disk_id(num):
@@ -125,30 +147,34 @@ def generate_cert():
 def generate_os_type_arr(t, num):
     arr = [1] * t
     for i in random.sample(range(t), num):
-        arr[i] = 2
+        arr[2] = 1
     return arr
 
 
+user_name = ['Felix', 'Grace', 'Henry']
 # 模拟 5 个用户，每人 20 条记录
 users = [
-    {"security_card_id": f"scid{i:03}", "name": f"user{i}", "department": f"dep{i%3}"} for i in range(3)
+    {"security_card_id": f"scid_{user_name[i]}", "name": user_name[i], "department": "test"} for i in range(3)
 ]
 
 sql_statements = []
 i = 0
 
 for user in users:
+    base_lat = random.uniform(30.0, 31.0)
+    base_lon = random.uniform(120.0, 121.0)
     valid, invalid = generate_cert()
+    random_device_site_num = random.choice(medium['device_site'])
+    random_login_time_num = random.choice(medium['login_time'])
     random_cert_num = random.choice(medium['cert'])
     random_os_type_num = random.choice(medium['os_type'])
-    login_time_arr = \
-        [random_login_time().strftime('%Y-%m-%d %H:%M:%S') for _ in range(random.choice(medium['login_time']))]
-    device_site_arr = [random_device_site() for _ in range(random.choice(medium['device_site']))]
+    login_time_arr = random_login_time(random_login_time_num)
+    device_site_arr = random_device_site(random_device_site_num, base_lat, base_lon)
     device_ip_arr = [random_ip() for _ in range(random.choice(medium['device_ip']))]
-    cpu_id_arr = generate_cpu_id(random.choice(medium['cpu_id']))
-    disk_id_arr = generate_disk_id(random.choice(medium['disk_id']))
-    auth_type_arr = [random.randint(1, 8) for _ in range(random.choice(medium['auth_type']))]
-    device_type_arr = [random.randint(1, 9) for _ in range(random.choice(medium['device_type']))]
+    cpu_id_arr = [str(uuid.uuid4()) for _ in range(random.choice(medium['cpu_id']))]
+    disk_id_arr = [str(uuid.uuid4()) for _ in range(random.choice(medium['disk_id']))]
+    auth_type_arr = [random.randint(2, 7) for _ in range(random.choice(medium['auth_type']))]
+    device_type_arr = [random.randint(1, 8) for _ in range(random.choice(medium['device_type']))]
     # cert_arr = [generate_fake_certificate() for _ in range(random.choice(medium['cert']))]
     cert_arr = random.sample([valid] * (10 - random_cert_num) + [invalid] * random_cert_num, 10)
     os_type_arr = generate_os_type_arr(10, random_os_type_num)
@@ -166,10 +192,8 @@ for user in users:
             "device_type": random.choice(device_type_arr),
             "cert": str(random.choice(cert_arr)),
             "os_type": random.choice(os_type_arr),
-            "oa_count": 0,
-            "oa_score": 1,
             "api_id": f"api_{random.randint(100,999)}",
-            "api_type": random.choice(["GET", "POST"]),
+            "api_type": "POST",
             "data_level": random.randint(0, 3),
             "department": user["department"],
         }
