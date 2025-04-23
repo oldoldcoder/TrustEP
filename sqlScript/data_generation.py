@@ -40,7 +40,7 @@ def random_login_time(num):
 
 def random_device_site(num, base_latitude, base_longitude):
     sites = []
-    for i in range(num):
+    for i in range(10):
         if i < num:
             abnormal_latitude = round(random.uniform(20.0, 53.0), 6)
             abnormal_longitude = round(random.uniform(73.0, 135.0), 6)
@@ -204,6 +204,8 @@ for user in users:
         vals = ", ".join(f"'{v}'" if isinstance(v, str) else str(v) for v in values.values())
         sql = f"INSERT INTO tb_data_total ({cols}) VALUES ({vals});"
         sql_statements.append(sql)
+        another_sql = f"INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('{values['security_card_id']}')"
+        sql_statements.append(another_sql)
 
 
 sql_statements.reverse()

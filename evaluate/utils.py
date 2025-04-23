@@ -14,7 +14,7 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     print("配置读取完毕，T值：", config["fce_config"]["t"])
     # 对于login_time,device_site内容进行聚类
     # 从数据库读数据到大表
-    get_first_data_from_database(security_card_id)
+    # get_first_data_from_database(security_card_id)
     # 从大表读取数据
     data_total, trust_scores = get_recent_data_by_security_card(security_card_id, config["fce_config"]["t"])
     # 提取设备的经纬度
@@ -48,7 +48,8 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     judge_cert = 0
     for i in range(0, config["fce_config"]["t"]):
         before, after = parse_cert_time(data_total[i].cert)
-        if before <= data_total[i].login_time <= after:
+        ltime = data_total[i].login_time.replace(tzinfo=None)
+        if not (before <= ltime <= after):
             judge_cert += 1
     '''
     根据次数完成等级定义
@@ -59,12 +60,12 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     # judge_auth_type = sum(data_total[i].auth_type != data_total[i - 1].auth_type for i in range(1, config["fce_config"]["t"]))
     # judge_device_type = sum(data_total[i].device_type != data_total[i - 1].device_type for i in range(1, config["fce_config"]["t"]))
     # judge_os_type = sum(data_total[i].os_type != data_total[i - 1].os_type for i in range(1, config["fce_config"]["t"]))
-    judge_device_ip = len(set(data_total[i].device_ip for i in range(config["fce_config"]["t"])))
-    judge_cpu_id = len(set(data_total[i].cpu_id for i in range(config["fce_config"]["t"])))
-    judge_disk_id = len(set(data_total[i].disk_id for i in range(config["fce_config"]["t"])))
-    judge_auth_type = len(set(data_total[i].auth_type for i in range(config["fce_config"]["t"])))
-    judge_device_type = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"])))
-    judge_os_type = sum(1 for item in data_total if item.os_type == 1)
+    judge_device_ip = len(set(data_total[i].device_ip for i in range(config["fce_config"]["t"]))) - 1
+    judge_cpu_id = len(set(data_total[i].cpu_id for i in range(config["fce_config"]["t"]))) - 1
+    judge_disk_id = len(set(data_total[i].disk_id for i in range(config["fce_config"]["t"]))) - 1
+    judge_auth_type = len(set(data_total[i].auth_type for i in range(config["fce_config"]["t"]))) - 1
+    judge_device_type = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"]))) - 1
+    judge_os_type = sum(1 for item in data_total if item.os_type == 2)
     # 获得每个指标的信任等级，此处直接转化为分数
     matrix = get_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
                              judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score)
@@ -232,13 +233,13 @@ def distance_to_nearest_cluster_center(history_positions, current_position):
 """
 
 
-def time_str_to_minutes(datetime_str):
-    """
-    输入格式: 'YYYY-MM-DD HH:MM:SS'
-    输出: 去掉日期后，转换为从00:00起的分钟数
-    """
-    dt = datetime.strptime(datetime_str, "%Y-%m-%d %H:%M:%S")
+def time_str_to_minutes(datetime_input):
+    if isinstance(datetime_input, datetime):
+        dt = datetime_input
+    else:
+        dt = datetime.strptime(datetime_input, "%Y-%m-%d %H:%M:%S")
     return dt.hour * 60 + dt.minute
+
 
 
 def cluster_time_centers(minute_list):
@@ -318,7 +319,7 @@ def get_trust_level(config, judge_device_ip, judge_device_site,
     matrix['device_type'] = get_level_by_weight(config, "device_type", judge_device_type)
     matrix['cert'] = get_level_by_weight(config, "cert", judge_cert)
     matrix['os_type'] = get_level_by_weight(config, "os_type", judge_os_type)
-    matrix['privilege_score'] = 0.9 if judge_privilege_score else 0
+    matrix['oa_result'] = 0.9 if judge_privilege_score else 0
 
     return matrix
 
@@ -326,7 +327,7 @@ def get_trust_level(config, judge_device_ip, judge_device_site,
 def calculate_final_trust_score(config, matrix, historical_scores):
     current_score = 0
     weights_dict = config["fce_config"]["indicator_weights"]
-    for key, weight in weights_dict.item():
+    for key, weight in weights_dict.items():
         current_score += weight * matrix[key]
 
     score = current_score * config["fce_config"]["history_score_weight"]["w_now"]
