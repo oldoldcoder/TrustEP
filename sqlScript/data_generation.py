@@ -40,7 +40,7 @@ def random_login_time(num):
 
 def random_device_site(num, base_latitude, base_longitude):
     sites = []
-    for i in range(num):
+    for i in range(10):
         if i < num:
             abnormal_latitude = round(random.uniform(20.0, 53.0), 6)
             abnormal_longitude = round(random.uniform(73.0, 135.0), 6)
@@ -192,9 +192,7 @@ for user in users:
             "device_type": random.choice(device_type_arr),
             "cert": str(random.choice(cert_arr)),
             "os_type": random.choice(os_type_arr),
-            "api_id": f"api_{random.randint(100,999)}",
             "api_type": "POST",
-            "data_level": random.randint(0, 3),
             "department": user["department"],
         }
 

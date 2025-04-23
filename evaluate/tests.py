@@ -63,7 +63,7 @@ class EvaluateTrustViewTest(TestCase):
 
     def test_valid_request(self):
         payload = {
-            'security_card_id': 'abc123',
+            'security_card_id': 'scid_Felix',
             'api_id': 'api_001',
             'data_level': '0'
         }
