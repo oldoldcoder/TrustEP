@@ -44,31 +44,31 @@ fce_config:
   membership_functions:
     # 以下为示例格式，具体函数你可以自定义为三角形、梯形或高斯型等
     login_time:
-      threshold:  2 # 聚类的半径,单位小时
+      threshold:  180 # 聚类的半径,单位分钟
       section:
         - level: high
-          weight: [ x,x ]
+          weight: [ 0,45 ]
         - level: above_average
-          weight: [ x,x ]
+          weight: [ 45,90 ]
         - level: average
-          weight: [ x,x ]
+          weight: [ 90,120 ]
         - level: below_average
-          weight: [ x,x ]
+          weight: [ 120,150 ]
         - level: low
-          weight: [ x,x ]
+          weight: [ 150,180 ]
     device_site:
       threshold:  50 # 聚类的半径,单位是km
       section:
         - level: high
-          weight: [ x,x ]
+          weight: [ 0,10 ]
         - level: above_average
-          weight: [ x,x ]
+          weight: [ 10,20 ]
         - level: average
-          weight: [ x,x ]
+          weight: [ 20,30 ]
         - level: below_average
-          weight: [ x,x ]
+          weight: [ 30,40 ]
         - level: low
-          weight: [ x,x ]
+          weight: [ 40,50 ]
     device_ip:
       threshold: 5
       section:
@@ -127,33 +127,6 @@ fce_config:
           weight: [ 1,2 ]
         - level: low
           weight: [ 3,3 ]
-
-    cert_dn:
-      threshold:  # 聚类的半径
-      section:
-        - level: high
-          weight: [ x,x ]
-        - level: above_average
-          weight: [ x,x ]
-        - level: average
-          weight: [ x,x ]
-        - level: below_average
-          weight: [ x,x ]
-        - level: low
-          weight: [ x,x ]
-    cert_sn:
-      threshold:  # 聚类的半径
-      section:
-        - level: high
-          weight: [ x,x ]
-        - level: above_average
-          weight: [ x,x ]
-        - level: average
-          weight: [ x,x ]
-        - level: below_average
-          weight: [ x,x ]
-        - level: low
-          weight: [ x,x ]
     cert:
       threshold: 5 # 聚类的半径
       section:
@@ -167,32 +140,6 @@ fce_config:
           weight: [ 4,4 ]
         - level: low
           weight: [ 5,5 ]
-    soft_type:
-      threshold:  # 聚类的半径
-      section:
-        - level: high
-          weight: [ x,x ]
-        - level: above_average
-          weight: [ x,x ]
-        - level: average
-          weight: [ x,x ]
-        - level: below_average
-          weight: [ x,x ]
-        - level: low
-          weight: [ x,x ]
-    setup_type:
-      threshold:  # 聚类的半径
-      section:
-        - level: high
-          weight: [ x,x ]
-        - level: above_average
-          weight: [ x,x ]
-        - level: average
-          weight: [ x,x ]
-        - level: below_average
-          weight: [ x,x ]
-        - level: low
-          weight: [ x,x ]
     os_type:
       threshold: 3
       section:
