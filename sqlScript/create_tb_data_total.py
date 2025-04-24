@@ -356,15 +356,15 @@ OsPfSTxf2P498yYtrCCH
         os_type = 2 if i in os_type_change_indices else base_os_type
 
         sql = (
-            f"INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, "
+            f"INSERT INTO tb_data_total (security_card_id, name, device_ip, device_site, login_time, "
             f"cpu_id, disk_id, auth_type, device_type, cert, os_type, oa_result, api_id, api_type, department) VALUES ("
-            f"'{tb_id}', '{security_card_id}', '{name}', '{device_ip}', '{device_site}', '{login_time}', "
+            f"'{security_card_id}', '{name}', '{device_ip}', '{device_site}', '{login_time}', "
             f"'{cpu_id}', '{disk_id}', {auth_type}, {device_type}, '{cert}', {os_type}, {oa_result}, "
             f"'{api_id}', '{api_type}', '{department}');"
         )
-        another_sql = f"INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('{security_card_id}');"
+        # another_sql = f"INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('{security_card_id}');"
         statements.append(sql)
-        statements.append(another_sql)
+        # statements.append(another_sql)
 
     return statements
 

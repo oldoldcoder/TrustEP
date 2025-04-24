@@ -180,7 +180,7 @@ for user in users:
     os_type_arr = generate_os_type_arr(10, random_os_type_num)
     for _ in range(20):
         values = {
-            "tb_id": f"tb_{i}",
+            # "tb_id": f"tb_{i}",
             "security_card_id": user["security_card_id"],
             "name": user["name"],
             "device_ip": random.choice(device_ip_arr),
@@ -202,9 +202,9 @@ for user in users:
         vals = ", ".join(f"'{v}'" if isinstance(v, str) else str(v) for v in values.values())
         sql = f"INSERT INTO tb_data_total ({cols}) VALUES ({vals});"
         sql_statements.append(sql)
-        security_card_id = values["security_card_id"]
-        another_sql = f"INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('{security_card_id}');"
-        sql_statements.append(another_sql)
+        # security_card_id = values["security_card_id"]
+        # another_sql = f"INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('{security_card_id}');"
+        # sql_statements.append(another_sql)
 
 
 sql_statements.reverse()

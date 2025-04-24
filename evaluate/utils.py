@@ -5,7 +5,7 @@ from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 import yaml
 
-from .models import Local, TrustScore, User, Biometric, Device, Software, Api, Data, Permission
+from .models import Local, User, Biometric, Device, Software, Permission#, TrustScore, Api, Data
 
 
 def calculate_trust_score(security_card_id, api_id, data_level):
@@ -14,9 +14,9 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     print("配置读取完毕，T值：", config["fce_config"]["t"])
     # 对于login_time,device_site内容进行聚类
     # 从数据库读数据到大表
-    # get_first_data_from_database(security_card_id)
+    get_first_data_from_database(security_card_id)
     # 从大表读取数据
-    data_total, trust_scores = get_recent_data_by_security_card(security_card_id, config["fce_config"]["t"])
+    data_total = get_recent_data_by_security_card(security_card_id, config["fce_config"]["t"])
     # 提取设备的经纬度
     latest_record = data_total[0]  # 最近一条记录
     current_position = list(map(float, latest_record.device_site.split(',')))
@@ -39,10 +39,6 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     """
     其他judge处理的部分
     """
-    # ip_set = set()
-    # for obj in data_total:
-    #     ip_set.add(obj.device_ip)
-    # judge_ip = len(ip_set)
 
     judge_privilege_score = data_total[0].oa_result
     judge_cert = 0
@@ -70,10 +66,10 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     matrix = get_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
                              judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score)
     # 获得信任分数
-    historical_scores = [item.score for item in trust_scores]
+    historical_scores = [item.score for item in data_total]
     score = calculate_final_trust_score(config, matrix, historical_scores)
-    trust_scores[0].score = score
-    trust_scores[0].save()
+    data_total[0].score = score
+    data_total[0].save()
     # 模拟打分逻辑（替换为FCE算法）
     return score
 
@@ -88,9 +84,9 @@ def get_first_data_from_database(security_card_id):
     biometric = Biometric.objects.using('source').get(id=data_id)
     device = Device.objects.using('source').get(id=data_id)
     software = Software.objects.using('source').get(id=data_id)
-    api = Api.objects.using('source').get(id=data_id)
-    data = Data.objects.using('source').get(id=data_id)
-    permission = Permission.using('source').get(id=data_id)
+    # api = Api.objects.using('source').get(id=data_id)
+    # data = Data.objects.using('source').get(id=data_id)
+    permission = Permission.objects.using('source').get(id=data_id)
 
     local = Local(
         tb_id=data_id,
@@ -98,7 +94,7 @@ def get_first_data_from_database(security_card_id):
         name=user.name,
         device_ip=device.device_ip,
         device_site=device.device_position,
-        login_time=datetime.strptime(device.login_time, '%Y-%m-%d %H:%M:%S'),
+        login_time=device.login_time,
         cpu_id=device.cpu_id,
         disk_id=device.disk_id,
         auth_type=biometric.auth_type,
@@ -109,23 +105,23 @@ def get_first_data_from_database(security_card_id):
         # soft_type=software.soft_type,
         # setup_type=software.setup_type,
         os_type=software.os_type,
-        api_id=api.api_id,
-        api_type=api.api_type,
-        data_level=data.data_level,
-        department=user.department,
+        # api_id=api.api_id,
+        # api_type=api.api_type,
+        # data_level=data.data_level,
+        # department=user.department,
         oa_result=permission.result
     )
 
-    trust_score = TrustScore(
-        api_id=api.api_id,
-        security_card_id=user.security_card_id,
-        data_level=data.data_level,
-        result_code=200,
-        create_time=device.login_time
-    )
+    # trust_score = TrustScore(
+    #     api_id=api.api_id,
+    #     security_card_id=user.security_card_id,
+    #     data_level=data.data_level,
+    #     result_code=200,
+    #     create_time=device.login_time
+    # )
 
     local.save()
-    trust_score.save()
+    # trust_score.save()
 
 
 def read_config():
@@ -148,13 +144,14 @@ def get_recent_data_by_security_card(security_card_id, T):
     )
 
     # 从 tb_historical_trust_scores 查询
-    historical_scores_qs = (
-        TrustScore.objects
-        .filter(security_card_id=security_card_id)
-        .order_by("-create_time")[:T + 1]  # 你也可以换成其他排序，比如按时间字段，如果有的话
-    )
+    # historical_scores_qs = (
+    #     TrustScore.objects
+    #     .filter(security_card_id=security_card_id)
+    #     .order_by("-create_time")[:T + 1]  # 你也可以换成其他排序，比如按时间字段，如果有的话
+    # )
 
-    return data_total_qs, historical_scores_qs
+    # return data_total_qs, historical_scores_qs
+    return data_total_qs
 
 
 """
