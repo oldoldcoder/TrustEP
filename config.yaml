@@ -16,7 +16,7 @@ fce_config:
 
   trust_levels:  # 模糊等级与其对应的权重
     - level: high
-      weight: 0.9
+      weight: 1
     - level: above_average
       weight: 0.7
     - level: average
