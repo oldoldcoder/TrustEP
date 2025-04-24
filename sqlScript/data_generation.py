@@ -202,7 +202,8 @@ for user in users:
         vals = ", ".join(f"'{v}'" if isinstance(v, str) else str(v) for v in values.values())
         sql = f"INSERT INTO tb_data_total ({cols}) VALUES ({vals});"
         sql_statements.append(sql)
-        another_sql = f"INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('{values['security_card_id']}')"
+        security_card_id = values["security_card_id"]
+        another_sql = f"INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('{security_card_id}');"
         sql_statements.append(another_sql)
 
 

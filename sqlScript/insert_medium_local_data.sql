@@ -1,1380 +1,1380 @@
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_59', 'scid_Henry', 'Henry', '105.143.132.156', '30.598886,120.81554', '2025-04-23 16:46:09', '7a756158-49d4-4987-97b8-2647dce3dc97', '559080eb-72cf-4ae7-a1a7-a4fff0b39978', 7, 6, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
------END CERTIFICATE-----
-', 1, 'api_428', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_58', 'scid_Henry', 'Henry', '105.143.132.156', '33.474212,81.833446', '2025-04-23 16:45:09', '7a756158-49d4-4987-97b8-2647dce3dc97', 'afaad645-e192-410f-a103-bfb90d377dac', 7, 6, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
------END CERTIFICATE-----
-', 1, 'api_339', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_57', 'scid_Henry', 'Henry', '157.156.72.12', '30.599695,120.815762', '2025-04-23 16:42:09', '7a756158-49d4-4987-97b8-2647dce3dc97', '559080eb-72cf-4ae7-a1a7-a4fff0b39978', 7, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
------END CERTIFICATE-----
-', 1, 'api_382', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_56', 'scid_Henry', 'Henry', '234.172.254.156', '30.59875,120.81537', '2025-04-23 16:44:09', '813c1fb7-2119-4bf0-a7ee-fe5e74971157', 'afaad645-e192-410f-a103-bfb90d377dac', 7, 6, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUcIzjDp4iRvF5+4mV74EYgou8VeowDQYJKoZIhvcNAQEL
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_59', 'scid_Henry', 'Henry', '158.149.23.161', '30.472715,120.252258', '2025-04-23 19:27:08', 'cb5ddd86-c71e-4d3a-ac76-efbf55687530', 'bbe17849-09f7-44db-8b19-a97fff1c2a07', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUHpZg/wyv1A6YA54Pgy61AwFtcjcwDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMM4PZnQDpv/j9f6
-Q4hSqXdJsME07oeyIPQJrxSBE4H7+mhIgQ7BefWttcFRCTgSwh68IQkuRbohOgXq
-xyKdq++N6Fi2EFf+JZpRwJQqWAardFD/Fn3NBnekXXO3uoquUo0WDODiBqXXh4r2
-zKuR2k1U21bM2aOQivpBVVE09VXKWLjkCijbj5JtqslddNKAfzHTQVImkjFGVO9V
-EUEHH1B1DnK4RD1JcKWpajRWqDXRjXlM68B45gV8TVs0N0duq64L9aafWwYIMdtS
-LM85Ut2X3L2j9ix4ln868qcWx2aMH257lULtt6X89ZAytdUvsJiuF6BdqS11zU3k
-U7iU0F8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAkzXsgsL0PRKgbmXBzUOsqMZ0CS9JxUNz7oVqnWrYpBa9rZ5XhWRDbiZNnxId
-yeWnxqYttZDGhyzRRVRtngtt52i9ABAx8/4maGs0LERKjrdfJvBSfk8IIxSzoEKp
-KdN9X07DcrvnX+bfd0Zhg9UbwCMLv4xR5IX8L+VZ6Kaqc90aKD/mttcVmCZpaWxw
-RYwUSz9W5CzQJ55jSFwZZg1HEhtw79eIL8QHKCMudzTAVlbkt+tuaKAj/SeCn377
-27P8WMC44NaZ9kKX13svRi9KH+/ljANbz9Bywu7HxWWyeZLWbjpOk+sVEBuvyNO/
-oTdvDPx0OGQ5Pw+6Zvi/mBmAUw==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALIqZjYvEhEkZwrx
+hRopa51gLO42BkgD9trRO5pUhR8ZZLLMtjktRg3ZnOZQFfVVxWk8+FYE8D1DaxQC
+TlZ0NTeRRqJNmQuvNJPDsAnBEG1XUM2dMR8QBIlgcKyGnI7siXvcKqmgaw+4GJg6
+NBv9w9M49IUBBqElh90x7k2EWvy2ap8iZvdAVnLpHJmHr8xSpCzT7BprSbX65IxT
+sVVSvN1L/S5NcRZM0MUYc08Gg0FRdA6wiufiPwxCGcie212uGMYspdo2ZSJUvHIe
+8c3hS+6va9sWcwGN0yEn/sqTyVBPZzY5at60/FG5s/TUiq5s9/ZJR31Prwdlyysp
+fx2zAMMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAlfXY7wE+SL69jTfRMqktoSUCV+hNZozwBYSdOioxiKx7y4T6hbds+PwACiia
+TNYGfbozqr70kOhb6U7yTN9xgJsXJzYm7FK4K+cBUzX0Spc6FbICxO+6e2A1qtXL
++6Yt7tJaV40WWHqe4hL+zUANa3VKQs05cKrz8pnG6+uK+saPgcaSucd1hVWD95Nl
+t2OQ62B+A3TblzKSeXEo88kh+AtIhVy1Y443S8b+ZgBAPM+NX2kY9FjMraNUb9Lz
+qK7TYq5cGTgmi8FdiF8QDkvMXI8+E28PXRRC8t1AUMntOGak01ujw5N5yJwXD3lX
+/Kebdboy3L05oXGbZzPCsFALHA==
 -----END CERTIFICATE-----
-', 1, 'api_430', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_55', 'scid_Henry', 'Henry', '105.143.132.156', '30.599695,120.815762', '2025-04-23 16:44:09', 'fb81e929-b4ab-4d4c-b0d8-9f1f1188a92e', '7f4dbdee-8c73-4d58-9be3-34495c0622d2', 7, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_58', 'scid_Henry', 'Henry', '219.233.227.53', '30.4738,120.251936', '2025-04-23 19:24:08', '25ce5be4-fa2e-4a1a-8004-e86a19e0105a', 'bbe17849-09f7-44db-8b19-a97fff1c2a07', 6, 2, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
 BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
 A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
 dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
 -----END CERTIFICATE-----
-', 1, 'api_141', 'POST', 2, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_54', 'scid_Henry', 'Henry', '105.143.132.156', '30.599114,120.815722', '2025-04-23 16:46:09', 'fb81e929-b4ab-4d4c-b0d8-9f1f1188a92e', 'afaad645-e192-410f-a103-bfb90d377dac', 7, 7, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUcIzjDp4iRvF5+4mV74EYgou8VeowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_57', 'scid_Henry', 'Henry', '17.240.157.109', '30.4738,120.251936', '2025-04-23 19:22:08', 'cb5ddd86-c71e-4d3a-ac76-efbf55687530', 'ef908fde-de21-42d0-992c-9643b2a31958', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_56', 'scid_Henry', 'Henry', '17.240.157.109', '30.473936,120.252695', '2025-04-23 19:25:08', '25ce5be4-fa2e-4a1a-8004-e86a19e0105a', 'ef908fde-de21-42d0-992c-9643b2a31958', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUHpZg/wyv1A6YA54Pgy61AwFtcjcwDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMM4PZnQDpv/j9f6
-Q4hSqXdJsME07oeyIPQJrxSBE4H7+mhIgQ7BefWttcFRCTgSwh68IQkuRbohOgXq
-xyKdq++N6Fi2EFf+JZpRwJQqWAardFD/Fn3NBnekXXO3uoquUo0WDODiBqXXh4r2
-zKuR2k1U21bM2aOQivpBVVE09VXKWLjkCijbj5JtqslddNKAfzHTQVImkjFGVO9V
-EUEHH1B1DnK4RD1JcKWpajRWqDXRjXlM68B45gV8TVs0N0duq64L9aafWwYIMdtS
-LM85Ut2X3L2j9ix4ln868qcWx2aMH257lULtt6X89ZAytdUvsJiuF6BdqS11zU3k
-U7iU0F8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAkzXsgsL0PRKgbmXBzUOsqMZ0CS9JxUNz7oVqnWrYpBa9rZ5XhWRDbiZNnxId
-yeWnxqYttZDGhyzRRVRtngtt52i9ABAx8/4maGs0LERKjrdfJvBSfk8IIxSzoEKp
-KdN9X07DcrvnX+bfd0Zhg9UbwCMLv4xR5IX8L+VZ6Kaqc90aKD/mttcVmCZpaWxw
-RYwUSz9W5CzQJ55jSFwZZg1HEhtw79eIL8QHKCMudzTAVlbkt+tuaKAj/SeCn377
-27P8WMC44NaZ9kKX13svRi9KH+/ljANbz9Bywu7HxWWyeZLWbjpOk+sVEBuvyNO/
-oTdvDPx0OGQ5Pw+6Zvi/mBmAUw==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALIqZjYvEhEkZwrx
+hRopa51gLO42BkgD9trRO5pUhR8ZZLLMtjktRg3ZnOZQFfVVxWk8+FYE8D1DaxQC
+TlZ0NTeRRqJNmQuvNJPDsAnBEG1XUM2dMR8QBIlgcKyGnI7siXvcKqmgaw+4GJg6
+NBv9w9M49IUBBqElh90x7k2EWvy2ap8iZvdAVnLpHJmHr8xSpCzT7BprSbX65IxT
+sVVSvN1L/S5NcRZM0MUYc08Gg0FRdA6wiufiPwxCGcie212uGMYspdo2ZSJUvHIe
+8c3hS+6va9sWcwGN0yEn/sqTyVBPZzY5at60/FG5s/TUiq5s9/ZJR31Prwdlyysp
+fx2zAMMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAlfXY7wE+SL69jTfRMqktoSUCV+hNZozwBYSdOioxiKx7y4T6hbds+PwACiia
+TNYGfbozqr70kOhb6U7yTN9xgJsXJzYm7FK4K+cBUzX0Spc6FbICxO+6e2A1qtXL
++6Yt7tJaV40WWHqe4hL+zUANa3VKQs05cKrz8pnG6+uK+saPgcaSucd1hVWD95Nl
+t2OQ62B+A3TblzKSeXEo88kh+AtIhVy1Y443S8b+ZgBAPM+NX2kY9FjMraNUb9Lz
+qK7TYq5cGTgmi8FdiF8QDkvMXI8+E28PXRRC8t1AUMntOGak01ujw5N5yJwXD3lX
+/Kebdboy3L05oXGbZzPCsFALHA==
 -----END CERTIFICATE-----
-', 1, 'api_838', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_53', 'scid_Henry', 'Henry', '105.143.132.156', '30.599114,120.815722', '2025-05-05 08:54:09', '7a756158-49d4-4987-97b8-2647dce3dc97', 'afaad645-e192-410f-a103-bfb90d377dac', 7, 6, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUcIzjDp4iRvF5+4mV74EYgou8VeowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_55', 'scid_Henry', 'Henry', '219.233.227.53', '30.473936,120.252695', '2025-04-23 19:25:08', 'cb5ddd86-c71e-4d3a-ac76-efbf55687530', 'ef908fde-de21-42d0-992c-9643b2a31958', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_54', 'scid_Henry', 'Henry', '219.233.227.53', '34.685917,110.490793', '2025-04-24 12:02:08', 'ce021587-34ad-4081-9379-24a88744a9f2', 'ef908fde-de21-42d0-992c-9643b2a31958', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_53', 'scid_Henry', 'Henry', '158.149.23.161', '38.568575,108.440082', '2025-04-24 12:02:08', '25ce5be4-fa2e-4a1a-8004-e86a19e0105a', 'aedbc0f8-cd5c-416f-a6fb-3933142c0f1e', 6, 2, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_52', 'scid_Henry', 'Henry', '17.240.157.109', '30.4738,120.251936', '2025-04-23 19:24:08', 'ce021587-34ad-4081-9379-24a88744a9f2', 'aedbc0f8-cd5c-416f-a6fb-3933142c0f1e', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_51', 'scid_Henry', 'Henry', '158.149.23.161', '30.4738,120.251936', '2025-04-24 12:02:08', 'cb5ddd86-c71e-4d3a-ac76-efbf55687530', '1cf67537-9314-4294-910b-1abe3abf9367', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUHpZg/wyv1A6YA54Pgy61AwFtcjcwDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMM4PZnQDpv/j9f6
-Q4hSqXdJsME07oeyIPQJrxSBE4H7+mhIgQ7BefWttcFRCTgSwh68IQkuRbohOgXq
-xyKdq++N6Fi2EFf+JZpRwJQqWAardFD/Fn3NBnekXXO3uoquUo0WDODiBqXXh4r2
-zKuR2k1U21bM2aOQivpBVVE09VXKWLjkCijbj5JtqslddNKAfzHTQVImkjFGVO9V
-EUEHH1B1DnK4RD1JcKWpajRWqDXRjXlM68B45gV8TVs0N0duq64L9aafWwYIMdtS
-LM85Ut2X3L2j9ix4ln868qcWx2aMH257lULtt6X89ZAytdUvsJiuF6BdqS11zU3k
-U7iU0F8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAkzXsgsL0PRKgbmXBzUOsqMZ0CS9JxUNz7oVqnWrYpBa9rZ5XhWRDbiZNnxId
-yeWnxqYttZDGhyzRRVRtngtt52i9ABAx8/4maGs0LERKjrdfJvBSfk8IIxSzoEKp
-KdN9X07DcrvnX+bfd0Zhg9UbwCMLv4xR5IX8L+VZ6Kaqc90aKD/mttcVmCZpaWxw
-RYwUSz9W5CzQJ55jSFwZZg1HEhtw79eIL8QHKCMudzTAVlbkt+tuaKAj/SeCn377
-27P8WMC44NaZ9kKX13svRi9KH+/ljANbz9Bywu7HxWWyeZLWbjpOk+sVEBuvyNO/
-oTdvDPx0OGQ5Pw+6Zvi/mBmAUw==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALIqZjYvEhEkZwrx
+hRopa51gLO42BkgD9trRO5pUhR8ZZLLMtjktRg3ZnOZQFfVVxWk8+FYE8D1DaxQC
+TlZ0NTeRRqJNmQuvNJPDsAnBEG1XUM2dMR8QBIlgcKyGnI7siXvcKqmgaw+4GJg6
+NBv9w9M49IUBBqElh90x7k2EWvy2ap8iZvdAVnLpHJmHr8xSpCzT7BprSbX65IxT
+sVVSvN1L/S5NcRZM0MUYc08Gg0FRdA6wiufiPwxCGcie212uGMYspdo2ZSJUvHIe
+8c3hS+6va9sWcwGN0yEn/sqTyVBPZzY5at60/FG5s/TUiq5s9/ZJR31Prwdlyysp
+fx2zAMMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAlfXY7wE+SL69jTfRMqktoSUCV+hNZozwBYSdOioxiKx7y4T6hbds+PwACiia
+TNYGfbozqr70kOhb6U7yTN9xgJsXJzYm7FK4K+cBUzX0Spc6FbICxO+6e2A1qtXL
++6Yt7tJaV40WWHqe4hL+zUANa3VKQs05cKrz8pnG6+uK+saPgcaSucd1hVWD95Nl
+t2OQ62B+A3TblzKSeXEo88kh+AtIhVy1Y443S8b+ZgBAPM+NX2kY9FjMraNUb9Lz
+qK7TYq5cGTgmi8FdiF8QDkvMXI8+E28PXRRC8t1AUMntOGak01ujw5N5yJwXD3lX
+/Kebdboy3L05oXGbZzPCsFALHA==
 -----END CERTIFICATE-----
-', 1, 'api_978', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_52', 'scid_Henry', 'Henry', '157.156.72.12', '30.598886,120.81554', '2025-04-23 16:42:09', '7a756158-49d4-4987-97b8-2647dce3dc97', 'afaad645-e192-410f-a103-bfb90d377dac', 7, 6, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_50', 'scid_Henry', 'Henry', '219.233.227.53', '30.4738,120.251936', '2025-04-23 19:21:08', 'cb5ddd86-c71e-4d3a-ac76-efbf55687530', 'ef908fde-de21-42d0-992c-9643b2a31958', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
 BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
 A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
 dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
 -----END CERTIFICATE-----
-', 1, 'api_295', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_51', 'scid_Henry', 'Henry', '234.172.254.156', '30.59875,120.81537', '2025-05-05 08:54:09', 'fb81e929-b4ab-4d4c-b0d8-9f1f1188a92e', 'afaad645-e192-410f-a103-bfb90d377dac', 7, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_49', 'scid_Henry', 'Henry', '219.233.227.53', '30.473261,120.251702', '2025-04-23 19:23:08', '25ce5be4-fa2e-4a1a-8004-e86a19e0105a', 'aedbc0f8-cd5c-416f-a6fb-3933142c0f1e', 6, 2, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
 BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
 A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
 dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
 -----END CERTIFICATE-----
-', 1, 'api_182', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_50', 'scid_Henry', 'Henry', '157.156.72.12', '30.599526,120.816109', '2025-04-23 16:46:09', 'fb81e929-b4ab-4d4c-b0d8-9f1f1188a92e', 'afaad645-e192-410f-a103-bfb90d377dac', 7, 7, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
------END CERTIFICATE-----
-', 1, 'api_718', 'POST', 2, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_49', 'scid_Henry', 'Henry', '105.143.132.156', '30.599603,120.81592', '2025-04-23 16:47:09', '813c1fb7-2119-4bf0-a7ee-fe5e74971157', '7f4dbdee-8c73-4d58-9be3-34495c0622d2', 7, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
------END CERTIFICATE-----
-', 1, 'api_121', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_48', 'scid_Henry', 'Henry', '234.172.254.156', '30.599695,120.815762', '2025-04-23 16:46:09', '7a756158-49d4-4987-97b8-2647dce3dc97', '7f4dbdee-8c73-4d58-9be3-34495c0622d2', 7, 7, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
------END CERTIFICATE-----
-', 1, 'api_761', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_47', 'scid_Henry', 'Henry', '234.172.254.156', '30.599695,120.815762', '2025-04-23 16:44:09', 'ef96146a-0d7d-48f9-b8aa-67f55092a046', 'b889d009-ce60-42ad-a14e-704a96b9ee66', 7, 7, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUcIzjDp4iRvF5+4mV74EYgou8VeowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_48', 'scid_Henry', 'Henry', '158.149.23.161', '30.473261,120.251702', '2025-04-23 19:24:08', '25ce5be4-fa2e-4a1a-8004-e86a19e0105a', 'bbe17849-09f7-44db-8b19-a97fff1c2a07', 6, 2, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUHpZg/wyv1A6YA54Pgy61AwFtcjcwDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMM4PZnQDpv/j9f6
-Q4hSqXdJsME07oeyIPQJrxSBE4H7+mhIgQ7BefWttcFRCTgSwh68IQkuRbohOgXq
-xyKdq++N6Fi2EFf+JZpRwJQqWAardFD/Fn3NBnekXXO3uoquUo0WDODiBqXXh4r2
-zKuR2k1U21bM2aOQivpBVVE09VXKWLjkCijbj5JtqslddNKAfzHTQVImkjFGVO9V
-EUEHH1B1DnK4RD1JcKWpajRWqDXRjXlM68B45gV8TVs0N0duq64L9aafWwYIMdtS
-LM85Ut2X3L2j9ix4ln868qcWx2aMH257lULtt6X89ZAytdUvsJiuF6BdqS11zU3k
-U7iU0F8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAkzXsgsL0PRKgbmXBzUOsqMZ0CS9JxUNz7oVqnWrYpBa9rZ5XhWRDbiZNnxId
-yeWnxqYttZDGhyzRRVRtngtt52i9ABAx8/4maGs0LERKjrdfJvBSfk8IIxSzoEKp
-KdN9X07DcrvnX+bfd0Zhg9UbwCMLv4xR5IX8L+VZ6Kaqc90aKD/mttcVmCZpaWxw
-RYwUSz9W5CzQJ55jSFwZZg1HEhtw79eIL8QHKCMudzTAVlbkt+tuaKAj/SeCn377
-27P8WMC44NaZ9kKX13svRi9KH+/ljANbz9Bywu7HxWWyeZLWbjpOk+sVEBuvyNO/
-oTdvDPx0OGQ5Pw+6Zvi/mBmAUw==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALIqZjYvEhEkZwrx
+hRopa51gLO42BkgD9trRO5pUhR8ZZLLMtjktRg3ZnOZQFfVVxWk8+FYE8D1DaxQC
+TlZ0NTeRRqJNmQuvNJPDsAnBEG1XUM2dMR8QBIlgcKyGnI7siXvcKqmgaw+4GJg6
+NBv9w9M49IUBBqElh90x7k2EWvy2ap8iZvdAVnLpHJmHr8xSpCzT7BprSbX65IxT
+sVVSvN1L/S5NcRZM0MUYc08Gg0FRdA6wiufiPwxCGcie212uGMYspdo2ZSJUvHIe
+8c3hS+6va9sWcwGN0yEn/sqTyVBPZzY5at60/FG5s/TUiq5s9/ZJR31Prwdlyysp
+fx2zAMMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAlfXY7wE+SL69jTfRMqktoSUCV+hNZozwBYSdOioxiKx7y4T6hbds+PwACiia
+TNYGfbozqr70kOhb6U7yTN9xgJsXJzYm7FK4K+cBUzX0Spc6FbICxO+6e2A1qtXL
++6Yt7tJaV40WWHqe4hL+zUANa3VKQs05cKrz8pnG6+uK+saPgcaSucd1hVWD95Nl
+t2OQ62B+A3TblzKSeXEo88kh+AtIhVy1Y443S8b+ZgBAPM+NX2kY9FjMraNUb9Lz
+qK7TYq5cGTgmi8FdiF8QDkvMXI8+E28PXRRC8t1AUMntOGak01ujw5N5yJwXD3lX
+/Kebdboy3L05oXGbZzPCsFALHA==
 -----END CERTIFICATE-----
-', 1, 'api_983', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_46', 'scid_Henry', 'Henry', '157.156.72.12', '30.599114,120.815722', '2025-04-23 16:44:09', 'ef96146a-0d7d-48f9-b8aa-67f55092a046', '144bd7a2-f910-487a-8753-91dfd307aa74', 7, 1, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUcIzjDp4iRvF5+4mV74EYgou8VeowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_47', 'scid_Henry', 'Henry', '158.149.23.161', '30.473261,120.251702', '2025-04-23 19:21:08', 'cb5ddd86-c71e-4d3a-ac76-efbf55687530', 'bbe17849-09f7-44db-8b19-a97fff1c2a07', 6, 2, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_46', 'scid_Henry', 'Henry', '17.240.157.109', '30.473261,120.251702', '2025-04-23 19:22:08', 'cb5ddd86-c71e-4d3a-ac76-efbf55687530', 'ef908fde-de21-42d0-992c-9643b2a31958', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_45', 'scid_Henry', 'Henry', '219.233.227.53', '30.473261,120.251702', '2025-04-23 19:21:08', '25ce5be4-fa2e-4a1a-8004-e86a19e0105a', 'bbe17849-09f7-44db-8b19-a97fff1c2a07', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUHpZg/wyv1A6YA54Pgy61AwFtcjcwDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMM4PZnQDpv/j9f6
-Q4hSqXdJsME07oeyIPQJrxSBE4H7+mhIgQ7BefWttcFRCTgSwh68IQkuRbohOgXq
-xyKdq++N6Fi2EFf+JZpRwJQqWAardFD/Fn3NBnekXXO3uoquUo0WDODiBqXXh4r2
-zKuR2k1U21bM2aOQivpBVVE09VXKWLjkCijbj5JtqslddNKAfzHTQVImkjFGVO9V
-EUEHH1B1DnK4RD1JcKWpajRWqDXRjXlM68B45gV8TVs0N0duq64L9aafWwYIMdtS
-LM85Ut2X3L2j9ix4ln868qcWx2aMH257lULtt6X89ZAytdUvsJiuF6BdqS11zU3k
-U7iU0F8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAkzXsgsL0PRKgbmXBzUOsqMZ0CS9JxUNz7oVqnWrYpBa9rZ5XhWRDbiZNnxId
-yeWnxqYttZDGhyzRRVRtngtt52i9ABAx8/4maGs0LERKjrdfJvBSfk8IIxSzoEKp
-KdN9X07DcrvnX+bfd0Zhg9UbwCMLv4xR5IX8L+VZ6Kaqc90aKD/mttcVmCZpaWxw
-RYwUSz9W5CzQJ55jSFwZZg1HEhtw79eIL8QHKCMudzTAVlbkt+tuaKAj/SeCn377
-27P8WMC44NaZ9kKX13svRi9KH+/ljANbz9Bywu7HxWWyeZLWbjpOk+sVEBuvyNO/
-oTdvDPx0OGQ5Pw+6Zvi/mBmAUw==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALIqZjYvEhEkZwrx
+hRopa51gLO42BkgD9trRO5pUhR8ZZLLMtjktRg3ZnOZQFfVVxWk8+FYE8D1DaxQC
+TlZ0NTeRRqJNmQuvNJPDsAnBEG1XUM2dMR8QBIlgcKyGnI7siXvcKqmgaw+4GJg6
+NBv9w9M49IUBBqElh90x7k2EWvy2ap8iZvdAVnLpHJmHr8xSpCzT7BprSbX65IxT
+sVVSvN1L/S5NcRZM0MUYc08Gg0FRdA6wiufiPwxCGcie212uGMYspdo2ZSJUvHIe
+8c3hS+6va9sWcwGN0yEn/sqTyVBPZzY5at60/FG5s/TUiq5s9/ZJR31Prwdlyysp
+fx2zAMMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAlfXY7wE+SL69jTfRMqktoSUCV+hNZozwBYSdOioxiKx7y4T6hbds+PwACiia
+TNYGfbozqr70kOhb6U7yTN9xgJsXJzYm7FK4K+cBUzX0Spc6FbICxO+6e2A1qtXL
++6Yt7tJaV40WWHqe4hL+zUANa3VKQs05cKrz8pnG6+uK+saPgcaSucd1hVWD95Nl
+t2OQ62B+A3TblzKSeXEo88kh+AtIhVy1Y443S8b+ZgBAPM+NX2kY9FjMraNUb9Lz
+qK7TYq5cGTgmi8FdiF8QDkvMXI8+E28PXRRC8t1AUMntOGak01ujw5N5yJwXD3lX
+/Kebdboy3L05oXGbZzPCsFALHA==
 -----END CERTIFICATE-----
-', 1, 'api_244', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_45', 'scid_Henry', 'Henry', '234.172.254.156', '30.599114,120.815722', '2025-04-23 16:46:09', 'fb81e929-b4ab-4d4c-b0d8-9f1f1188a92e', '7f4dbdee-8c73-4d58-9be3-34495c0622d2', 7, 7, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_44', 'scid_Henry', 'Henry', '158.149.23.161', '30.473741,120.252239', '2025-04-23 19:25:08', '25ce5be4-fa2e-4a1a-8004-e86a19e0105a', 'bbe17849-09f7-44db-8b19-a97fff1c2a07', 6, 2, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
 BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
 A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
 dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
 -----END CERTIFICATE-----
-', 1, 'api_890', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_44', 'scid_Henry', 'Henry', '234.172.254.156', '30.598886,120.81554', '2025-05-05 08:54:09', 'fb81e929-b4ab-4d4c-b0d8-9f1f1188a92e', 'b889d009-ce60-42ad-a14e-704a96b9ee66', 7, 7, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUcIzjDp4iRvF5+4mV74EYgou8VeowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_43', 'scid_Henry', 'Henry', '158.149.23.161', '30.472715,120.252258', '2025-04-23 19:24:08', 'ce021587-34ad-4081-9379-24a88744a9f2', 'ef908fde-de21-42d0-992c-9643b2a31958', 6, 2, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_42', 'scid_Henry', 'Henry', '158.149.23.161', '30.472923,120.251701', '2025-05-15 13:21:08', 'cb5ddd86-c71e-4d3a-ac76-efbf55687530', 'aedbc0f8-cd5c-416f-a6fb-3933142c0f1e', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_41', 'scid_Henry', 'Henry', '17.240.157.109', '30.472923,120.251701', '2025-04-23 19:24:08', 'cb5ddd86-c71e-4d3a-ac76-efbf55687530', 'bbe17849-09f7-44db-8b19-a97fff1c2a07', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_40', 'scid_Henry', 'Henry', '17.240.157.109', '30.4738,120.251936', '2025-04-24 12:02:08', 'ce021587-34ad-4081-9379-24a88744a9f2', 'aedbc0f8-cd5c-416f-a6fb-3933142c0f1e', 6, 4, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUaKIfVSPX5Vc18v4cD6Edc+gSqmMwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmKTU7IDDR7LaOhXSXMR9
+OB8eAFz7dSn7rodDgd/jjzyk6wC6LoSOBUuDjN2S2XG0mReNxs3YysEmngkyYCW5
+9PMs8izFS70ZJgQTx7ahEhtP8IPQozfPVg4ZzxL9yUK4anx/2YZLCcu5X15NTqWY
+v3+lmzhG9qQx5vubBxaGu+hyrD+cOEcCw6CbSu8ahd6TmLDmyPdwVAyU3JC1CrLl
+ckS4YuAs6U7f1prx8qhSV14NJnwwNMJsz+hiKEoGmSyf8oh7wxClSdD+tsSUfEWo
+oLfflWaKXltuTQq0Rgk3E/JtBXPBhPtCtL6aGDPyi/TQRvOzAVZEFK7LlQcrJe9c
+LwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQB2
+5Se3lVR0jZVermFvCu2EZj7VAV8TENamdsm3ay3Gu11R9gB0tqodTZRMiCtMbEEr
+4PkmusvVisqHyvOxRaoOcMxobPqzEir/PyYqQ6NmTNByycgV9/oafUVn0sDWMnCM
+3z8eJ7rhrSc7OCk9UR+PWtXw/8G607uPqlPmUDcCWh1qRWRYGsOdWDyRyUMHJOr9
+INyxSQWkVf5L9D2iuTm0WiJ1/6FtjPsHF/VKwHJs3pI43rKjbD9g3MnDewFmlTg2
+CyGg1xfBrOOb1YnIcP87zIgirY144L/fLbwlc6rg/5KRQq2VFhLjlJuX8gROTPsY
+1zoiVFXHlPzLEbN0pWFT
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_39', 'scid_Grace', 'Grace', '134.22.155.128', '30.489187,120.525505', '2025-04-23 19:22:08', '478165df-4f1d-4273-9259-c5769ddb6ee7', '705e2718-3e7d-4d86-a247-ebac67d3e918', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_38', 'scid_Grace', 'Grace', '134.22.155.128', '38.312288,98.159529', '2025-04-23 19:21:08', '524c6913-091c-402f-ad49-38836f9b1908', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 6, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_37', 'scid_Grace', 'Grace', '52.203.240.108', '30.489187,120.525505', '2025-04-23 19:21:08', '524c6913-091c-402f-ad49-38836f9b1908', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_36', 'scid_Grace', 'Grace', '52.203.240.108', '30.490532,120.525181', '2025-05-08 10:28:08', '792126b9-7851-4c2c-912c-dacf698c9637', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 6, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_35', 'scid_Grace', 'Grace', '11.14.108.163', '30.49039,120.52455', '2025-04-23 19:25:08', '792126b9-7851-4c2c-912c-dacf698c9637', '705e2718-3e7d-4d86-a247-ebac67d3e918', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_34', 'scid_Grace', 'Grace', '11.14.108.163', '30.489481,120.524917', '2025-04-23 19:22:08', '478165df-4f1d-4273-9259-c5769ddb6ee7', '705e2718-3e7d-4d86-a247-ebac67d3e918', 7, 6, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_33', 'scid_Grace', 'Grace', '11.14.108.163', '30.489738,120.525644', '2025-04-23 19:22:08', 'ac768aab-5602-40ea-8fc5-616c0ca902d9', 'e9431c78-259d-40aa-8988-92ddba4ab2d1', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_32', 'scid_Grace', 'Grace', '134.22.155.128', '30.489738,120.525644', '2025-04-23 19:21:08', '478165df-4f1d-4273-9259-c5769ddb6ee7', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_31', 'scid_Grace', 'Grace', '167.249.176.100', '30.490532,120.525181', '2025-04-23 19:24:08', '478165df-4f1d-4273-9259-c5769ddb6ee7', 'e9431c78-259d-40aa-8988-92ddba4ab2d1', 7, 6, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUOjFxfB9xDJrwn1DgdnOOGAWkDLIwDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMM4PZnQDpv/j9f6
-Q4hSqXdJsME07oeyIPQJrxSBE4H7+mhIgQ7BefWttcFRCTgSwh68IQkuRbohOgXq
-xyKdq++N6Fi2EFf+JZpRwJQqWAardFD/Fn3NBnekXXO3uoquUo0WDODiBqXXh4r2
-zKuR2k1U21bM2aOQivpBVVE09VXKWLjkCijbj5JtqslddNKAfzHTQVImkjFGVO9V
-EUEHH1B1DnK4RD1JcKWpajRWqDXRjXlM68B45gV8TVs0N0duq64L9aafWwYIMdtS
-LM85Ut2X3L2j9ix4ln868qcWx2aMH257lULtt6X89ZAytdUvsJiuF6BdqS11zU3k
-U7iU0F8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAkzXsgsL0PRKgbmXBzUOsqMZ0CS9JxUNz7oVqnWrYpBa9rZ5XhWRDbiZNnxId
-yeWnxqYttZDGhyzRRVRtngtt52i9ABAx8/4maGs0LERKjrdfJvBSfk8IIxSzoEKp
-KdN9X07DcrvnX+bfd0Zhg9UbwCMLv4xR5IX8L+VZ6Kaqc90aKD/mttcVmCZpaWxw
-RYwUSz9W5CzQJ55jSFwZZg1HEhtw79eIL8QHKCMudzTAVlbkt+tuaKAj/SeCn377
-27P8WMC44NaZ9kKX13svRi9KH+/ljANbz9Bywu7HxWWyeZLWbjpOk+sVEBuvyNO/
-oTdvDPx0OGQ5Pw+6Zvi/mBmAUw==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOGCdvr8GwlFsPrc
+7QdDUGMI3lIaEppG1mxcFBP2q0GM2EKJZzrEEwlQXBn38moFaDTBOs/clkQB7FIh
+gLG0HluAt0kMc9Cj6QllaIQkcyT40OCOsFEw1nbbYYiYpuOIUN3smFlNoX3Pn+RL
+lhsBneUzvjkkOQMEGD+/TVsS00c6I6pTwacBD2MSq8oP70qxc/nb76ECbjCF+4U4
+CiwoN5VJJMvIVu0QBWlRMYoIoENK4FUccMLsq2gGWDnmu4TvKlO6vWmO+8pYEkdL
+vH5pjSNtO09zROJYAnT5Sw11FafoEg1HkSxkjvDKjQpdYDVUftBTqb/Cx8eQ7Zqr
+2mQlpG8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAn/3hE7h5VKIqAnsy9H4+lOsYmNJdufSA8e9Dx2qS39zeSjegkgpDqFBGcthh
+SC8cu98qzD145o8lq3HXwxczNibA5tpv2kWR1nbmBiwA6C7lUW3jeVRgY+hpTz35
+VcE4fZb6awmhaOGYj5ymi6cNlnbDxB2ft7AAOHeu8oARahfOUYlLlEnmHRO7xh+A
+UZW7YYnBe9qZPleGKQhc01D2iL8Ldlb+g1Hm9OE78GjpITEMIL9DMnZBke/hIf5T
+4rks7G7x9BeES94VnOlm+dv+WV+f1czTgu1O+Fu8KSl5C5GcsUxDdrOIaUEnA6mn
+pR5tEsFOkDBoGImJhAHETlP0qw==
 -----END CERTIFICATE-----
-', 1, 'api_686', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_43', 'scid_Henry', 'Henry', '234.172.254.156', '30.598886,120.81554', '2025-04-23 16:46:09', 'fb81e929-b4ab-4d4c-b0d8-9f1f1188a92e', '7f4dbdee-8c73-4d58-9be3-34495c0622d2', 7, 1, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUcIzjDp4iRvF5+4mV74EYgou8VeowDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_30', 'scid_Grace', 'Grace', '134.22.155.128', '30.489999,120.524693', '2025-04-23 19:24:08', '524c6913-091c-402f-ad49-38836f9b1908', '705e2718-3e7d-4d86-a247-ebac67d3e918', 7, 6, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_29', 'scid_Grace', 'Grace', '52.203.240.108', '49.0957,121.551252', '2025-04-23 19:24:08', '478165df-4f1d-4273-9259-c5769ddb6ee7', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 6, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUOjFxfB9xDJrwn1DgdnOOGAWkDLIwDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMM4PZnQDpv/j9f6
-Q4hSqXdJsME07oeyIPQJrxSBE4H7+mhIgQ7BefWttcFRCTgSwh68IQkuRbohOgXq
-xyKdq++N6Fi2EFf+JZpRwJQqWAardFD/Fn3NBnekXXO3uoquUo0WDODiBqXXh4r2
-zKuR2k1U21bM2aOQivpBVVE09VXKWLjkCijbj5JtqslddNKAfzHTQVImkjFGVO9V
-EUEHH1B1DnK4RD1JcKWpajRWqDXRjXlM68B45gV8TVs0N0duq64L9aafWwYIMdtS
-LM85Ut2X3L2j9ix4ln868qcWx2aMH257lULtt6X89ZAytdUvsJiuF6BdqS11zU3k
-U7iU0F8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAkzXsgsL0PRKgbmXBzUOsqMZ0CS9JxUNz7oVqnWrYpBa9rZ5XhWRDbiZNnxId
-yeWnxqYttZDGhyzRRVRtngtt52i9ABAx8/4maGs0LERKjrdfJvBSfk8IIxSzoEKp
-KdN9X07DcrvnX+bfd0Zhg9UbwCMLv4xR5IX8L+VZ6Kaqc90aKD/mttcVmCZpaWxw
-RYwUSz9W5CzQJ55jSFwZZg1HEhtw79eIL8QHKCMudzTAVlbkt+tuaKAj/SeCn377
-27P8WMC44NaZ9kKX13svRi9KH+/ljANbz9Bywu7HxWWyeZLWbjpOk+sVEBuvyNO/
-oTdvDPx0OGQ5Pw+6Zvi/mBmAUw==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOGCdvr8GwlFsPrc
+7QdDUGMI3lIaEppG1mxcFBP2q0GM2EKJZzrEEwlQXBn38moFaDTBOs/clkQB7FIh
+gLG0HluAt0kMc9Cj6QllaIQkcyT40OCOsFEw1nbbYYiYpuOIUN3smFlNoX3Pn+RL
+lhsBneUzvjkkOQMEGD+/TVsS00c6I6pTwacBD2MSq8oP70qxc/nb76ECbjCF+4U4
+CiwoN5VJJMvIVu0QBWlRMYoIoENK4FUccMLsq2gGWDnmu4TvKlO6vWmO+8pYEkdL
+vH5pjSNtO09zROJYAnT5Sw11FafoEg1HkSxkjvDKjQpdYDVUftBTqb/Cx8eQ7Zqr
+2mQlpG8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAn/3hE7h5VKIqAnsy9H4+lOsYmNJdufSA8e9Dx2qS39zeSjegkgpDqFBGcthh
+SC8cu98qzD145o8lq3HXwxczNibA5tpv2kWR1nbmBiwA6C7lUW3jeVRgY+hpTz35
+VcE4fZb6awmhaOGYj5ymi6cNlnbDxB2ft7AAOHeu8oARahfOUYlLlEnmHRO7xh+A
+UZW7YYnBe9qZPleGKQhc01D2iL8Ldlb+g1Hm9OE78GjpITEMIL9DMnZBke/hIf5T
+4rks7G7x9BeES94VnOlm+dv+WV+f1czTgu1O+Fu8KSl5C5GcsUxDdrOIaUEnA6mn
+pR5tEsFOkDBoGImJhAHETlP0qw==
 -----END CERTIFICATE-----
-', 1, 'api_137', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_42', 'scid_Henry', 'Henry', '157.156.72.12', '30.599114,120.815722', '2025-04-23 16:46:09', '813c1fb7-2119-4bf0-a7ee-fe5e74971157', '559080eb-72cf-4ae7-a1a7-a4fff0b39978', 7, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
------END CERTIFICATE-----
-', 1, 'api_469', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_41', 'scid_Henry', 'Henry', '234.172.254.156', '30.598886,120.81554', '2025-04-23 16:42:09', 'ef96146a-0d7d-48f9-b8aa-67f55092a046', '7f4dbdee-8c73-4d58-9be3-34495c0622d2', 7, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
------END CERTIFICATE-----
-', 1, 'api_812', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Henry')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_40', 'scid_Henry', 'Henry', '105.143.132.156', '30.599114,120.815722', '2025-04-23 16:46:09', 'ef96146a-0d7d-48f9-b8aa-67f55092a046', 'b889d009-ce60-42ad-a14e-704a96b9ee66', 7, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUZTgtO3hf+J5hbw1+fFv0f9hkhCowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAu+JucqfrFoTGo6RrJbxp
-VzQazjbyWbW6XMXfgcJu7kCPTNJ8Up0Br4raziEN7QwQEdFCXdWloYpJ4Q/xytVA
-cb4yikj+UhMgV8pZfGXxubNkOB4h4VInkZn6Q/g951UAnS60aGoqNgs0xWE5WKT+
-Hpq/D6s0jm4WcIROcY5RgUktU/yi20J+clk8BoYK0latMJe0wunUfrXmEGOJmEeo
-U1SIM55jhppwtKQZODJObF3a3yqu8MUhAYho/Z3gJ331O2/Gqa5Hl6nmTUKjGsrZ
-dxwQd95SSAOEXUuJYTN2XHkxFWKLGBQa0RrTwQWQMhhsi4dZQp41mK8K+vX8HOYk
-wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBN
-napayf+yQM5tsYCWdSqvwizxE5qqZyowP7+2xeI+rvRKzM2sTNCsqvnjAwvNUO6m
-g9wxl5xoe+V5zKnWYkykOv6eGGc2zUW1K944GQcnJnfRitcfRlW+wyu/VVbj9RZz
-mTiMU3Ihk1is4KOdoDVifC5JevlSJVrLrwc1l2zefgf9Fzpn2iyJ9npPQzbCbOZE
-4MpWGmU4m7hgBUUzYx4mUp7dAcDtu8O6UJBqoy92sLUfpzQnDLJ0PkSRkUBehJL2
-1NV/gXRoARMf7JveWNES4MerqdogUO1Srow2LuPFMQDTHvC7VBUMpJ6uxJIawT3x
-TEgF1kqBJfP5lAu3elB5
------END CERTIFICATE-----
-', 1, 'api_417', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_39', 'scid_Grace', 'Grace', '186.41.77.1', '30.231876,120.733511', '2025-04-23 16:47:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', 'c4fdb9ef-4586-4ec8-8ce8-6a7af9eaf4a0', 6, 1, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUEcWu+F636y6SGp/JeKU2bYMrlWswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_28', 'scid_Grace', 'Grace', '52.203.240.108', '30.489187,120.525505', '2025-04-23 19:22:08', '478165df-4f1d-4273-9259-c5769ddb6ee7', '705e2718-3e7d-4d86-a247-ebac67d3e918', 7, 6, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUOjFxfB9xDJrwn1DgdnOOGAWkDLIwDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK/yQ5GSa2avzQL4
-4FGYNhvoEWxJSeF0GTi05qCl4GwDHE9/yHj6apxb9QJL8pbz9V9FL5J8v6HFH93H
-rbSHbQNE1LBc0SfyXdyVZ2fjj6Gi2nsXb6qt8I28uO3kqeW/hsYk374rgjMYgKRa
-RqCHyvAZi0neZoyYM6iKNkSBFZPeLIeqSUE9DYkTlI06tU2ThzTb2ArK7qyLSmQB
-I4w1vfABybsnIxNLTXfkzMNwrQetyeGUOyvywZkdOnS/O7/5M4m1L71eMBNazw3F
-GuC+v5STydsxFqwHHsxgckgVf3oK6zImA2770GogvZDkb0fuoLsqyxMKopMG3N9f
-lYS+nXMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAdGrewgi7UoEB4ofJD3foILENcIm6r9nxEQOXmbG1PQ9XjKxSUtyirgJGfb9W
-NNzY046tGMRsqOTH8ZQjAzkzVw+ovwohyzHpfRn2zFQVHwhre2eqv8Yjl1dkVpJk
-+cuzwt8g7cpOBPzX3GUxSR9Sg1pxCUniRHe4JkP0VWFQWw6vfrDuu+p4oK9HEOXK
-XpNo+cBgT6AaAnK3n8L+nSVBMHQ3IO9GBV7MY+2HtyKjifwDUv/vB8I3yiboIRhb
-LzSDQf7UUah1+O334kAugpY2/LoHDght5ws9RPYYqq4T5LOvDjkWu/YQXEZsXhJu
-ylFqsz2yosU/wcDXvs7EfBpyOg==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOGCdvr8GwlFsPrc
+7QdDUGMI3lIaEppG1mxcFBP2q0GM2EKJZzrEEwlQXBn38moFaDTBOs/clkQB7FIh
+gLG0HluAt0kMc9Cj6QllaIQkcyT40OCOsFEw1nbbYYiYpuOIUN3smFlNoX3Pn+RL
+lhsBneUzvjkkOQMEGD+/TVsS00c6I6pTwacBD2MSq8oP70qxc/nb76ECbjCF+4U4
+CiwoN5VJJMvIVu0QBWlRMYoIoENK4FUccMLsq2gGWDnmu4TvKlO6vWmO+8pYEkdL
+vH5pjSNtO09zROJYAnT5Sw11FafoEg1HkSxkjvDKjQpdYDVUftBTqb/Cx8eQ7Zqr
+2mQlpG8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAn/3hE7h5VKIqAnsy9H4+lOsYmNJdufSA8e9Dx2qS39zeSjegkgpDqFBGcthh
+SC8cu98qzD145o8lq3HXwxczNibA5tpv2kWR1nbmBiwA6C7lUW3jeVRgY+hpTz35
+VcE4fZb6awmhaOGYj5ymi6cNlnbDxB2ft7AAOHeu8oARahfOUYlLlEnmHRO7xh+A
+UZW7YYnBe9qZPleGKQhc01D2iL8Ldlb+g1Hm9OE78GjpITEMIL9DMnZBke/hIf5T
+4rks7G7x9BeES94VnOlm+dv+WV+f1czTgu1O+Fu8KSl5C5GcsUxDdrOIaUEnA6mn
+pR5tEsFOkDBoGImJhAHETlP0qw==
 -----END CERTIFICATE-----
-', 1, 'api_190', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_38', 'scid_Grace', 'Grace', '251.140.190.154', '44.082776,103.884129', '2025-04-23 16:47:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', 'c9c45b73-6057-446f-8a57-34a85da591e4', 6, 5, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_27', 'scid_Grace', 'Grace', '11.14.108.163', '30.489481,120.524917', '2025-04-23 19:23:08', 'b43df31e-258c-4d6d-bc57-c9cd0e759e0a', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
 BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
 A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
 dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
 -----END CERTIFICATE-----
-', 1, 'api_412', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_37', 'scid_Grace', 'Grace', '251.140.190.154', '30.233376,120.733127', '2025-04-23 16:45:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', 'c4fdb9ef-4586-4ec8-8ce8-6a7af9eaf4a0', 6, 6, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUEcWu+F636y6SGp/JeKU2bYMrlWswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_26', 'scid_Grace', 'Grace', '11.14.108.163', '30.490532,120.525181', '2025-04-23 19:21:08', '792126b9-7851-4c2c-912c-dacf698c9637', 'e9431c78-259d-40aa-8988-92ddba4ab2d1', 7, 6, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_25', 'scid_Grace', 'Grace', '11.14.108.163', '30.49039,120.52455', '2025-05-08 10:28:08', 'b43df31e-258c-4d6d-bc57-c9cd0e759e0a', 'e9431c78-259d-40aa-8988-92ddba4ab2d1', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUOjFxfB9xDJrwn1DgdnOOGAWkDLIwDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK/yQ5GSa2avzQL4
-4FGYNhvoEWxJSeF0GTi05qCl4GwDHE9/yHj6apxb9QJL8pbz9V9FL5J8v6HFH93H
-rbSHbQNE1LBc0SfyXdyVZ2fjj6Gi2nsXb6qt8I28uO3kqeW/hsYk374rgjMYgKRa
-RqCHyvAZi0neZoyYM6iKNkSBFZPeLIeqSUE9DYkTlI06tU2ThzTb2ArK7qyLSmQB
-I4w1vfABybsnIxNLTXfkzMNwrQetyeGUOyvywZkdOnS/O7/5M4m1L71eMBNazw3F
-GuC+v5STydsxFqwHHsxgckgVf3oK6zImA2770GogvZDkb0fuoLsqyxMKopMG3N9f
-lYS+nXMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAdGrewgi7UoEB4ofJD3foILENcIm6r9nxEQOXmbG1PQ9XjKxSUtyirgJGfb9W
-NNzY046tGMRsqOTH8ZQjAzkzVw+ovwohyzHpfRn2zFQVHwhre2eqv8Yjl1dkVpJk
-+cuzwt8g7cpOBPzX3GUxSR9Sg1pxCUniRHe4JkP0VWFQWw6vfrDuu+p4oK9HEOXK
-XpNo+cBgT6AaAnK3n8L+nSVBMHQ3IO9GBV7MY+2HtyKjifwDUv/vB8I3yiboIRhb
-LzSDQf7UUah1+O334kAugpY2/LoHDght5ws9RPYYqq4T5LOvDjkWu/YQXEZsXhJu
-ylFqsz2yosU/wcDXvs7EfBpyOg==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOGCdvr8GwlFsPrc
+7QdDUGMI3lIaEppG1mxcFBP2q0GM2EKJZzrEEwlQXBn38moFaDTBOs/clkQB7FIh
+gLG0HluAt0kMc9Cj6QllaIQkcyT40OCOsFEw1nbbYYiYpuOIUN3smFlNoX3Pn+RL
+lhsBneUzvjkkOQMEGD+/TVsS00c6I6pTwacBD2MSq8oP70qxc/nb76ECbjCF+4U4
+CiwoN5VJJMvIVu0QBWlRMYoIoENK4FUccMLsq2gGWDnmu4TvKlO6vWmO+8pYEkdL
+vH5pjSNtO09zROJYAnT5Sw11FafoEg1HkSxkjvDKjQpdYDVUftBTqb/Cx8eQ7Zqr
+2mQlpG8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAn/3hE7h5VKIqAnsy9H4+lOsYmNJdufSA8e9Dx2qS39zeSjegkgpDqFBGcthh
+SC8cu98qzD145o8lq3HXwxczNibA5tpv2kWR1nbmBiwA6C7lUW3jeVRgY+hpTz35
+VcE4fZb6awmhaOGYj5ymi6cNlnbDxB2ft7AAOHeu8oARahfOUYlLlEnmHRO7xh+A
+UZW7YYnBe9qZPleGKQhc01D2iL8Ldlb+g1Hm9OE78GjpITEMIL9DMnZBke/hIf5T
+4rks7G7x9BeES94VnOlm+dv+WV+f1czTgu1O+Fu8KSl5C5GcsUxDdrOIaUEnA6mn
+pR5tEsFOkDBoGImJhAHETlP0qw==
 -----END CERTIFICATE-----
-', 1, 'api_546', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_36', 'scid_Grace', 'Grace', '186.41.77.1', '30.231876,120.733511', '2025-05-20 10:36:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', '0ffc6be7-4983-411a-bf8b-567684b1ba80', 4, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_24', 'scid_Grace', 'Grace', '134.22.155.128', '30.489481,120.524917', '2025-04-23 19:24:08', '478165df-4f1d-4273-9259-c5769ddb6ee7', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
 BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
 A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
 dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
 -----END CERTIFICATE-----
-', 1, 'api_890', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_35', 'scid_Grace', 'Grace', '251.140.190.154', '30.231876,120.733511', '2025-04-23 16:46:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', 'c9c45b73-6057-446f-8a57-34a85da591e4', 4, 5, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUEcWu+F636y6SGp/JeKU2bYMrlWswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_23', 'scid_Grace', 'Grace', '167.249.176.100', '30.489738,120.525644', '2025-05-08 10:28:08', '792126b9-7851-4c2c-912c-dacf698c9637', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_22', 'scid_Grace', 'Grace', '134.22.155.128', '30.489481,120.524917', '2025-04-23 19:21:08', '478165df-4f1d-4273-9259-c5769ddb6ee7', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 6, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_21', 'scid_Grace', 'Grace', '52.203.240.108', '30.489761,120.524442', '2025-04-23 19:22:08', '792126b9-7851-4c2c-912c-dacf698c9637', 'aa1fa5c4-3e9c-4836-9e69-20267054c56d', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_20', 'scid_Grace', 'Grace', '134.22.155.128', '49.0957,121.551252', '2025-04-23 19:22:08', '478165df-4f1d-4273-9259-c5769ddb6ee7', 'e9431c78-259d-40aa-8988-92ddba4ab2d1', 7, 1, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUKuwfj5FevSiwU3ofnYMwCPINDJswDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyUyLQmKnMxChXE/ClGxn
+Knc2rb651DlJzo01Uv65M7tYZ5BfaokUfIycBYIj+FveiBa8F7LuiHavGkflk4Gx
+2khjPOAMzN6DYOA1koVoJtZKnPxzcGn0IK4XQnFkL0KuYI5VSF+FksEBUVYJtmnF
++Z1TqNzrdX/023muZm+xxbXHDiK8lzvkfnkd297b3xLOT3laxWZmFszzDcBSZWAq
+pQB8xXFsrM1EPjDA2PKNchcwFsMblXqGizgKR+J6Ey+T6YuedUiS8vOFh1QQYeYj
+i6sIEJU/+5c3pRi13Bt/p6i25NHkDj2S5Nvhhj4L2xHoVk5VH6xtspJQKfQ0MxYt
+VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBF
+9RtTd5CHSjriCuzeSEDYLZUO2L/ibrttvbBfPd4VZXRMIINpjmRBuDwxcyuuyW7z
+Wl56VLfpZUZ6ix184SeXOs0cZquAhQqUfONibw2JfNi9irNcVlqOQcGjzwB6JQFO
+xlPEHqQ/tDhxVVIW8GGPW90x78nSJKzS3BCp3V6uaAaC0wlttYI3iZXsWFdygMqV
+2eDtkHQ0jyVXCXt+OIPdn+BAns78ctq37TA1d2pvPfeKA0SM1KMKNdpvC8xYa7AY
+H+a9E+JcumRhO3g8F+3TKI7/Lzv+RGj8Q6v69oyWv8/+CtviU5MtCPt/TQNyr1Pa
+GLhaYGCfPOY2Le9SHuJP
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_19', 'scid_Felix', 'Felix', '192.230.188.215', '30.029248,120.704698', '2025-04-23 19:25:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', '599cdbdf-0f47-43a9-b1c4-e6e9422585ef', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_18', 'scid_Felix', 'Felix', '192.230.188.215', '30.028109,120.705302', '2025-04-23 19:26:08', '7558cc4a-3d0f-44d2-b03d-0e6777d050e9', '2a09bf12-a3ee-4bc3-a3f7-c52783502226', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_17', 'scid_Felix', 'Felix', '192.230.188.215', '30.028143,120.704901', '2025-04-23 19:23:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', 'cad957d9-db9e-4930-b5f1-0c073b646413', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_16', 'scid_Felix', 'Felix', '197.32.20.235', '22.456427,87.561695', '2025-04-23 19:25:08', '709c0a6d-46e3-4cab-9779-79c169fde6bf', '2a09bf12-a3ee-4bc3-a3f7-c52783502226', 2, 7, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUcLYegmTUlOtMolZY2oRMTGj9ot4wDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK/yQ5GSa2avzQL4
-4FGYNhvoEWxJSeF0GTi05qCl4GwDHE9/yHj6apxb9QJL8pbz9V9FL5J8v6HFH93H
-rbSHbQNE1LBc0SfyXdyVZ2fjj6Gi2nsXb6qt8I28uO3kqeW/hsYk374rgjMYgKRa
-RqCHyvAZi0neZoyYM6iKNkSBFZPeLIeqSUE9DYkTlI06tU2ThzTb2ArK7qyLSmQB
-I4w1vfABybsnIxNLTXfkzMNwrQetyeGUOyvywZkdOnS/O7/5M4m1L71eMBNazw3F
-GuC+v5STydsxFqwHHsxgckgVf3oK6zImA2770GogvZDkb0fuoLsqyxMKopMG3N9f
-lYS+nXMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAdGrewgi7UoEB4ofJD3foILENcIm6r9nxEQOXmbG1PQ9XjKxSUtyirgJGfb9W
-NNzY046tGMRsqOTH8ZQjAzkzVw+ovwohyzHpfRn2zFQVHwhre2eqv8Yjl1dkVpJk
-+cuzwt8g7cpOBPzX3GUxSR9Sg1pxCUniRHe4JkP0VWFQWw6vfrDuu+p4oK9HEOXK
-XpNo+cBgT6AaAnK3n8L+nSVBMHQ3IO9GBV7MY+2HtyKjifwDUv/vB8I3yiboIRhb
-LzSDQf7UUah1+O334kAugpY2/LoHDght5ws9RPYYqq4T5LOvDjkWu/YQXEZsXhJu
-ylFqsz2yosU/wcDXvs7EfBpyOg==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJWv+Gr1rHKuMpKg
+Sx5e7l1xWw8M70rp5/1AiTpPm2svdTo0s7vI6sVJi35rPDk35QUlPlL7Zx/8K0UE
+ef3Z9pz3hK67gPuwTdWGwHvpHU6U0xPcytRPWTXhc5CKSelOsIX8bpPwGLGSRkCJ
+4DInAqZxRjt7VN1pwXErLybiByEqbzdFMltvejBIaNlFgktcQPBDLZ2V0wz+Yqr6
+oY+cdHcQKm+1uD7rxpXOv8xlt86BYJ2hc8uQ/hC9h4O9INizvZCLHjiOg6WyXDhg
+NVGql5mAlwOfpTiyTcxWxvxb0D6cp9D86MVgugT3gPTakoiS7U3OQldXvAVKtwWl
+9ddh5tUCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFKI7+39cjxRWeSnsDqTRa4PjPdZOxL495lsAPh81aSRRf8W+k59HGuZNBOfJ
+q9FK0EmJNQIMzDFVHrlqaCk3wrHqtbbATlof+cHWRcASIIUTPFlFnWzR1cXn6hdL
+NohTvWaCeDTAXfbOjq+W55X/fdJdAWNj0CqQnghhl5PU4vCsYAa7gYCOEQCZHn9V
+/yAhIcpJT3G911iTL8sal141z5JKEZM9z2FsgUIRDEm4UoJEGdGQRf2wCC/mKejb
+sN9DiCDbgufW4HlQTFet12SCCF0k1mfpRWfMTu7tylrLj/5fI7iSl6fE6s/T2pS+
+MqEwh+i474tQve3psQbjULPlAQ==
 -----END CERTIFICATE-----
-', 1, 'api_739', 'POST', 2, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_34', 'scid_Grace', 'Grace', '20.136.186.116', '30.233288,120.732968', '2025-04-23 16:46:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', 'c9c45b73-6057-446f-8a57-34a85da591e4', 6, 6, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUEcWu+F636y6SGp/JeKU2bYMrlWswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_15', 'scid_Felix', 'Felix', '197.32.20.235', '30.029248,120.704698', '2025-04-23 19:23:08', '7558cc4a-3d0f-44d2-b03d-0e6777d050e9', '58407e5a-da21-43a7-8fb7-b3bdb0c9336f', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_14', 'scid_Felix', 'Felix', '197.32.20.235', '30.028143,120.704901', '2025-05-16 04:10:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', '599cdbdf-0f47-43a9-b1c4-e6e9422585ef', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_13', 'scid_Felix', 'Felix', '197.32.20.235', '30.460414,93.230591', '2025-04-23 19:25:08', '97ec2397-7290-4757-be41-dee8c593e3bc', 'cad957d9-db9e-4930-b5f1-0c073b646413', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_12', 'scid_Felix', 'Felix', '225.138.193.235', '30.460414,93.230591', '2025-04-23 19:25:08', '97ec2397-7290-4757-be41-dee8c593e3bc', '58407e5a-da21-43a7-8fb7-b3bdb0c9336f', 2, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_11', 'scid_Felix', 'Felix', '192.230.188.215', '30.027744,120.704423', '2025-05-23 15:06:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', '2a09bf12-a3ee-4bc3-a3f7-c52783502226', 2, 7, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUcLYegmTUlOtMolZY2oRMTGj9ot4wDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK/yQ5GSa2avzQL4
-4FGYNhvoEWxJSeF0GTi05qCl4GwDHE9/yHj6apxb9QJL8pbz9V9FL5J8v6HFH93H
-rbSHbQNE1LBc0SfyXdyVZ2fjj6Gi2nsXb6qt8I28uO3kqeW/hsYk374rgjMYgKRa
-RqCHyvAZi0neZoyYM6iKNkSBFZPeLIeqSUE9DYkTlI06tU2ThzTb2ArK7qyLSmQB
-I4w1vfABybsnIxNLTXfkzMNwrQetyeGUOyvywZkdOnS/O7/5M4m1L71eMBNazw3F
-GuC+v5STydsxFqwHHsxgckgVf3oK6zImA2770GogvZDkb0fuoLsqyxMKopMG3N9f
-lYS+nXMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAdGrewgi7UoEB4ofJD3foILENcIm6r9nxEQOXmbG1PQ9XjKxSUtyirgJGfb9W
-NNzY046tGMRsqOTH8ZQjAzkzVw+ovwohyzHpfRn2zFQVHwhre2eqv8Yjl1dkVpJk
-+cuzwt8g7cpOBPzX3GUxSR9Sg1pxCUniRHe4JkP0VWFQWw6vfrDuu+p4oK9HEOXK
-XpNo+cBgT6AaAnK3n8L+nSVBMHQ3IO9GBV7MY+2HtyKjifwDUv/vB8I3yiboIRhb
-LzSDQf7UUah1+O334kAugpY2/LoHDght5ws9RPYYqq4T5LOvDjkWu/YQXEZsXhJu
-ylFqsz2yosU/wcDXvs7EfBpyOg==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJWv+Gr1rHKuMpKg
+Sx5e7l1xWw8M70rp5/1AiTpPm2svdTo0s7vI6sVJi35rPDk35QUlPlL7Zx/8K0UE
+ef3Z9pz3hK67gPuwTdWGwHvpHU6U0xPcytRPWTXhc5CKSelOsIX8bpPwGLGSRkCJ
+4DInAqZxRjt7VN1pwXErLybiByEqbzdFMltvejBIaNlFgktcQPBDLZ2V0wz+Yqr6
+oY+cdHcQKm+1uD7rxpXOv8xlt86BYJ2hc8uQ/hC9h4O9INizvZCLHjiOg6WyXDhg
+NVGql5mAlwOfpTiyTcxWxvxb0D6cp9D86MVgugT3gPTakoiS7U3OQldXvAVKtwWl
+9ddh5tUCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFKI7+39cjxRWeSnsDqTRa4PjPdZOxL495lsAPh81aSRRf8W+k59HGuZNBOfJ
+q9FK0EmJNQIMzDFVHrlqaCk3wrHqtbbATlof+cHWRcASIIUTPFlFnWzR1cXn6hdL
+NohTvWaCeDTAXfbOjq+W55X/fdJdAWNj0CqQnghhl5PU4vCsYAa7gYCOEQCZHn9V
+/yAhIcpJT3G911iTL8sal141z5JKEZM9z2FsgUIRDEm4UoJEGdGQRf2wCC/mKejb
+sN9DiCDbgufW4HlQTFet12SCCF0k1mfpRWfMTu7tylrLj/5fI7iSl6fE6s/T2pS+
+MqEwh+i474tQve3psQbjULPlAQ==
 -----END CERTIFICATE-----
-', 1, 'api_932', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_33', 'scid_Grace', 'Grace', '20.136.186.116', '30.233093,120.733994', '2025-04-23 16:45:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', 'c9c45b73-6057-446f-8a57-34a85da591e4', 4, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
------END CERTIFICATE-----
-', 1, 'api_378', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_32', 'scid_Grace', 'Grace', '20.136.186.116', '30.232208,120.733721', '2025-04-23 16:45:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', 'c4fdb9ef-4586-4ec8-8ce8-6a7af9eaf4a0', 4, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
------END CERTIFICATE-----
-', 1, 'api_868', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_31', 'scid_Grace', 'Grace', '20.136.186.116', '30.233288,120.732968', '2025-04-23 16:43:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', 'c9c45b73-6057-446f-8a57-34a85da591e4', 4, 5, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUEcWu+F636y6SGp/JeKU2bYMrlWswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_10', 'scid_Felix', 'Felix', '225.138.193.235', '30.029059,120.705978', '2025-04-23 19:25:08', '709c0a6d-46e3-4cab-9779-79c169fde6bf', 'cad957d9-db9e-4930-b5f1-0c073b646413', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUcLYegmTUlOtMolZY2oRMTGj9ot4wDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK/yQ5GSa2avzQL4
-4FGYNhvoEWxJSeF0GTi05qCl4GwDHE9/yHj6apxb9QJL8pbz9V9FL5J8v6HFH93H
-rbSHbQNE1LBc0SfyXdyVZ2fjj6Gi2nsXb6qt8I28uO3kqeW/hsYk374rgjMYgKRa
-RqCHyvAZi0neZoyYM6iKNkSBFZPeLIeqSUE9DYkTlI06tU2ThzTb2ArK7qyLSmQB
-I4w1vfABybsnIxNLTXfkzMNwrQetyeGUOyvywZkdOnS/O7/5M4m1L71eMBNazw3F
-GuC+v5STydsxFqwHHsxgckgVf3oK6zImA2770GogvZDkb0fuoLsqyxMKopMG3N9f
-lYS+nXMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAdGrewgi7UoEB4ofJD3foILENcIm6r9nxEQOXmbG1PQ9XjKxSUtyirgJGfb9W
-NNzY046tGMRsqOTH8ZQjAzkzVw+ovwohyzHpfRn2zFQVHwhre2eqv8Yjl1dkVpJk
-+cuzwt8g7cpOBPzX3GUxSR9Sg1pxCUniRHe4JkP0VWFQWw6vfrDuu+p4oK9HEOXK
-XpNo+cBgT6AaAnK3n8L+nSVBMHQ3IO9GBV7MY+2HtyKjifwDUv/vB8I3yiboIRhb
-LzSDQf7UUah1+O334kAugpY2/LoHDght5ws9RPYYqq4T5LOvDjkWu/YQXEZsXhJu
-ylFqsz2yosU/wcDXvs7EfBpyOg==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJWv+Gr1rHKuMpKg
+Sx5e7l1xWw8M70rp5/1AiTpPm2svdTo0s7vI6sVJi35rPDk35QUlPlL7Zx/8K0UE
+ef3Z9pz3hK67gPuwTdWGwHvpHU6U0xPcytRPWTXhc5CKSelOsIX8bpPwGLGSRkCJ
+4DInAqZxRjt7VN1pwXErLybiByEqbzdFMltvejBIaNlFgktcQPBDLZ2V0wz+Yqr6
+oY+cdHcQKm+1uD7rxpXOv8xlt86BYJ2hc8uQ/hC9h4O9INizvZCLHjiOg6WyXDhg
+NVGql5mAlwOfpTiyTcxWxvxb0D6cp9D86MVgugT3gPTakoiS7U3OQldXvAVKtwWl
+9ddh5tUCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFKI7+39cjxRWeSnsDqTRa4PjPdZOxL495lsAPh81aSRRf8W+k59HGuZNBOfJ
+q9FK0EmJNQIMzDFVHrlqaCk3wrHqtbbATlof+cHWRcASIIUTPFlFnWzR1cXn6hdL
+NohTvWaCeDTAXfbOjq+W55X/fdJdAWNj0CqQnghhl5PU4vCsYAa7gYCOEQCZHn9V
+/yAhIcpJT3G911iTL8sal141z5JKEZM9z2FsgUIRDEm4UoJEGdGQRf2wCC/mKejb
+sN9DiCDbgufW4HlQTFet12SCCF0k1mfpRWfMTu7tylrLj/5fI7iSl6fE6s/T2pS+
+MqEwh+i474tQve3psQbjULPlAQ==
 -----END CERTIFICATE-----
-', 1, 'api_611', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_30', 'scid_Grace', 'Grace', '186.41.77.1', '30.232863,120.733881', '2025-04-23 16:47:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', 'c9c45b73-6057-446f-8a57-34a85da591e4', 6, 6, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_9', 'scid_Felix', 'Felix', '197.32.20.235', '30.028143,120.704901', '2025-04-23 19:25:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', 'cad957d9-db9e-4930-b5f1-0c073b646413', 2, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
 BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
 A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
 dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
 -----END CERTIFICATE-----
-', 1, 'api_454', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_29', 'scid_Grace', 'Grace', '20.136.186.116', '30.233347,120.733528', '2025-05-20 10:36:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', 'c9c45b73-6057-446f-8a57-34a85da591e4', 6, 5, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
------END CERTIFICATE-----
-', 1, 'api_723', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_28', 'scid_Grace', 'Grace', '251.140.190.154', '30.233347,120.733528', '2025-04-23 16:47:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', 'c9c45b73-6057-446f-8a57-34a85da591e4', 4, 6, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
------END CERTIFICATE-----
-', 1, 'api_590', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_27', 'scid_Grace', 'Grace', '186.41.77.1', '30.233376,120.733127', '2025-04-23 16:45:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', '0ffc6be7-4983-411a-bf8b-567684b1ba80', 4, 1, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUEcWu+F636y6SGp/JeKU2bYMrlWswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_8', 'scid_Felix', 'Felix', '197.32.20.235', '30.028469,120.706035', '2025-04-23 19:24:08', '7558cc4a-3d0f-44d2-b03d-0e6777d050e9', '599cdbdf-0f47-43a9-b1c4-e6e9422585ef', 2, 7, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUcLYegmTUlOtMolZY2oRMTGj9ot4wDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK/yQ5GSa2avzQL4
-4FGYNhvoEWxJSeF0GTi05qCl4GwDHE9/yHj6apxb9QJL8pbz9V9FL5J8v6HFH93H
-rbSHbQNE1LBc0SfyXdyVZ2fjj6Gi2nsXb6qt8I28uO3kqeW/hsYk374rgjMYgKRa
-RqCHyvAZi0neZoyYM6iKNkSBFZPeLIeqSUE9DYkTlI06tU2ThzTb2ArK7qyLSmQB
-I4w1vfABybsnIxNLTXfkzMNwrQetyeGUOyvywZkdOnS/O7/5M4m1L71eMBNazw3F
-GuC+v5STydsxFqwHHsxgckgVf3oK6zImA2770GogvZDkb0fuoLsqyxMKopMG3N9f
-lYS+nXMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAdGrewgi7UoEB4ofJD3foILENcIm6r9nxEQOXmbG1PQ9XjKxSUtyirgJGfb9W
-NNzY046tGMRsqOTH8ZQjAzkzVw+ovwohyzHpfRn2zFQVHwhre2eqv8Yjl1dkVpJk
-+cuzwt8g7cpOBPzX3GUxSR9Sg1pxCUniRHe4JkP0VWFQWw6vfrDuu+p4oK9HEOXK
-XpNo+cBgT6AaAnK3n8L+nSVBMHQ3IO9GBV7MY+2HtyKjifwDUv/vB8I3yiboIRhb
-LzSDQf7UUah1+O334kAugpY2/LoHDght5ws9RPYYqq4T5LOvDjkWu/YQXEZsXhJu
-ylFqsz2yosU/wcDXvs7EfBpyOg==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJWv+Gr1rHKuMpKg
+Sx5e7l1xWw8M70rp5/1AiTpPm2svdTo0s7vI6sVJi35rPDk35QUlPlL7Zx/8K0UE
+ef3Z9pz3hK67gPuwTdWGwHvpHU6U0xPcytRPWTXhc5CKSelOsIX8bpPwGLGSRkCJ
+4DInAqZxRjt7VN1pwXErLybiByEqbzdFMltvejBIaNlFgktcQPBDLZ2V0wz+Yqr6
+oY+cdHcQKm+1uD7rxpXOv8xlt86BYJ2hc8uQ/hC9h4O9INizvZCLHjiOg6WyXDhg
+NVGql5mAlwOfpTiyTcxWxvxb0D6cp9D86MVgugT3gPTakoiS7U3OQldXvAVKtwWl
+9ddh5tUCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFKI7+39cjxRWeSnsDqTRa4PjPdZOxL495lsAPh81aSRRf8W+k59HGuZNBOfJ
+q9FK0EmJNQIMzDFVHrlqaCk3wrHqtbbATlof+cHWRcASIIUTPFlFnWzR1cXn6hdL
+NohTvWaCeDTAXfbOjq+W55X/fdJdAWNj0CqQnghhl5PU4vCsYAa7gYCOEQCZHn9V
+/yAhIcpJT3G911iTL8sal141z5JKEZM9z2FsgUIRDEm4UoJEGdGQRf2wCC/mKejb
+sN9DiCDbgufW4HlQTFet12SCCF0k1mfpRWfMTu7tylrLj/5fI7iSl6fE6s/T2pS+
+MqEwh+i474tQve3psQbjULPlAQ==
 -----END CERTIFICATE-----
-', 1, 'api_645', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_26', 'scid_Grace', 'Grace', '20.136.186.116', '30.232863,120.733881', '2025-04-23 16:43:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', 'c4fdb9ef-4586-4ec8-8ce8-6a7af9eaf4a0', 4, 6, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_7', 'scid_Felix', 'Felix', '225.138.193.235', '30.028469,120.706035', '2025-05-23 15:06:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', '599cdbdf-0f47-43a9-b1c4-e6e9422585ef', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
 BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
 A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
 dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
 -----END CERTIFICATE-----
-', 1, 'api_494', 'POST', 2, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_25', 'scid_Grace', 'Grace', '20.136.186.116', '30.233376,120.733127', '2025-04-23 16:46:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', '0ffc6be7-4983-411a-bf8b-567684b1ba80', 4, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
------END CERTIFICATE-----
-', 1, 'api_564', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_24', 'scid_Grace', 'Grace', '186.41.77.1', '30.233347,120.733528', '2025-05-20 10:36:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', 'c9c45b73-6057-446f-8a57-34a85da591e4', 4, 6, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
------END CERTIFICATE-----
-', 1, 'api_901', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_23', 'scid_Grace', 'Grace', '186.41.77.1', '44.082776,103.884129', '2025-05-06 12:44:09', 'd65a269c-ac10-4a06-ab3d-d3c6df8d39ce', 'c4fdb9ef-4586-4ec8-8ce8-6a7af9eaf4a0', 4, 6, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
------END CERTIFICATE-----
-', 1, 'api_957', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_22', 'scid_Grace', 'Grace', '251.140.190.154', '30.233347,120.733528', '2025-04-23 16:47:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', '0ffc6be7-4983-411a-bf8b-567684b1ba80', 4, 1, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIURDJcO9FmQDWBI63K3PYXaVuorYswDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9ReRhxdceKtVoGjN2rGN
-fO4nQcfaKZJ423+VS580bpj5UEJiiNKXnBF3EScjpY9hgqQ1nqTIjoKrx0DyR+w4
-uYZLxNTc3p8TG9s55YMGXnXoSHijlcW5wVzo2B1md5XnEkWU7Ao4uOJF0+YG1DkV
-wUYz8ylrNv9B6cTm549Mobk5HsdJCSP8dz7ACQjOpio8zmjoSzL3zM7Ebc1FvJ7k
-9dfav7HpNAGr2YESEU3d65h5VWUuWYTo2Qcj4AA7BnAmA/nvJ0V0DnoGTZdyUy/v
-girT2tnk9QaH7+2wRMlKcZ7v7DDtTyd00kdLh/mCCZbx8LcX2PZUHvgPI0dZFipg
-VwIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQAv
-VZyWjctnwXe2gKrB3ZyRPmGWTqgtvrVfUGwIqUtoEBR2wSfsO/XeYxYGpL7tF5br
-TSIuJ7cqdkhbJo2m6hidp0ZR8pRm5k8tEYCybAkEXDSVb6Nl9DYcuwgNsuhPo6ly
-R9KxBmLBhxye4WKMGWAC9ak2USGyFX4UtmnxzMXoPIuRoVQYghfsZR578Pi4n6aA
-pxmIvnsNDz428D+mzBvRcH7ZOpZ5iAcb/JWKjPciS1bhR8o8D7P3rRNwq4Mtaqai
-fwRXpX2RuSmkzQjzSD48cfWxepBOmB6tDZ+8A1w+K1lRHQTL0LB453J52V2YF1II
-BvlNS3y2JCfdYIfa2p5Q
------END CERTIFICATE-----
-', 1, 'api_380', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_21', 'scid_Grace', 'Grace', '20.136.186.116', '30.233288,120.732968', '2025-04-23 16:43:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', 'c9c45b73-6057-446f-8a57-34a85da591e4', 6, 1, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUEcWu+F636y6SGp/JeKU2bYMrlWswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_6', 'scid_Felix', 'Felix', '225.138.193.235', '30.029277,120.70476', '2025-04-23 19:24:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', '58407e5a-da21-43a7-8fb7-b3bdb0c9336f', 2, 7, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUcLYegmTUlOtMolZY2oRMTGj9ot4wDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK/yQ5GSa2avzQL4
-4FGYNhvoEWxJSeF0GTi05qCl4GwDHE9/yHj6apxb9QJL8pbz9V9FL5J8v6HFH93H
-rbSHbQNE1LBc0SfyXdyVZ2fjj6Gi2nsXb6qt8I28uO3kqeW/hsYk374rgjMYgKRa
-RqCHyvAZi0neZoyYM6iKNkSBFZPeLIeqSUE9DYkTlI06tU2ThzTb2ArK7qyLSmQB
-I4w1vfABybsnIxNLTXfkzMNwrQetyeGUOyvywZkdOnS/O7/5M4m1L71eMBNazw3F
-GuC+v5STydsxFqwHHsxgckgVf3oK6zImA2770GogvZDkb0fuoLsqyxMKopMG3N9f
-lYS+nXMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAdGrewgi7UoEB4ofJD3foILENcIm6r9nxEQOXmbG1PQ9XjKxSUtyirgJGfb9W
-NNzY046tGMRsqOTH8ZQjAzkzVw+ovwohyzHpfRn2zFQVHwhre2eqv8Yjl1dkVpJk
-+cuzwt8g7cpOBPzX3GUxSR9Sg1pxCUniRHe4JkP0VWFQWw6vfrDuu+p4oK9HEOXK
-XpNo+cBgT6AaAnK3n8L+nSVBMHQ3IO9GBV7MY+2HtyKjifwDUv/vB8I3yiboIRhb
-LzSDQf7UUah1+O334kAugpY2/LoHDght5ws9RPYYqq4T5LOvDjkWu/YQXEZsXhJu
-ylFqsz2yosU/wcDXvs7EfBpyOg==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJWv+Gr1rHKuMpKg
+Sx5e7l1xWw8M70rp5/1AiTpPm2svdTo0s7vI6sVJi35rPDk35QUlPlL7Zx/8K0UE
+ef3Z9pz3hK67gPuwTdWGwHvpHU6U0xPcytRPWTXhc5CKSelOsIX8bpPwGLGSRkCJ
+4DInAqZxRjt7VN1pwXErLybiByEqbzdFMltvejBIaNlFgktcQPBDLZ2V0wz+Yqr6
+oY+cdHcQKm+1uD7rxpXOv8xlt86BYJ2hc8uQ/hC9h4O9INizvZCLHjiOg6WyXDhg
+NVGql5mAlwOfpTiyTcxWxvxb0D6cp9D86MVgugT3gPTakoiS7U3OQldXvAVKtwWl
+9ddh5tUCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFKI7+39cjxRWeSnsDqTRa4PjPdZOxL495lsAPh81aSRRf8W+k59HGuZNBOfJ
+q9FK0EmJNQIMzDFVHrlqaCk3wrHqtbbATlof+cHWRcASIIUTPFlFnWzR1cXn6hdL
+NohTvWaCeDTAXfbOjq+W55X/fdJdAWNj0CqQnghhl5PU4vCsYAa7gYCOEQCZHn9V
+/yAhIcpJT3G911iTL8sal141z5JKEZM9z2FsgUIRDEm4UoJEGdGQRf2wCC/mKejb
+sN9DiCDbgufW4HlQTFet12SCCF0k1mfpRWfMTu7tylrLj/5fI7iSl6fE6s/T2pS+
+MqEwh+i474tQve3psQbjULPlAQ==
 -----END CERTIFICATE-----
-', 1, 'api_354', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Grace')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_20', 'scid_Grace', 'Grace', '251.140.190.154', '30.233347,120.733528', '2025-05-06 12:44:09', 'bba1618f-2a14-4f8d-a1ba-d7b08340a61f', 'c4fdb9ef-4586-4ec8-8ce8-6a7af9eaf4a0', 4, 1, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUEcWu+F636y6SGp/JeKU2bYMrlWswDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_5', 'scid_Felix', 'Felix', '192.230.188.215', '30.460414,93.230591', '2025-05-16 04:10:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', 'cad957d9-db9e-4930-b5f1-0c073b646413', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUcLYegmTUlOtMolZY2oRMTGj9ot4wDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK/yQ5GSa2avzQL4
-4FGYNhvoEWxJSeF0GTi05qCl4GwDHE9/yHj6apxb9QJL8pbz9V9FL5J8v6HFH93H
-rbSHbQNE1LBc0SfyXdyVZ2fjj6Gi2nsXb6qt8I28uO3kqeW/hsYk374rgjMYgKRa
-RqCHyvAZi0neZoyYM6iKNkSBFZPeLIeqSUE9DYkTlI06tU2ThzTb2ArK7qyLSmQB
-I4w1vfABybsnIxNLTXfkzMNwrQetyeGUOyvywZkdOnS/O7/5M4m1L71eMBNazw3F
-GuC+v5STydsxFqwHHsxgckgVf3oK6zImA2770GogvZDkb0fuoLsqyxMKopMG3N9f
-lYS+nXMCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEAdGrewgi7UoEB4ofJD3foILENcIm6r9nxEQOXmbG1PQ9XjKxSUtyirgJGfb9W
-NNzY046tGMRsqOTH8ZQjAzkzVw+ovwohyzHpfRn2zFQVHwhre2eqv8Yjl1dkVpJk
-+cuzwt8g7cpOBPzX3GUxSR9Sg1pxCUniRHe4JkP0VWFQWw6vfrDuu+p4oK9HEOXK
-XpNo+cBgT6AaAnK3n8L+nSVBMHQ3IO9GBV7MY+2HtyKjifwDUv/vB8I3yiboIRhb
-LzSDQf7UUah1+O334kAugpY2/LoHDght5ws9RPYYqq4T5LOvDjkWu/YQXEZsXhJu
-ylFqsz2yosU/wcDXvs7EfBpyOg==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJWv+Gr1rHKuMpKg
+Sx5e7l1xWw8M70rp5/1AiTpPm2svdTo0s7vI6sVJi35rPDk35QUlPlL7Zx/8K0UE
+ef3Z9pz3hK67gPuwTdWGwHvpHU6U0xPcytRPWTXhc5CKSelOsIX8bpPwGLGSRkCJ
+4DInAqZxRjt7VN1pwXErLybiByEqbzdFMltvejBIaNlFgktcQPBDLZ2V0wz+Yqr6
+oY+cdHcQKm+1uD7rxpXOv8xlt86BYJ2hc8uQ/hC9h4O9INizvZCLHjiOg6WyXDhg
+NVGql5mAlwOfpTiyTcxWxvxb0D6cp9D86MVgugT3gPTakoiS7U3OQldXvAVKtwWl
+9ddh5tUCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFKI7+39cjxRWeSnsDqTRa4PjPdZOxL495lsAPh81aSRRf8W+k59HGuZNBOfJ
+q9FK0EmJNQIMzDFVHrlqaCk3wrHqtbbATlof+cHWRcASIIUTPFlFnWzR1cXn6hdL
+NohTvWaCeDTAXfbOjq+W55X/fdJdAWNj0CqQnghhl5PU4vCsYAa7gYCOEQCZHn9V
+/yAhIcpJT3G911iTL8sal141z5JKEZM9z2FsgUIRDEm4UoJEGdGQRf2wCC/mKejb
+sN9DiCDbgufW4HlQTFet12SCCF0k1mfpRWfMTu7tylrLj/5fI7iSl6fE6s/T2pS+
+MqEwh+i474tQve3psQbjULPlAQ==
 -----END CERTIFICATE-----
-', 1, 'api_451', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_19', 'scid_Felix', 'Felix', '20.231.197.67', '30.263227,120.852742', '2025-04-23 16:44:09', '4419a350-6ee4-452e-822d-0c00ee956a1e', '8b708052-578b-4d39-aa4a-a173ca7fc959', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_807', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_18', 'scid_Felix', 'Felix', '121.25.235.177', '30.263831,120.853138', '2025-05-05 06:17:09', '68f720f9-f1b2-40ac-8eee-6b1aca5233db', 'ea8e29f1-1716-47ce-ac2d-6b6384a8bc84', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUa/NKvwoq1+t+vmxbGzWvSDzIqJEwDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_4', 'scid_Felix', 'Felix', '192.230.188.215', '30.460414,93.230591', '2025-04-23 19:25:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', 'cad957d9-db9e-4930-b5f1-0c073b646413', 2, 7, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUcLYegmTUlOtMolZY2oRMTGj9ot4wDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTUXvMsgEV/Iz5g
-3fEhQRmYQFg2Mes/WJdlQ5tBLodALe/jv3stjEIJN1160KjJYyRRXT27ZXVnNH18
-Mn2OlCIcogp0YkN8uDJIvKCzoaGC/prd5aFyjZEoWNRAfmNOJrRLWvGM7p8mZrpq
-ZIV7r9x/IaPfzELEWhDGozZ8Dvm5KwD/lTr/XWUT15xftaVRG5M9ccSIab+SJK1u
-Tjz5G25NJdr9QAzPh5DqWeEGTII2DBszSXHpZ8cPpNXIw7R4jFeX8b6I7FCBZVj/
-fkEYeybq4RTVmnHfEh3H58H06EkM4SNffzpmd6FeeLTKH/vRV//RayAzeWwGY/8R
-MUV/YQ8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEALdzl9cufRlN2v/3hQa3xh7wQotgpfzs+yiLA3Rk1FhdH+Pu80pFtdsaEwi7r
-AAq+M5ckmL6ElkeOdsK8bIcgC1s3TBej6DUaWlXtnibLmSf8rh7qQFur/Z6M8h34
-JJZbbspAfhrgYN2fc0ab45OkZVVc88ks6nW8QRsfZFKjtORwAeojguahKzWCOWTg
-9iyqP0BCvNCatm7In0p2UVNZUwh+I2mwj9GLVOpXi4JskDb37iIMVdlEZ3pA4Sml
-5EeUraImjnrs2lCgzBny/DeGoY73Ys3XsBq7+ejAdvEqeKWPx/qkalSEr4i6Gol0
-y3g4kFeE11sYLLTNZeFTkJPruA==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJWv+Gr1rHKuMpKg
+Sx5e7l1xWw8M70rp5/1AiTpPm2svdTo0s7vI6sVJi35rPDk35QUlPlL7Zx/8K0UE
+ef3Z9pz3hK67gPuwTdWGwHvpHU6U0xPcytRPWTXhc5CKSelOsIX8bpPwGLGSRkCJ
+4DInAqZxRjt7VN1pwXErLybiByEqbzdFMltvejBIaNlFgktcQPBDLZ2V0wz+Yqr6
+oY+cdHcQKm+1uD7rxpXOv8xlt86BYJ2hc8uQ/hC9h4O9INizvZCLHjiOg6WyXDhg
+NVGql5mAlwOfpTiyTcxWxvxb0D6cp9D86MVgugT3gPTakoiS7U3OQldXvAVKtwWl
+9ddh5tUCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFKI7+39cjxRWeSnsDqTRa4PjPdZOxL495lsAPh81aSRRf8W+k59HGuZNBOfJ
+q9FK0EmJNQIMzDFVHrlqaCk3wrHqtbbATlof+cHWRcASIIUTPFlFnWzR1cXn6hdL
+NohTvWaCeDTAXfbOjq+W55X/fdJdAWNj0CqQnghhl5PU4vCsYAa7gYCOEQCZHn9V
+/yAhIcpJT3G911iTL8sal141z5JKEZM9z2FsgUIRDEm4UoJEGdGQRf2wCC/mKejb
+sN9DiCDbgufW4HlQTFet12SCCF0k1mfpRWfMTu7tylrLj/5fI7iSl6fE6s/T2pS+
+MqEwh+i474tQve3psQbjULPlAQ==
 -----END CERTIFICATE-----
-', 1, 'api_192', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_17', 'scid_Felix', 'Felix', '121.25.235.177', '30.264526,120.851689', '2025-04-23 16:46:09', 'a4d00cfd-d3a4-4d92-ab15-ee5ded0be951', 'ea8e29f1-1716-47ce-ac2d-6b6384a8bc84', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUa/NKvwoq1+t+vmxbGzWvSDzIqJEwDQYJKoZIhvcNAQEL
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_3', 'scid_Felix', 'Felix', '192.230.188.215', '30.027744,120.704423', '2025-04-23 19:23:08', 'e66bdab4-8de6-4c65-ac06-ffd92802637a', '58407e5a-da21-43a7-8fb7-b3bdb0c9336f', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_2', 'scid_Felix', 'Felix', '192.230.188.215', '30.028143,120.704901', '2025-04-23 19:23:08', '7558cc4a-3d0f-44d2-b03d-0e6777d050e9', '58407e5a-da21-43a7-8fb7-b3bdb0c9336f', 2, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_1', 'scid_Felix', 'Felix', '225.138.193.235', '30.029248,120.704698', '2025-04-23 19:25:08', '97ec2397-7290-4757-be41-dee8c593e3bc', '599cdbdf-0f47-43a9-b1c4-e6e9422585ef', 7, 7, '-----BEGIN CERTIFICATE-----
+MIIDazCCAlOgAwIBAgIUY1zHD4M6oXzKjXOobYVdafR9pxkwDQYJKoZIhvcNAQEL
+BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
+BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
+YW1wbGUuY29tMB4XDTI1MDQyMzExMjQwOFoXDTI2MDQyMzExMjQwOFowZTELMAkG
+A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
+dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAnFES29bmC9gUokJLQNEx
+6f/LveGdNyVt5EzUaBIW2PgJxrH8PWNtCjQnefcWAR13+ldTfErFa/eAurkx+snV
+f1u3+hFOBU00paj5M9BA2VOeT1OvQciAexymtNIpk9jcG/DfN2h8W4/bmCXaTl/2
+MbXgCWtXznS+NG7VwJlkGjb0YVhSOssdWvhE6SSeVp6e2wMr57tBdtNHnIJ+FFyS
+5iEMv8UtgLYKX/lIfBdvMJ5BsKToUldVX4Nhiyvmgl6vKPxdYQxKrmw9GmlRwknL
+cyMbXimYjUWKwojHMqKO4mMtdd6ruDsqwut2zSQwvu6nZnVMXWqR/cPsvQqRzagV
+wQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBK
+Fzs94zKiMVVZ7S8v1RBO1zUfMivgL4TtPzyDnXEjRY9RYmb1hg75y5l8PJCXaDz1
+Cxr5pT8KqIv0FGUxsxOgZdFg/aViM0JMHwg6izrh+zp+YRNr14Q4ZFX+Z/1FeE/y
+uoR/hWxSd6u28XPaTJA+R/gKwA4D9gwktydyrzzmnz6cjfdpvpYSegXXC5O9Yamo
+rZL75n4MljFmTsLxforPDDehF+GA4s32saoWq2LiBh5P2MohI+JyVRlSEtcPbB30
+/dxboGUdvIH8AaU6dHql1GyofM+yOKMIKxsgHdhp5CAdE/S873yywhtrfwMIrOWJ
+4LUvEcK7um/uN1djZ2xb
+-----END CERTIFICATE-----
+', 1, 'POST', 'test');
+INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix');
+INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_type, department) VALUES ('tb_0', 'scid_Felix', 'Felix', '192.230.188.215', '30.027744,120.704423', '2025-04-23 19:24:08', '7558cc4a-3d0f-44d2-b03d-0e6777d050e9', '2a09bf12-a3ee-4bc3-a3f7-c52783502226', 2, 7, '-----BEGIN CERTIFICATE-----
+MIIDbzCCAlegAwIBAgIUcLYegmTUlOtMolZY2oRMTGj9ot4wDQYJKoZIhvcNAQEL
 BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
 BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
+ZXhhbXBsZS5jb20wHhcNMjMwNDI0MTEyNDA4WhcNMjQwNDIzMTEyNDA4WjBnMQsw
 CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
 Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTUXvMsgEV/Iz5g
-3fEhQRmYQFg2Mes/WJdlQ5tBLodALe/jv3stjEIJN1160KjJYyRRXT27ZXVnNH18
-Mn2OlCIcogp0YkN8uDJIvKCzoaGC/prd5aFyjZEoWNRAfmNOJrRLWvGM7p8mZrpq
-ZIV7r9x/IaPfzELEWhDGozZ8Dvm5KwD/lTr/XWUT15xftaVRG5M9ccSIab+SJK1u
-Tjz5G25NJdr9QAzPh5DqWeEGTII2DBszSXHpZ8cPpNXIw7R4jFeX8b6I7FCBZVj/
-fkEYeybq4RTVmnHfEh3H58H06EkM4SNffzpmd6FeeLTKH/vRV//RayAzeWwGY/8R
-MUV/YQ8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEALdzl9cufRlN2v/3hQa3xh7wQotgpfzs+yiLA3Rk1FhdH+Pu80pFtdsaEwi7r
-AAq+M5ckmL6ElkeOdsK8bIcgC1s3TBej6DUaWlXtnibLmSf8rh7qQFur/Z6M8h34
-JJZbbspAfhrgYN2fc0ab45OkZVVc88ks6nW8QRsfZFKjtORwAeojguahKzWCOWTg
-9iyqP0BCvNCatm7In0p2UVNZUwh+I2mwj9GLVOpXi4JskDb37iIMVdlEZ3pA4Sml
-5EeUraImjnrs2lCgzBny/DeGoY73Ys3XsBq7+ejAdvEqeKWPx/qkalSEr4i6Gol0
-y3g4kFeE11sYLLTNZeFTkJPruA==
+LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJWv+Gr1rHKuMpKg
+Sx5e7l1xWw8M70rp5/1AiTpPm2svdTo0s7vI6sVJi35rPDk35QUlPlL7Zx/8K0UE
+ef3Z9pz3hK67gPuwTdWGwHvpHU6U0xPcytRPWTXhc5CKSelOsIX8bpPwGLGSRkCJ
+4DInAqZxRjt7VN1pwXErLybiByEqbzdFMltvejBIaNlFgktcQPBDLZ2V0wz+Yqr6
+oY+cdHcQKm+1uD7rxpXOv8xlt86BYJ2hc8uQ/hC9h4O9INizvZCLHjiOg6WyXDhg
+NVGql5mAlwOfpTiyTcxWxvxb0D6cp9D86MVgugT3gPTakoiS7U3OQldXvAVKtwWl
+9ddh5tUCAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
+AQEAFKI7+39cjxRWeSnsDqTRa4PjPdZOxL495lsAPh81aSRRf8W+k59HGuZNBOfJ
+q9FK0EmJNQIMzDFVHrlqaCk3wrHqtbbATlof+cHWRcASIIUTPFlFnWzR1cXn6hdL
+NohTvWaCeDTAXfbOjq+W55X/fdJdAWNj0CqQnghhl5PU4vCsYAa7gYCOEQCZHn9V
+/yAhIcpJT3G911iTL8sal141z5JKEZM9z2FsgUIRDEm4UoJEGdGQRf2wCC/mKejb
+sN9DiCDbgufW4HlQTFet12SCCF0k1mfpRWfMTu7tylrLj/5fI7iSl6fE6s/T2pS+
+MqEwh+i474tQve3psQbjULPlAQ==
 -----END CERTIFICATE-----
-', 1, 'api_378', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_16', 'scid_Felix', 'Felix', '121.25.235.177', '44.874066,92.899455', '2025-04-23 16:43:09', '4419a350-6ee4-452e-822d-0c00ee956a1e', '8b708052-578b-4d39-aa4a-a173ca7fc959', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_198', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_15', 'scid_Felix', 'Felix', '78.9.52.104', '30.264351,120.852502', '2025-04-23 16:43:09', 'a4d00cfd-d3a4-4d92-ab15-ee5ded0be951', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUa/NKvwoq1+t+vmxbGzWvSDzIqJEwDQYJKoZIhvcNAQEL
-BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
-CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
-Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTUXvMsgEV/Iz5g
-3fEhQRmYQFg2Mes/WJdlQ5tBLodALe/jv3stjEIJN1160KjJYyRRXT27ZXVnNH18
-Mn2OlCIcogp0YkN8uDJIvKCzoaGC/prd5aFyjZEoWNRAfmNOJrRLWvGM7p8mZrpq
-ZIV7r9x/IaPfzELEWhDGozZ8Dvm5KwD/lTr/XWUT15xftaVRG5M9ccSIab+SJK1u
-Tjz5G25NJdr9QAzPh5DqWeEGTII2DBszSXHpZ8cPpNXIw7R4jFeX8b6I7FCBZVj/
-fkEYeybq4RTVmnHfEh3H58H06EkM4SNffzpmd6FeeLTKH/vRV//RayAzeWwGY/8R
-MUV/YQ8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEALdzl9cufRlN2v/3hQa3xh7wQotgpfzs+yiLA3Rk1FhdH+Pu80pFtdsaEwi7r
-AAq+M5ckmL6ElkeOdsK8bIcgC1s3TBej6DUaWlXtnibLmSf8rh7qQFur/Z6M8h34
-JJZbbspAfhrgYN2fc0ab45OkZVVc88ks6nW8QRsfZFKjtORwAeojguahKzWCOWTg
-9iyqP0BCvNCatm7In0p2UVNZUwh+I2mwj9GLVOpXi4JskDb37iIMVdlEZ3pA4Sml
-5EeUraImjnrs2lCgzBny/DeGoY73Ys3XsBq7+ejAdvEqeKWPx/qkalSEr4i6Gol0
-y3g4kFeE11sYLLTNZeFTkJPruA==
------END CERTIFICATE-----
-', 1, 'api_731', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_14', 'scid_Felix', 'Felix', '249.22.32.16', '30.262875,120.85283', '2025-04-23 16:43:09', 'a4d00cfd-d3a4-4d92-ab15-ee5ded0be951', 'ea8e29f1-1716-47ce-ac2d-6b6384a8bc84', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_659', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_13', 'scid_Felix', 'Felix', '78.9.52.104', '30.264262,120.853024', '2025-04-23 16:46:09', 'a4d00cfd-d3a4-4d92-ab15-ee5ded0be951', 'ea8e29f1-1716-47ce-ac2d-6b6384a8bc84', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUa/NKvwoq1+t+vmxbGzWvSDzIqJEwDQYJKoZIhvcNAQEL
-BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
-CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
-Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTUXvMsgEV/Iz5g
-3fEhQRmYQFg2Mes/WJdlQ5tBLodALe/jv3stjEIJN1160KjJYyRRXT27ZXVnNH18
-Mn2OlCIcogp0YkN8uDJIvKCzoaGC/prd5aFyjZEoWNRAfmNOJrRLWvGM7p8mZrpq
-ZIV7r9x/IaPfzELEWhDGozZ8Dvm5KwD/lTr/XWUT15xftaVRG5M9ccSIab+SJK1u
-Tjz5G25NJdr9QAzPh5DqWeEGTII2DBszSXHpZ8cPpNXIw7R4jFeX8b6I7FCBZVj/
-fkEYeybq4RTVmnHfEh3H58H06EkM4SNffzpmd6FeeLTKH/vRV//RayAzeWwGY/8R
-MUV/YQ8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEALdzl9cufRlN2v/3hQa3xh7wQotgpfzs+yiLA3Rk1FhdH+Pu80pFtdsaEwi7r
-AAq+M5ckmL6ElkeOdsK8bIcgC1s3TBej6DUaWlXtnibLmSf8rh7qQFur/Z6M8h34
-JJZbbspAfhrgYN2fc0ab45OkZVVc88ks6nW8QRsfZFKjtORwAeojguahKzWCOWTg
-9iyqP0BCvNCatm7In0p2UVNZUwh+I2mwj9GLVOpXi4JskDb37iIMVdlEZ3pA4Sml
-5EeUraImjnrs2lCgzBny/DeGoY73Ys3XsBq7+ejAdvEqeKWPx/qkalSEr4i6Gol0
-y3g4kFeE11sYLLTNZeFTkJPruA==
------END CERTIFICATE-----
-', 1, 'api_524', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_12', 'scid_Felix', 'Felix', '20.231.197.67', '44.874066,92.899455', '2025-04-23 16:47:09', 'a4d00cfd-d3a4-4d92-ab15-ee5ded0be951', 'ea8e29f1-1716-47ce-ac2d-6b6384a8bc84', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_213', 'POST', 2, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_11', 'scid_Felix', 'Felix', '190.213.245.28', '30.263086,120.852102', '2025-05-05 06:17:09', '68f720f9-f1b2-40ac-8eee-6b1aca5233db', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUa/NKvwoq1+t+vmxbGzWvSDzIqJEwDQYJKoZIhvcNAQEL
-BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
-CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
-Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTUXvMsgEV/Iz5g
-3fEhQRmYQFg2Mes/WJdlQ5tBLodALe/jv3stjEIJN1160KjJYyRRXT27ZXVnNH18
-Mn2OlCIcogp0YkN8uDJIvKCzoaGC/prd5aFyjZEoWNRAfmNOJrRLWvGM7p8mZrpq
-ZIV7r9x/IaPfzELEWhDGozZ8Dvm5KwD/lTr/XWUT15xftaVRG5M9ccSIab+SJK1u
-Tjz5G25NJdr9QAzPh5DqWeEGTII2DBszSXHpZ8cPpNXIw7R4jFeX8b6I7FCBZVj/
-fkEYeybq4RTVmnHfEh3H58H06EkM4SNffzpmd6FeeLTKH/vRV//RayAzeWwGY/8R
-MUV/YQ8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEALdzl9cufRlN2v/3hQa3xh7wQotgpfzs+yiLA3Rk1FhdH+Pu80pFtdsaEwi7r
-AAq+M5ckmL6ElkeOdsK8bIcgC1s3TBej6DUaWlXtnibLmSf8rh7qQFur/Z6M8h34
-JJZbbspAfhrgYN2fc0ab45OkZVVc88ks6nW8QRsfZFKjtORwAeojguahKzWCOWTg
-9iyqP0BCvNCatm7In0p2UVNZUwh+I2mwj9GLVOpXi4JskDb37iIMVdlEZ3pA4Sml
-5EeUraImjnrs2lCgzBny/DeGoY73Ys3XsBq7+ejAdvEqeKWPx/qkalSEr4i6Gol0
-y3g4kFeE11sYLLTNZeFTkJPruA==
------END CERTIFICATE-----
-', 1, 'api_734', 'POST', 2, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_10', 'scid_Felix', 'Felix', '190.213.245.28', '30.264262,120.853024', '2025-04-23 16:43:09', '4419a350-6ee4-452e-822d-0c00ee956a1e', 'ea8e29f1-1716-47ce-ac2d-6b6384a8bc84', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_101', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_9', 'scid_Felix', 'Felix', '78.9.52.104', '30.264262,120.853024', '2025-04-23 16:43:09', '4419a350-6ee4-452e-822d-0c00ee956a1e', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUa/NKvwoq1+t+vmxbGzWvSDzIqJEwDQYJKoZIhvcNAQEL
-BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
-CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
-Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTUXvMsgEV/Iz5g
-3fEhQRmYQFg2Mes/WJdlQ5tBLodALe/jv3stjEIJN1160KjJYyRRXT27ZXVnNH18
-Mn2OlCIcogp0YkN8uDJIvKCzoaGC/prd5aFyjZEoWNRAfmNOJrRLWvGM7p8mZrpq
-ZIV7r9x/IaPfzELEWhDGozZ8Dvm5KwD/lTr/XWUT15xftaVRG5M9ccSIab+SJK1u
-Tjz5G25NJdr9QAzPh5DqWeEGTII2DBszSXHpZ8cPpNXIw7R4jFeX8b6I7FCBZVj/
-fkEYeybq4RTVmnHfEh3H58H06EkM4SNffzpmd6FeeLTKH/vRV//RayAzeWwGY/8R
-MUV/YQ8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEALdzl9cufRlN2v/3hQa3xh7wQotgpfzs+yiLA3Rk1FhdH+Pu80pFtdsaEwi7r
-AAq+M5ckmL6ElkeOdsK8bIcgC1s3TBej6DUaWlXtnibLmSf8rh7qQFur/Z6M8h34
-JJZbbspAfhrgYN2fc0ab45OkZVVc88ks6nW8QRsfZFKjtORwAeojguahKzWCOWTg
-9iyqP0BCvNCatm7In0p2UVNZUwh+I2mwj9GLVOpXi4JskDb37iIMVdlEZ3pA4Sml
-5EeUraImjnrs2lCgzBny/DeGoY73Ys3XsBq7+ejAdvEqeKWPx/qkalSEr4i6Gol0
-y3g4kFeE11sYLLTNZeFTkJPruA==
------END CERTIFICATE-----
-', 1, 'api_740', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_8', 'scid_Felix', 'Felix', '20.231.197.67', '30.262655,120.853266', '2025-04-23 16:43:09', '68f720f9-f1b2-40ac-8eee-6b1aca5233db', 'ea8e29f1-1716-47ce-ac2d-6b6384a8bc84', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUa/NKvwoq1+t+vmxbGzWvSDzIqJEwDQYJKoZIhvcNAQEL
-BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
-CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
-Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTUXvMsgEV/Iz5g
-3fEhQRmYQFg2Mes/WJdlQ5tBLodALe/jv3stjEIJN1160KjJYyRRXT27ZXVnNH18
-Mn2OlCIcogp0YkN8uDJIvKCzoaGC/prd5aFyjZEoWNRAfmNOJrRLWvGM7p8mZrpq
-ZIV7r9x/IaPfzELEWhDGozZ8Dvm5KwD/lTr/XWUT15xftaVRG5M9ccSIab+SJK1u
-Tjz5G25NJdr9QAzPh5DqWeEGTII2DBszSXHpZ8cPpNXIw7R4jFeX8b6I7FCBZVj/
-fkEYeybq4RTVmnHfEh3H58H06EkM4SNffzpmd6FeeLTKH/vRV//RayAzeWwGY/8R
-MUV/YQ8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEALdzl9cufRlN2v/3hQa3xh7wQotgpfzs+yiLA3Rk1FhdH+Pu80pFtdsaEwi7r
-AAq+M5ckmL6ElkeOdsK8bIcgC1s3TBej6DUaWlXtnibLmSf8rh7qQFur/Z6M8h34
-JJZbbspAfhrgYN2fc0ab45OkZVVc88ks6nW8QRsfZFKjtORwAeojguahKzWCOWTg
-9iyqP0BCvNCatm7In0p2UVNZUwh+I2mwj9GLVOpXi4JskDb37iIMVdlEZ3pA4Sml
-5EeUraImjnrs2lCgzBny/DeGoY73Ys3XsBq7+ejAdvEqeKWPx/qkalSEr4i6Gol0
-y3g4kFeE11sYLLTNZeFTkJPruA==
------END CERTIFICATE-----
-', 1, 'api_809', 'POST', 1, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_7', 'scid_Felix', 'Felix', '20.231.197.67', '30.263086,120.852102', '2025-04-23 16:46:09', '4419a350-6ee4-452e-822d-0c00ee956a1e', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_554', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_6', 'scid_Felix', 'Felix', '20.231.197.67', '30.262875,120.85283', '2025-04-23 16:46:09', 'c2fb5ede-5ec2-48d8-a372-94a480c06c17', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_907', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_5', 'scid_Felix', 'Felix', '20.231.197.67', '30.264351,120.852502', '2025-04-23 16:44:09', '4419a350-6ee4-452e-822d-0c00ee956a1e', 'ea8e29f1-1716-47ce-ac2d-6b6384a8bc84', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUa/NKvwoq1+t+vmxbGzWvSDzIqJEwDQYJKoZIhvcNAQEL
-BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
-CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
-Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTUXvMsgEV/Iz5g
-3fEhQRmYQFg2Mes/WJdlQ5tBLodALe/jv3stjEIJN1160KjJYyRRXT27ZXVnNH18
-Mn2OlCIcogp0YkN8uDJIvKCzoaGC/prd5aFyjZEoWNRAfmNOJrRLWvGM7p8mZrpq
-ZIV7r9x/IaPfzELEWhDGozZ8Dvm5KwD/lTr/XWUT15xftaVRG5M9ccSIab+SJK1u
-Tjz5G25NJdr9QAzPh5DqWeEGTII2DBszSXHpZ8cPpNXIw7R4jFeX8b6I7FCBZVj/
-fkEYeybq4RTVmnHfEh3H58H06EkM4SNffzpmd6FeeLTKH/vRV//RayAzeWwGY/8R
-MUV/YQ8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEALdzl9cufRlN2v/3hQa3xh7wQotgpfzs+yiLA3Rk1FhdH+Pu80pFtdsaEwi7r
-AAq+M5ckmL6ElkeOdsK8bIcgC1s3TBej6DUaWlXtnibLmSf8rh7qQFur/Z6M8h34
-JJZbbspAfhrgYN2fc0ab45OkZVVc88ks6nW8QRsfZFKjtORwAeojguahKzWCOWTg
-9iyqP0BCvNCatm7In0p2UVNZUwh+I2mwj9GLVOpXi4JskDb37iIMVdlEZ3pA4Sml
-5EeUraImjnrs2lCgzBny/DeGoY73Ys3XsBq7+ejAdvEqeKWPx/qkalSEr4i6Gol0
-y3g4kFeE11sYLLTNZeFTkJPruA==
------END CERTIFICATE-----
-', 1, 'api_557', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_4', 'scid_Felix', 'Felix', '20.231.197.67', '30.262655,120.853266', '2025-04-23 16:43:09', 'c2fb5ede-5ec2-48d8-a372-94a480c06c17', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_104', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_3', 'scid_Felix', 'Felix', '249.22.32.16', '30.264526,120.851689', '2025-04-23 16:46:09', 'a4d00cfd-d3a4-4d92-ab15-ee5ded0be951', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_357', 'POST', 2, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_2', 'scid_Felix', 'Felix', '78.9.52.104', '30.264257,120.852752', '2025-04-23 16:46:09', '68f720f9-f1b2-40ac-8eee-6b1aca5233db', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 6, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_635', 'POST', 3, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_1', 'scid_Felix', 'Felix', '249.22.32.16', '30.263831,120.853138', '2025-04-23 16:46:09', 'a4d00cfd-d3a4-4d92-ab15-ee5ded0be951', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDbzCCAlegAwIBAgIUa/NKvwoq1+t+vmxbGzWvSDzIqJEwDQYJKoZIhvcNAQEL
-BQAwZzELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxHDAaBgNVBAMME2V4cGlyZWQu
-ZXhhbXBsZS5jb20wHhcNMjMwNDI0MDg0NDA5WhcNMjQwNDIzMDg0NDA5WjBnMQsw
-CQYDVQQGEwJDTjEVMBMGA1UECAwMVGVzdFByb3ZpbmNlMREwDwYDVQQHDAhUZXN0
-Q2l0eTEQMA4GA1UECgwHVGVzdE9yZzEcMBoGA1UEAwwTZXhwaXJlZC5leGFtcGxl
-LmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKTUXvMsgEV/Iz5g
-3fEhQRmYQFg2Mes/WJdlQ5tBLodALe/jv3stjEIJN1160KjJYyRRXT27ZXVnNH18
-Mn2OlCIcogp0YkN8uDJIvKCzoaGC/prd5aFyjZEoWNRAfmNOJrRLWvGM7p8mZrpq
-ZIV7r9x/IaPfzELEWhDGozZ8Dvm5KwD/lTr/XWUT15xftaVRG5M9ccSIab+SJK1u
-Tjz5G25NJdr9QAzPh5DqWeEGTII2DBszSXHpZ8cPpNXIw7R4jFeX8b6I7FCBZVj/
-fkEYeybq4RTVmnHfEh3H58H06EkM4SNffzpmd6FeeLTKH/vRV//RayAzeWwGY/8R
-MUV/YQ8CAwEAAaMTMBEwDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOC
-AQEALdzl9cufRlN2v/3hQa3xh7wQotgpfzs+yiLA3Rk1FhdH+Pu80pFtdsaEwi7r
-AAq+M5ckmL6ElkeOdsK8bIcgC1s3TBej6DUaWlXtnibLmSf8rh7qQFur/Z6M8h34
-JJZbbspAfhrgYN2fc0ab45OkZVVc88ks6nW8QRsfZFKjtORwAeojguahKzWCOWTg
-9iyqP0BCvNCatm7In0p2UVNZUwh+I2mwj9GLVOpXi4JskDb37iIMVdlEZ3pA4Sml
-5EeUraImjnrs2lCgzBny/DeGoY73Ys3XsBq7+ejAdvEqeKWPx/qkalSEr4i6Gol0
-y3g4kFeE11sYLLTNZeFTkJPruA==
------END CERTIFICATE-----
-', 1, 'api_323', 'POST', 0, 'test');
-INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('scid_Felix')
-INSERT INTO tb_data_total (tb_id, security_card_id, name, device_ip, device_site, login_time, cpu_id, disk_id, auth_type, device_type, cert, os_type, api_id, api_type, data_level, department) VALUES ('tb_0', 'scid_Felix', 'Felix', '20.231.197.67', '30.262655,120.853266', '2025-04-23 16:46:09', '68f720f9-f1b2-40ac-8eee-6b1aca5233db', '970f21ad-1336-406a-9ccc-4e0b5b88029d', 2, 2, '-----BEGIN CERTIFICATE-----
-MIIDazCCAlOgAwIBAgIUHEOvixwL30voveyDzmko2lmSXpowDQYJKoZIhvcNAQEL
-BQAwZTELMAkGA1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UE
-BwwIVGVzdENpdHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4
-YW1wbGUuY29tMB4XDTI1MDQyMzA4NDQwOVoXDTI2MDQyMzA4NDQwOVowZTELMAkG
-A1UEBhMCQ04xFTATBgNVBAgMDFRlc3RQcm92aW5jZTERMA8GA1UEBwwIVGVzdENp
-dHkxEDAOBgNVBAoMB1Rlc3RPcmcxGjAYBgNVBAMMEXZhbGlkLmV4YW1wbGUuY29t
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7OwfoZfTkNJk8VCdR+Eq
-NaiF61+mZzoBoGFB+gxwTPELZSosxXcVgtC6ZE0MjwSWn9onogXzB4nF9XWvOFEt
-eObG8KKDY0XIwRXELc/nbicbp2tEOrQWOog041LZ8skGDb9900DpsLXVjsWbGRsO
-/X5jztOi/2L4aOzeUKWZbuVsBfxRFpnsVglCSy4lOJLXa5OUGQG93qZKpmFe3qrV
-+wTloTjZUmGj/i3sG8o/VRTEF6RswYjgOY4r28kGVgheSW/4FYyxi4q+nVQi7Gui
-uoFJfidnPcv8u8C6t6LOfXp89/Yt/w5ZQDSVXvDt/pIPbe3yW5ARFabdrTUyMTWr
-QQIDAQABoxMwETAPBgNVHRMBAf8EBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQDc
-RRAxZsdljtccpy/eU3FUCMRZnQH48o824M4WDOEVnLGKkDxQU+Tq1py26p9f/G65
-TPZuW/EsFhRaGhzEqhv1dyZAFrobaZDu+J5qwXv+Wxk90cmtl3/DrSYPmRaRSKBR
-iI6aphB3RcLo4ogOB3qC3+2hWw4ODaTLt0pFYlKzTRfBAaLiFqOZh53dGMpD9BtI
-lhdWVGgyqs4oRlX3Kaelh0zBTOFTGy0HX1P6P48LfHDiGlXv2MBF+S/Iq2MzymbG
-KlYW8CulZY0xAssx5XkpXrsVrfVtMQToh8zh/VU9VdiIyxUGGptAiG9cygVvqT98
-Zr3aFm9J3ZG4tZ15YsnV
------END CERTIFICATE-----
-', 1, 'api_375', 'POST', 2, 'test');
+', 1, 'POST', 'test');

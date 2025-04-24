@@ -259,7 +259,7 @@ def generate_insert_statements_for_user():
             f"'{cpu_id}', '{disk_id}', {auth_type}, {device_type}, '{cert}', {os_type}, {oa_result}, "
             f"'{api_id}', '{api_type}', '{department}');"
         )
-        another_sql = f"INSERT INTO tb_historical_trust_scores (security_card_id) VALUES '{security_card_id}'"
+        another_sql = f"INSERT INTO tb_historical_trust_scores (security_card_id) VALUES ('{security_card_id}');"
         statements.append(sql)
         statements.append(another_sql)
 

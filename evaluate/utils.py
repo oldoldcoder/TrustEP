@@ -319,7 +319,7 @@ def get_trust_level(config, judge_device_ip, judge_device_site,
     matrix['device_type'] = get_level_by_weight(config, "device_type", judge_device_type)
     matrix['cert'] = get_level_by_weight(config, "cert", judge_cert)
     matrix['os_type'] = get_level_by_weight(config, "os_type", judge_os_type)
-    matrix['oa_result'] = 0.9 if judge_privilege_score else 0
+    matrix['oa_result'] = 0.9 if judge_privilege_score == 0 else 0
 
     return matrix
 
@@ -330,11 +330,14 @@ def calculate_final_trust_score(config, matrix, historical_scores):
     for key, weight in weights_dict.items():
         current_score += weight * matrix[key]
 
+    print(matrix)
+    print("current score = ", current_score)
     score = current_score * config["fce_config"]["history_score_weight"]["w_now"]
-    historical_weight = config["fce_config"]["history_score_weight"]["w_history"]
+    print("score = ", score)
+    historical_weight = [list(item.values())[0] for item in config["fce_config"]["history_score_weight"]["w_history"]]
     for weight, historical_score in zip(historical_weight, historical_scores):
         score += weight * historical_score
-    return score
+    return float(score)
 
 
 def parse_cert_time(cert_pem):
