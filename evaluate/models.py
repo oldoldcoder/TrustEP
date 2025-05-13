@@ -7,6 +7,7 @@ class Local(models.Model):
     security_card_id = models.CharField(max_length=128)
     name = models.CharField(max_length=64)
     device_ip = models.CharField(max_length=64)
+    # device_id = models.CharField(max_length=64)
     device_site = models.CharField(max_length=64)
     login_time = models.DateTimeField(default=timezone.now)
     cpu_id = models.CharField(max_length=256, default="")
@@ -19,6 +20,7 @@ class Local(models.Model):
     # 无法对应，先删除
     # soft_type = models.IntegerField(default=0)
     # setup_type = models.IntegerField(default=0)
+    # soft_id = models.CharField(max_length=256)
     os_type = models.IntegerField(default=0)
     # oa_count = models.IntegerField(default=0)
     # oa_score = models.IntegerField(default=0)
@@ -71,6 +73,7 @@ class Device(models.Model):
     login_time = models.CharField(max_length=64)
     device_position = models.CharField(max_length=64)
     device_ip = models.CharField(max_length=128)
+    # device_id = models.CharField(max_length=64)
     cpu_id = models.CharField(max_length=256)
     disk_id = models.CharField(max_length=256)
     device_type = models.IntegerField(default=0)
@@ -85,6 +88,7 @@ class Device(models.Model):
 
 class Software(models.Model):
     id = models.IntegerField(primary_key=True)
+    # soft_id = models.CharField(max_length=256)
     # 无法对应，先删除
     # soft_type = models.IntegerField(default=0)
     # setup_type = models.IntegerField(default=0)

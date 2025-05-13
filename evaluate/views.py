@@ -2,6 +2,10 @@ from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from .utils import calculate_trust_score, read_config
 import json
+import logging
+import time
+
+logger = logging.getLogger(__name__)
 
 
 @csrf_exempt
@@ -18,7 +22,11 @@ def evaluate_trust(request):
         if not all([security_card_id, api_id, data_level]):
             return JsonResponse({'CODE': 400, 'returnBody': {'error': 'Missing parameters'}}, status=400)
 
+        start_time = time.time()
         score = calculate_trust_score(security_card_id, api_id, data_level)
+        end_time = time.time()
+        duration = round(end_time - start_time, 4)  # 秒为单位，保留4位小数
+        logger.info(f"计算结果为：{score}，运行耗时：{duration} 秒")
 
         return JsonResponse({
             'CODE': 200,
