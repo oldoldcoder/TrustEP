@@ -151,10 +151,10 @@ def generate_os_type_arr(t, num):
     return arr
 
 
-user_name = ['Felix', 'Grace', 'Henry']
+user_name = ['Lebron']
 # 模拟 5 个用户，每人 20 条记录
 users = [
-    {"security_card_id": f"scid_{user_name[i]}", "name": user_name[i], "department": "test"} for i in range(3)
+    {"security_card_id": f"scid_{user_name[i]}", "name": user_name[i], "department": "test"} for i in range(1)
 ]
 
 sql_statements = []
@@ -192,8 +192,9 @@ for user in users:
             "device_type": random.choice(device_type_arr),
             "cert": str(random.choice(cert_arr)),
             "os_type": random.choice(os_type_arr),
-            "api_type": "POST",
-            "department": user["department"],
+            "oa_result": 0,
+            # "api_type": "POST",
+            # "department": user["department"],
         }
 
         i += 1
