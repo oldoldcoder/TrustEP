@@ -1,18 +1,16 @@
-# config.yaml
+# user_config.yaml
 
 fce_config:
   t: 10  # 取最近T次记录
   indicator_weights:
-    login_time: 0.15
     device_site: 0.15
     device_ip: 0.1
     cpu_id: 0.05
     disk_id: 0.05
-    auth_type: 0.05
     device_type: 0.05
     cert: 0.15
-    os_type: 0.05
-    oa_result: 0.2
+    key_type:
+    device_result: 0.2
 
   trust_levels:  # 模糊等级与其对应的权重
     - level: high
@@ -43,19 +41,6 @@ fce_config:
 
   membership_functions:
     # 以下为示例格式，具体函数你可以自定义为三角形、梯形或高斯型等
-    login_time:
-      threshold:  180 # 聚类的半径,单位分钟
-      section:
-        - level: high
-          weight: [ 0,45 ]
-        - level: above_average
-          weight: [ 45,90 ]
-        - level: average
-          weight: [ 90,120 ]
-        - level: below_average
-          weight: [ 120,150 ]
-        - level: low
-          weight: [ 150,180 ]
     device_site:
       threshold:  50 # 聚类的半径,单位是km
       section:
@@ -108,15 +93,6 @@ fce_config:
           weight: [ 4,4 ]
         - level: low
           weight: [ 5,5 ]
-    auth_type:
-      threshold:  3
-      section:
-        - level: high
-          weight: [ 0,0 ]
-        - level: average
-          weight: [ 1,2 ]
-        - level: low
-          weight: [ 3,3 ]
 
     device_type:
       threshold:  3
@@ -140,7 +116,7 @@ fce_config:
           weight: [ 4,4 ]
         - level: low
           weight: [ 5,5 ]
-    os_type:
+    key_type:
       threshold: 3
       section:
         - level: high
@@ -149,8 +125,5 @@ fce_config:
           weight: [ 1,2 ]
         - level: low
           weight: [ 3,3 ]
-
-    oa_count: # 历史越权率 = (T - 越权次数) / T
-
 
 

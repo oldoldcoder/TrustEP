@@ -7,44 +7,46 @@ class Local(models.Model):
     security_card_id = models.CharField(max_length=128)
     name = models.CharField(max_length=64)
     device_ip = models.CharField(max_length=64)
-    # device_id = models.CharField(max_length=64)
     device_site = models.CharField(max_length=64)
-    login_time = models.DateTimeField(default=timezone.now)
-    cpu_id = models.CharField(max_length=256, default="")
-    disk_id = models.CharField(max_length=256, default="")
-    auth_type = models.IntegerField(default=0)
-    device_type = models.IntegerField(default=0)
-    cert = models.TextField(default='')
+    login_time = models.DateTimeField(db_default=timezone.now)
+    cpu_id = models.CharField(max_length=256, db_default="")
+    disk_id = models.CharField(max_length=256, db_default="")
+    auth_type = models.IntegerField(db_default=0)
+    device_type = models.IntegerField(db_default=0)
+    cert = models.TextField(db_default='')
     # cert_dn = models.CharField(max_length=256)
     # cert_sn = models.CharField(max_length=256)
     # 无法对应，先删除
     # soft_type = models.IntegerField(default=0)
     # setup_type = models.IntegerField(default=0)
-    # soft_id = models.CharField(max_length=256)
-    os_type = models.IntegerField(default=0)
+    os_type = models.IntegerField(db_default=0)
     # oa_count = models.IntegerField(default=0)
     # oa_score = models.IntegerField(default=0)
     # api_id = models.CharField(max_length=64)
     # api_type = models.CharField(max_length=64)
     # data_level = models.IntegerField(default=0)
     # department = models.CharField(max_length=64)
-    oa_result = models.IntegerField(default=0)
-    score = models.FloatField(default=0)
+    oa_result = models.IntegerField(db_default=0)
+    score = models.FloatField(db_default=0)
 
     class Meta:
         db_table = 'tb_data_total'
 
 
-# class TrustScore(models.Model):
-#     api_id = models.CharField(max_length=128)
-#     security_card_id = models.CharField(max_length=128)
-#     data_level = models.IntegerField(default=0)
-#     result_code = models.IntegerField(default=0)
-#     score = models.FloatField(default=0)
-#     create_time = models.DateTimeField()
-#
-#     class Meta:
-#         db_table = 'tb_historical_trust_scores'
+class DeviceScore(models.Model):
+    device_id = models.CharField(max_length=64)
+    device_ip = models.CharField(max_length=64)
+    device_site = models.CharField(max_length=64)
+    cpu_id = models.CharField(max_length=256, default="")
+    disk_id = models.CharField(max_length=256, default="")
+    key_type = models.IntegerField(db_default=0)
+    device_type = models.IntegerField(db_default=0)
+    cert = models.TextField(db_default='')
+    device_result = models.IntegerField(default=0, db_column='auth_result')
+    score = models.FloatField(db_default=0)
+
+    class Meta:
+        db_table = 'tb_device_score'
 
 
 class User(models.Model):
@@ -73,11 +75,13 @@ class Device(models.Model):
     login_time = models.CharField(max_length=64)
     device_position = models.CharField(max_length=64)
     device_ip = models.CharField(max_length=128)
-    # device_id = models.CharField(max_length=64)
+    device_id = models.CharField(max_length=64)
     cpu_id = models.CharField(max_length=256)
     disk_id = models.CharField(max_length=256)
-    device_type = models.IntegerField(default=0)
-    cert = models.TextField(default='')
+    device_type = models.IntegerField(db_default=0)
+    cert = models.TextField(db_default='')
+    key_type = models.IntegerField(db_default=0)
+    auth_result = models.IntegerField()
     # cert_dn = models.CharField(max_length=256)
     # cert_sn = models.CharField(max_length=256)
 
@@ -88,11 +92,11 @@ class Device(models.Model):
 
 class Software(models.Model):
     id = models.IntegerField(primary_key=True)
-    # soft_id = models.CharField(max_length=256)
+    soft_id = models.CharField(max_length=256)
     # 无法对应，先删除
     # soft_type = models.IntegerField(default=0)
     # setup_type = models.IntegerField(default=0)
-    os_type = models.IntegerField(default=0)
+    os_type = models.IntegerField(db_default=0)
 
     class Meta:
         db_table = 'software'

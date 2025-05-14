@@ -5,7 +5,7 @@ from cryptography import x509
 from cryptography.hazmat.backends import default_backend
 import yaml
 
-from .models import Local, User, Biometric, Device, Software, Permission#, TrustScore, Api, Data
+from .models import Local, User, Biometric, Device, Software, Permission, DeviceScore  # , TrustScore, Api, Data
 
 
 def calculate_trust_score(security_card_id, api_id, data_level):
@@ -50,12 +50,6 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     '''
     根据次数完成等级定义
     '''
-    # judge_device_ip = sum(data_total[i].device_ip != data_total[i - 1].device_ip for i in range(1, config["fce_config"]["t"]))
-    # judge_cpu_id = sum(data_total[i].cpu_id != data_total[i - 1].cpu_id for i in range(1, config["fce_config"]["t"]))
-    # judge_disk_id = sum(data_total[i].disk_id != data_total[i - 1].disk_id for i in range(1, config["fce_config"]["t"]))
-    # judge_auth_type = sum(data_total[i].auth_type != data_total[i - 1].auth_type for i in range(1, config["fce_config"]["t"]))
-    # judge_device_type = sum(data_total[i].device_type != data_total[i - 1].device_type for i in range(1, config["fce_config"]["t"]))
-    # judge_os_type = sum(data_total[i].os_type != data_total[i - 1].os_type for i in range(1, config["fce_config"]["t"]))
     judge_device_ip = len(set(data_total[i].device_ip for i in range(config["fce_config"]["t"]))) - 1
     judge_cpu_id = len(set(data_total[i].cpu_id for i in range(config["fce_config"]["t"]))) - 1
     judge_disk_id = len(set(data_total[i].disk_id for i in range(config["fce_config"]["t"]))) - 1
@@ -65,6 +59,55 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     # 获得每个指标的信任等级，此处直接转化为分数
     matrix = get_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
                              judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score)
+    # 获得信任分数
+    historical_scores = [item.score for item in data_total]
+    score = calculate_final_trust_score(config, matrix, historical_scores)
+    data_total[0].score = score
+    data_total[0].save()
+    # 模拟打分逻辑（替换为FCE算法）
+    return score
+
+
+def calculate_device_trust_score(device_id):
+    # 读取配置
+    config = read_config('device_config.yaml')
+    print("配置读取完毕，T值：", config["fce_config"]["t"])
+    # 对于login_time,device_site内容进行聚类
+    # 从数据库读数据到大表
+    get_first_device_from_database(device_id)
+    # 从大表读取数据
+    data_total = get_recent_data_by_device_id(device_id, config["fce_config"]["t"])
+    # 提取设备的经纬度
+    latest_record = data_total[0]  # 最近一条记录
+    current_position = list(map(float, latest_record.device_site.split(',')))
+
+    positions = [
+        list(map(float, record.device_site.split(',')))
+        for record in data_total[1:]
+        if record.device_site
+    ]
+    judge_device_site = distance_to_nearest_cluster_center(positions, current_position)
+    """
+    其他judge处理的部分
+    """
+    judge_device_result = data_total[0].device_result
+    judge_cert = 0
+    for i in range(0, config["fce_config"]["t"]):
+        before, after = parse_cert_time(data_total[i].cert)
+        ltime = data_total[i].login_time.replace(tzinfo=None)
+        if not (before <= ltime <= after):
+            judge_cert += 1
+    '''
+    根据次数完成等级定义
+    '''
+    judge_device_ip = len(set(data_total[i].device_ip for i in range(config["fce_config"]["t"]))) - 1
+    judge_cpu_id = len(set(data_total[i].cpu_id for i in range(config["fce_config"]["t"]))) - 1
+    judge_disk_id = len(set(data_total[i].disk_id for i in range(config["fce_config"]["t"]))) - 1
+    judge_device_type = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"]))) - 1
+    judge_key_type = len(set(data_total[i].key_type for i in range(config["fce_config"]["t"]))) - 1
+    # 获得每个指标的信任等级，此处直接转化为分数
+    matrix = get_device_trust_level(config, judge_device_ip, judge_device_site, judge_cpu_id, judge_disk_id,
+                                    judge_device_type, judge_key_type, judge_cert, judge_device_result)
     # 获得信任分数
     historical_scores = [item.score for item in data_total]
     score = calculate_final_trust_score(config, matrix, historical_scores)
@@ -89,7 +132,7 @@ def get_first_data_from_database(security_card_id):
     permission = Permission.objects.using('source').get(id=data_id)
 
     local = Local(
-        tb_id=data_id,
+        # tb_id=data_id,
         security_card_id=security_card_id,
         name=user.name,
         device_ip=device.device_ip,
@@ -124,8 +167,31 @@ def get_first_data_from_database(security_card_id):
     # trust_score.save()
 
 
-def read_config():
-    config_path = Path(__file__).resolve().parent.parent / 'config.yaml'
+def get_first_device_from_database(device_id):
+    device = Device.objects.using('source').filter(device_id=device_id).first()
+    device_score = DeviceScore(
+        device_id=device.device_id,
+        device_ip=device.device_ip,
+        device_site=device.device_position,
+        cpu_id=device.cpu_id,
+        disk_id=device.disk_id,
+        key_type=device.key_type,
+        device_type=device.device_type,
+        cert=device.cert,
+        device_result=device.auth_result,
+    )
+
+    device_score.save()
+#
+#
+# def read_config():
+#     config_path = Path(__file__).resolve().parent.parent / 'user_config.yaml'
+#     with open(config_path, 'r', encoding='utf-8') as f:
+#         return yaml.safe_load(f)
+
+
+def read_config(str):
+    config_path = Path(__file__).resolve().parent.parent / str
     with open(config_path, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 
@@ -152,6 +218,16 @@ def get_recent_data_by_security_card(security_card_id, T):
 
     # return data_total_qs, historical_scores_qs
     return data_total_qs
+
+
+def get_recent_data_by_device_id(device_id, T):
+    # 从 tb_data_total 查询
+    data_total_qs = (
+        DeviceScore.objects
+        .filter(device_id=device_id)
+        .order_by("-id")[:T + 1]
+    )
+    return list(reversed(data_total_qs))
 
 
 """
@@ -317,6 +393,41 @@ def get_trust_level(config, judge_device_ip, judge_device_site,
     matrix['cert'] = get_level_by_weight(config, "cert", judge_cert)
     matrix['os_type'] = get_level_by_weight(config, "os_type", judge_os_type)
     matrix['oa_result'] = 0.9 if judge_privilege_score == 0 else 0
+
+    return matrix
+
+
+def get_device_trust_level(config, judge_device_ip, judge_device_site, judge_cpu_id, judge_disk_id,
+                     judge_device_type, judge_key_type, judge_cert, judge_device_result):
+    """
+    获取每个指标对应模糊等级的分数
+    :param config: 读取到的YAML文件
+    :param judge_cpu_id: 滑动窗口中CPU_ID变化次数
+    :param judge_disk_id: 滑动窗口中主板ID变化次数
+    :param judge_auth_type: 滑动窗口中认证类型的变化次数
+    :param judge_device_type: 滑动窗口的设备类型变化次数
+    :param judge_os_type:滑动窗口中操作类型变化次数
+    :return:包括每个指标对应模糊等级分数的字典
+    """
+    matrix = {}
+    trust_dict = {item["level"]: item["weight"] for item in config["fce_config"]["trust_levels"]}
+
+    def get_level_by_weight(config, str, weight):
+        if weight > config["fce_config"]["membership_functions"][str]["threshold"]:
+            return trust_dict["untrusted"]
+        for section in config["fce_config"]["membership_functions"][str]["section"]:
+            start, end = section["weight"]
+            if start <= weight <= end:
+                return trust_dict[section['level']]
+
+    matrix['device_ip'] = get_level_by_weight(config, "device_ip", judge_device_ip)
+    matrix['device_site'] = get_level_by_weight(config, "device_site", judge_device_site)
+    matrix['cpu_id'] = get_level_by_weight(config, "cpu_id", judge_cpu_id)
+    matrix['disk_id'] = get_level_by_weight(config, "disk_id", judge_disk_id)
+    matrix['device_type'] = get_level_by_weight(config, "device_type", judge_device_type)
+    matrix['key_type'] = get_level_by_weight(config, "key_type", judge_key_type)
+    matrix['cert'] = get_level_by_weight(config, "cert", judge_cert)
+    matrix['device_result'] = 1 if judge_device_result == 0 else 0
 
     return matrix
 
