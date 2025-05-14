@@ -8,13 +8,14 @@ import yaml
 from .models import Local, User, Biometric, Device, Software, Permission, DeviceScore  # , TrustScore, Api, Data
 
 
-def calculate_trust_score(security_card_id, api_id, data_level):
+# 负责计算用户的
+def calculate_trust_score(security_card_id, api_id, data_level, secret_level="public"):
     # 读取配置
     config = read_config()
     print("配置读取完毕，T值：", config["fce_config"]["t"])
     # 对于login_time,device_site内容进行聚类
     # 从数据库读数据到大表
-    get_first_data_from_database(security_card_id)
+    # get_first_data_from_database(security_card_id)
     # 从大表读取数据
     data_total = get_recent_data_by_security_card(security_card_id, config["fce_config"]["t"])
     # 提取设备的经纬度
@@ -57,7 +58,7 @@ def calculate_trust_score(security_card_id, api_id, data_level):
     judge_device_type = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"]))) - 1
     judge_os_type = sum(1 for item in data_total if item.os_type == 2)
     # 获得每个指标的信任等级，此处直接转化为分数
-    matrix = get_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
+    matrix = get_trust_level(config, secret_level, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
                              judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score)
     # 获得信任分数
     historical_scores = [item.score for item in data_total]
@@ -115,6 +116,49 @@ def calculate_device_trust_score(device_id):
     data_total[0].save()
     # 模拟打分逻辑（替换为FCE算法）
     return score
+
+
+# 负责计算软件的
+def calculate_trust_score_software(soft_id):
+    # 读取配置
+    config = read_config("config-software.yaml")
+    weights = config["fce_config"]["indicator_weights"]
+    print("配置读取完毕，T值：", config["fce_config"]["t"])
+    # 从库里面查询一条软件的记录信息
+    software = get_software_from_database(soft_id)
+    # 计算各指标得分
+    status_score = evaluate_status(software.status, weights["status"])
+    soft_type_score = evaluate_soft_type(software.soft_type, weights["soft_type"])
+    setup_type_score = evaluate_setup_type(software.setup_type, weights["setup_type"])
+    os_type_score = evaluate_os_type(software.os_type, weights["os_type"])
+    domain_score = evaluate_domain(software.domain, weights["domain"])
+    size_score = evaluate_size(software.size, weights["size"])
+
+    # 计算总分
+    total_score = (
+            status_score +
+            soft_type_score +
+            setup_type_score +
+            os_type_score +
+            domain_score +
+            size_score
+    )
+
+    print(f"软件 {soft_id} 评分详情：")
+    print(f"状态: {status_score}/{weights['status']}")
+    print(f"软件类型: {soft_type_score}/{weights['soft_type']}")
+    print(f"安装类型: {setup_type_score}/{weights['setup_type']}")
+    print(f"操作系统类型: {os_type_score}/{weights['os_type']}")
+    print(f"域名可信度: {domain_score}/{weights['domain']}")
+    print(f"软件大小: {size_score}/{weights['size']}")
+    print(f"总分: {total_score}/100")
+
+    return total_score
+
+
+def get_software_from_database(soft_id):
+    software = Software.objects.using('source').filter(soft_id=soft_id).first()
+    return software
 
 
 def get_first_data_from_database(security_card_id):
@@ -190,8 +234,8 @@ def get_first_device_from_database(device_id):
 #         return yaml.safe_load(f)
 
 
-def read_config(str):
-    config_path = Path(__file__).resolve().parent.parent / str
+def read_config(config_name="config.yaml"):
+    config_path = Path(__file__).resolve().parent.parent / config_name
     with open(config_path, 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 
@@ -314,7 +358,6 @@ def time_str_to_minutes(datetime_input):
     return dt.hour * 60 + dt.minute
 
 
-
 def cluster_time_centers(minute_list):
     """
     分别对 0-720 和 720-1440 分钟的时间做聚合，返回两个聚合中心
@@ -358,7 +401,7 @@ def time_cluster_distance(historical_times, current_time):
     return min(distance_to_morning, distance_to_afternoon)
 
 
-def get_trust_level(config, judge_device_ip, judge_device_site,
+def get_trust_level(config, secret_level, judge_device_ip, judge_device_site,
                     judge_login_time, judge_cpu_id, judge_disk_id,
                     judge_auth_type, judge_device_type, judge_cert,
                     judge_os_type, judge_privilege_score):
@@ -376,9 +419,9 @@ def get_trust_level(config, judge_device_ip, judge_device_site,
     trust_dict = {item["level"]: item["weight"] for item in config["fce_config"]["trust_levels"]}
 
     def get_level_by_weight(config, str, weight):
-        if weight > config["fce_config"]["membership_functions"][str]["threshold"]:
+        if weight > config["fce_config"][secret_level]["membership_functions"][str]["threshold"]:
             return trust_dict["untrusted"]
-        for section in config["fce_config"]["membership_functions"][str]["section"]:
+        for section in config["fce_config"][secret_level]["membership_functions"][str]["section"]:
             start, end = section["weight"]
             if start <= weight <= end:
                 return trust_dict[section['level']]
@@ -451,3 +494,93 @@ def calculate_final_trust_score(config, matrix, historical_scores):
 def parse_cert_time(cert_pem):
     cert = x509.load_pem_x509_certificate(cert_pem.encode(), default_backend())
     return cert.not_valid_before, cert.not_valid_after
+
+
+# 软件评估相关
+# 各指标评分函数
+def evaluate_status(status, max_score):
+    """评估软件状态得分"""
+    status_map = {
+        1: max_score,  # 启用状态（满分）
+        2: max_score * 0.5,  # 部分功能受限（50%分）
+        3: max_score * 0.2,  # 需更新（20%分）
+        0: 0  # 禁用状态（0分）
+    }
+    return status_map.get(status, 0)
+
+
+def evaluate_soft_type(soft_type, max_score):
+    """评估软件类型得分"""
+    # 假设1=系统软件，2=应用程序，3=工具软件，4=其他
+    type_map = {
+        1: max_score,  # 系统软件（满分）
+        2: max_score * 0.9,  # 应用程序（90%分）
+        3: max_score * 0.8,  # 工具软件（80%分）
+        4: max_score * 0.5  # 其他（50%分）
+    }
+    return type_map.get(soft_type, 0)
+
+
+def evaluate_setup_type(setup_type, max_score):
+    """评估安装类型得分"""
+    # 假设1=绿色版，2=安装版，3=其他
+    setup_map = {
+        1: max_score,  # 绿色版（满分）
+        2: max_score * 0.8,  # 安装版（80%分）
+        3: max_score * 0.5  # 其他（50%分）
+    }
+    return setup_map.get(setup_type, 0)
+
+
+def evaluate_os_type(os_type, max_score):
+    """评估操作系统类型得分"""
+    # 假设1=国产系统，2=主流系统，3=小众系统，4=未知系统
+    os_map = {
+        1: max_score,  # 国产系统（满分）
+        2: max_score * 0.9,  # 主流系统（90%分）
+        3: max_score * 0.7,  # 小众系统（70%分）
+        4: max_score * 0.3  # 未知系统（30%分）
+    }
+    return os_map.get(os_type, 0)
+
+
+def evaluate_domain(domain, max_score):
+    """评估域名可信度得分"""
+    trusted_domains = ["official.com", "trustworthy.net", "company.org"]  # 示例可信域名
+    suspicious_domains = ["malicious.com", "phishing.net"]  # 示例可疑域名
+
+    if any(d in domain for d in trusted_domains):
+        return max_score
+    elif any(d in domain for d in suspicious_domains):
+        return 0
+    else:
+        return max_score * 0.6  # 未知域名（60%分）
+
+
+def evaluate_size(size_str, max_score):
+    """评估软件大小得分（假设size_str格式为"数值+单位"，如"100MB"）"""
+    try:
+        # 转换为MB
+        size = float(size_str[:-2])
+        unit = size_str[-2:].upper()
+
+        if unit == "KB":
+            size /= 1024
+        elif unit == "GB":
+            size *= 1024
+        elif unit != "MB":
+            return max_score * 0.5  # 未知单位（50%分）
+
+        # 根据软件大小评分（越小越好）
+        if size < 50:
+            return max_score
+        elif size < 200:
+            return max_score * 0.8
+        elif size < 500:
+            return max_score * 0.6
+        elif size < 1000:
+            return max_score * 0.4
+        else:
+            return max_score * 0.2
+    except:
+        return max_score * 0.5  # 解析失败（50%分）
