@@ -229,7 +229,7 @@ def get_first_device_from_database(device_id):
 #
 #
 # def read_config():
-#     config_path = Path(__file__).resolve().parent.parent / 'user_config.yaml'
+#     config_path = Path(__file__).resolve().parent.parent / 'config.yaml'
 #     with open(config_path, 'r', encoding='utf-8') as f:
 #         return yaml.safe_load(f)
 

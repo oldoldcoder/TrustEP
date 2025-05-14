@@ -1,4 +1,4 @@
-# user_config.yaml
+# config.yaml
 
 fce_config:
   t: 10  # 取最近T次记录

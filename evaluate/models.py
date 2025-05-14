@@ -4,12 +4,13 @@ from django.utils import timezone
 
 # 软件的模型
 class Software(models.Model):
-    soft_id = models.CharField(max_length=256, primary_key=True)  # 假设soft_id是主键
+    id = models.IntegerField(primary_key=True)
+    soft_id = models.CharField(max_length=255)
     status = models.IntegerField()
     soft_type = models.IntegerField()
     setup_type = models.IntegerField()
     os_type = models.IntegerField()
-    domain = models.CharField(max_length=256)
+    domain = models.CharField(max_length=255)
     size = models.CharField(max_length=64)  # 假设size是数字类型（字节）
 
     class Meta:
@@ -23,26 +24,26 @@ class Local(models.Model):
     name = models.CharField(max_length=64)
     device_ip = models.CharField(max_length=64)
     device_site = models.CharField(max_length=64)
-    login_time = models.DateTimeField(db_default=timezone.now)
-    cpu_id = models.CharField(max_length=256, db_default="")
-    disk_id = models.CharField(max_length=256, db_default="")
-    auth_type = models.IntegerField(db_default=0)
-    device_type = models.IntegerField(db_default=0)
-    cert = models.TextField(db_default='')
+    login_time = models.DateTimeField(default=timezone.now)
+    cpu_id = models.CharField(max_length=256, default="")
+    disk_id = models.CharField(max_length=256, default="")
+    auth_type = models.IntegerField(default=0)
+    device_type = models.IntegerField(default=0)
+    cert = models.TextField()
     # cert_dn = models.CharField(max_length=256)
     # cert_sn = models.CharField(max_length=256)
     # 无法对应，先删除
     # soft_type = models.IntegerField(default=0)
     # setup_type = models.IntegerField(default=0)
-    os_type = models.IntegerField(db_default=0)
+    os_type = models.IntegerField(default=0)
     # oa_count = models.IntegerField(default=0)
     # oa_score = models.IntegerField(default=0)
     # api_id = models.CharField(max_length=64)
     # api_type = models.CharField(max_length=64)
     # data_level = models.IntegerField(default=0)
     # department = models.CharField(max_length=64)
-    oa_result = models.IntegerField(db_default=0)
-    score = models.FloatField(db_default=0)
+    oa_result = models.IntegerField(default=0)
+    score = models.FloatField(default=0)
 
     class Meta:
         db_table = 'tb_data_total'
@@ -54,11 +55,11 @@ class DeviceScore(models.Model):
     device_site = models.CharField(max_length=64)
     cpu_id = models.CharField(max_length=256, default="")
     disk_id = models.CharField(max_length=256, default="")
-    key_type = models.IntegerField(db_default=0)
-    device_type = models.IntegerField(db_default=0)
-    cert = models.TextField(db_default='')
+    key_type = models.IntegerField(default=0)
+    device_type = models.IntegerField(default=0)
+    cert = models.TextField()
     device_result = models.IntegerField(default=0, db_column='auth_result')
-    score = models.FloatField(db_default=0)
+    score = models.FloatField(default=0)
 
     class Meta:
         db_table = 'tb_device_score'
@@ -93,9 +94,9 @@ class Device(models.Model):
     device_id = models.CharField(max_length=64)
     cpu_id = models.CharField(max_length=256)
     disk_id = models.CharField(max_length=256)
-    device_type = models.IntegerField(db_default=0)
-    cert = models.TextField(db_default='')
-    key_type = models.IntegerField(db_default=0)
+    device_type = models.IntegerField(default=0)
+    cert = models.TextField()
+    key_type = models.IntegerField(default=0)
     auth_result = models.IntegerField()
     # cert_dn = models.CharField(max_length=256)
     # cert_sn = models.CharField(max_length=256)
