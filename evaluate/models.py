@@ -2,6 +2,21 @@ from django.db import models
 from django.utils import timezone
 
 
+# 软件的模型
+class Software(models.Model):
+    soft_id = models.CharField(max_length=256, primary_key=True)  # 假设soft_id是主键
+    status = models.IntegerField()
+    soft_type = models.IntegerField()
+    setup_type = models.IntegerField()
+    os_type = models.IntegerField()
+    domain = models.CharField(max_length=256)
+    size = models.CharField(max_length=64)  # 假设size是数字类型（字节）
+
+    class Meta:
+        db_table = 'tb_software'  # 替换为实际表名
+        managed = False  # 如果数据库表已存在且不需要Django管理迁移
+
+
 class Local(models.Model):
     # tb_id = models.CharField(max_length=128, primary_key=True)
     security_card_id = models.CharField(max_length=128)
@@ -51,6 +66,7 @@ class User(models.Model):
     id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=64)
     security_card_id = models.CharField(max_length=128)
+
     # position = models.CharField(max_length=64)
     # department = models.CharField(max_length=64)
 
@@ -78,6 +94,7 @@ class Device(models.Model):
     disk_id = models.CharField(max_length=256)
     device_type = models.IntegerField(default=0)
     cert = models.TextField(default='')
+
     # cert_dn = models.CharField(max_length=256)
     # cert_sn = models.CharField(max_length=256)
 
@@ -86,17 +103,6 @@ class Device(models.Model):
         managed = False
 
 
-class Software(models.Model):
-    id = models.IntegerField(primary_key=True)
-    # soft_id = models.CharField(max_length=256)
-    # 无法对应，先删除
-    # soft_type = models.IntegerField(default=0)
-    # setup_type = models.IntegerField(default=0)
-    os_type = models.IntegerField(default=0)
-
-    class Meta:
-        db_table = 'software'
-        managed = False
 
 
 # class Api(models.Model):

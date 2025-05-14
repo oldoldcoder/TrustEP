@@ -1,0 +1,12 @@
+# config.yaml
+
+fce_config:
+  t: 10  # 取最近T次记录
+  indicator_weights:
+    status: 20
+    soft_type: 15  # 软件类型权重（满分15分）
+    setup_type: 10  # 安装类型权重（满分10分）
+    os_type: 15  # 操作系统类型权重（满分15分）
+    domain: 20  # 域名可信度权重（满分20分）
+    size: 20  # 软件大小权重（满分20分）
+

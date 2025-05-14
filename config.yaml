@@ -40,117 +40,455 @@ fce_config:
       - w8: 0.01
       - w9: 0.01
       - w10: 0.01
+  secret_level_Public:
+    membership_functions:
+      # 以下为示例格式，具体函数你可以自定义为三角形、梯形或高斯型等
+      login_time:
+        threshold: 180 # 聚类的半径,单位分钟
+        section:
+          - level: high
+            weight: [ 0,45 ]
+          - level: above_average
+            weight: [ 45,90 ]
+          - level: average
+            weight: [ 90,120 ]
+          - level: below_average
+            weight: [ 120,150 ]
+          - level: low
+            weight: [ 150,180 ]
 
-  membership_functions:
-    # 以下为示例格式，具体函数你可以自定义为三角形、梯形或高斯型等
-    login_time:
-      threshold:  180 # 聚类的半径,单位分钟
-      section:
-        - level: high
-          weight: [ 0,45 ]
-        - level: above_average
-          weight: [ 45,90 ]
-        - level: average
-          weight: [ 90,120 ]
-        - level: below_average
-          weight: [ 120,150 ]
-        - level: low
-          weight: [ 150,180 ]
-    device_site:
-      threshold:  50 # 聚类的半径,单位是km
-      section:
-        - level: high
-          weight: [ 0,10 ]
-        - level: above_average
-          weight: [ 10,20 ]
-        - level: average
-          weight: [ 20,30 ]
-        - level: below_average
-          weight: [ 30,40 ]
-        - level: low
-          weight: [ 40,50 ]
-    device_ip:
-      threshold: 5
-      section:
-        - level: high
-          weight: [ 0,1 ]
-        - level: above_average
-          weight: [ 2,2 ]
-        - level: average
-          weight: [ 3,3 ]
-        - level: below_average
-          weight: [ 4,4 ]
-        - level: low
-          weight: [ 5,5 ]
-    cpu_id:
-      threshold: 5
-      section:
-        - level: high
-          weight: [ 0,1 ]
-        - level: above_average
-          weight: [ 2,2 ]
-        - level: average
-          weight: [ 3,3 ]
-        - level: below_average
-          weight: [ 4,4 ]
-        - level: low
-          weight: [ 5,5 ]
-    disk_id:
-      threshold:  5
-      section:
-        - level: high
-          weight: [ 0,1 ]
-        - level: above_average
-          weight: [ 2,2 ]
-        - level: average
-          weight: [ 3,3 ]
-        - level: below_average
-          weight: [ 4,4 ]
-        - level: low
-          weight: [ 5,5 ]
-    auth_type:
-      threshold:  3
-      section:
-        - level: high
-          weight: [ 0,0 ]
-        - level: average
-          weight: [ 1,2 ]
-        - level: low
-          weight: [ 3,3 ]
+      device_site:
+        threshold: 50 # 聚类的半径,单位是km
+        section:
+          - level: high
+            weight: [ 0,10 ]
+          - level: above_average
+            weight: [ 10,20 ]
+          - level: average
+            weight: [ 20,30 ]
+          - level: below_average
+            weight: [ 30,40 ]
+          - level: low
+            weight: [ 40,50 ]
 
-    device_type:
-      threshold:  3
-      section:
-        - level: high
-          weight: [ 0,0 ]
-        - level: average
-          weight: [ 1,2 ]
-        - level: low
-          weight: [ 3,3 ]
-    cert:
-      threshold: 5 # 聚类的半径
-      section:
-        - level: high
-          weight: [ 0,1 ]
-        - level: above_average
-          weight: [ 2,2 ]
-        - level: average
-          weight: [ 3,3 ]
-        - level: below_average
-          weight: [ 4,4 ]
-        - level: low
-          weight: [ 5,5 ]
-    os_type:
-      threshold: 3
-      section:
-        - level: high
-          weight: [ 0,0 ]
-        - level: average
-          weight: [ 1,2 ]
-        - level: low
-          weight: [ 3,3 ]
+      device_ip:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      cpu_id:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      disk_id:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      auth_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
 
-    oa_count: # 历史越权率 = (T - 越权次数) / T
+      device_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+      cert:
+        threshold: 5 # 聚类的半径
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      os_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+      oa_count: # 历史越权率 = (T - 越权次数) / T
+  secret_level_General:
+    membership_functions:
+      # 以下为示例格式，具体函数你可以自定义为三角形、梯形或高斯型等
+      login_time:
+        threshold: 180 # 聚类的半径,单位分钟
+        section:
+          - level: high
+            weight: [ 0,45 ]
+          - level: above_average
+            weight: [ 45,90 ]
+          - level: average
+            weight: [ 90,120 ]
+          - level: below_average
+            weight: [ 120,150 ]
+          - level: low
+            weight: [ 150,180 ]
+
+      device_site:
+        threshold: 50 # 聚类的半径,单位是km
+        section:
+          - level: high
+            weight: [ 0,10 ]
+          - level: above_average
+            weight: [ 10,20 ]
+          - level: average
+            weight: [ 20,30 ]
+          - level: below_average
+            weight: [ 30,40 ]
+          - level: low
+            weight: [ 40,50 ]
+
+      device_ip:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      cpu_id:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      disk_id:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      auth_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+
+      device_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+      cert:
+        threshold: 5 # 聚类的半径
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      os_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+      oa_count: # 历史越权率 = (T - 越权次数) / T
+  secret_level_Important:
+    membership_functions:
+      # 以下为示例格式，具体函数你可以自定义为三角形、梯形或高斯型等
+      login_time:
+        threshold: 180 # 聚类的半径,单位分钟
+        section:
+          - level: high
+            weight: [ 0,45 ]
+          - level: above_average
+            weight: [ 45,90 ]
+          - level: average
+            weight: [ 90,120 ]
+          - level: below_average
+            weight: [ 120,150 ]
+          - level: low
+            weight: [ 150,180 ]
+
+      device_site:
+        threshold: 50 # 聚类的半径,单位是km
+        section:
+          - level: high
+            weight: [ 0,10 ]
+          - level: above_average
+            weight: [ 10,20 ]
+          - level: average
+            weight: [ 20,30 ]
+          - level: below_average
+            weight: [ 30,40 ]
+          - level: low
+            weight: [ 40,50 ]
+
+      device_ip:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      cpu_id:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      disk_id:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      auth_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+
+      device_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+      cert:
+        threshold: 5 # 聚类的半径
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      os_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+      oa_count: # 历史越权率 = (T - 越权次数) / T
+  secret_level_Core:
+    membership_functions:
+      # 以下为示例格式，具体函数你可以自定义为三角形、梯形或高斯型等
+      login_time:
+        threshold: 180 # 聚类的半径,单位分钟
+        section:
+          - level: high
+            weight: [ 0,45 ]
+          - level: above_average
+            weight: [ 45,90 ]
+          - level: average
+            weight: [ 90,120 ]
+          - level: below_average
+            weight: [ 120,150 ]
+          - level: low
+            weight: [ 150,180 ]
+
+      device_site:
+        threshold: 50 # 聚类的半径,单位是km
+        section:
+          - level: high
+            weight: [ 0,10 ]
+          - level: above_average
+            weight: [ 10,20 ]
+          - level: average
+            weight: [ 20,30 ]
+          - level: below_average
+            weight: [ 30,40 ]
+          - level: low
+            weight: [ 40,50 ]
+
+      device_ip:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      cpu_id:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      disk_id:
+        threshold: 5
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      auth_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+
+      device_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+      cert:
+        threshold: 5 # 聚类的半径
+        section:
+          - level: high
+            weight: [ 0,1 ]
+          - level: above_average
+            weight: [ 2,2 ]
+          - level: average
+            weight: [ 3,3 ]
+          - level: below_average
+            weight: [ 4,4 ]
+          - level: low
+            weight: [ 5,5 ]
+      os_type:
+        threshold: 3
+        section:
+          - level: high
+            weight: [ 0,0 ]
+          - level: average
+            weight: [ 1,2 ]
+          - level: low
+            weight: [ 3,3 ]
+      oa_count: # 历史越权率 = (T - 越权次数) / T
+
 
 
 
