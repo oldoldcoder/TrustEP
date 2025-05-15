@@ -51,6 +51,7 @@ class Local(models.Model):
 
 class DeviceScore(models.Model):
     device_id = models.CharField(max_length=64)
+    login_time = models.DateTimeField(default=timezone.now)
     device_ip = models.CharField(max_length=64)
     device_site = models.CharField(max_length=64)
     cpu_id = models.CharField(max_length=256, default="")

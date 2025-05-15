@@ -75,7 +75,7 @@ def calculate_device_trust_score(device_id):
     print("配置读取完毕，T值：", config["fce_config"]["t"])
     # 对于login_time,device_site内容进行聚类
     # 从数据库读数据到大表
-    get_first_device_from_database(device_id)
+    # get_first_device_from_database(device_id)
     # 从大表读取数据
     data_total = get_recent_data_by_device_id(device_id, config["fce_config"]["t"])
     # 提取设备的经纬度
@@ -88,6 +88,14 @@ def calculate_device_trust_score(device_id):
         if record.device_site
     ]
     judge_device_site = distance_to_nearest_cluster_center(positions, current_position)
+    """
+        数据处理阶段，其次是时间的聚类
+        """
+    current_login_time = latest_record.login_time
+    history_times = [
+        obj.login_time.strftime("%Y-%m-%d %H:%M:%S") for obj in data_total
+    ]
+    judge_login_time = time_cluster_distance(history_times, current_login_time)
     """
     其他judge处理的部分
     """
@@ -107,10 +115,10 @@ def calculate_device_trust_score(device_id):
     judge_device_type = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"]))) - 1
     judge_key_type = len(set(data_total[i].key_type for i in range(config["fce_config"]["t"]))) - 1
     # 获得每个指标的信任等级，此处直接转化为分数
-    matrix = get_device_trust_level(config, judge_device_ip, judge_device_site, judge_cpu_id, judge_disk_id,
+    matrix = get_device_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
                                     judge_device_type, judge_key_type, judge_cert, judge_device_result)
     # 获得信任分数
-    historical_scores = [item.score for item in data_total]
+    historical_scores = [item.score for item in data_total[1:]]
     score = calculate_final_trust_score(config, matrix, historical_scores)
     data_total[0].score = score
     data_total[0].save()
@@ -216,6 +224,7 @@ def get_first_device_from_database(device_id):
     device_score = DeviceScore(
         device_id=device.device_id,
         device_ip=device.device_ip,
+        login_time=device.login_time,
         device_site=device.device_position,
         cpu_id=device.cpu_id,
         disk_id=device.disk_id,
@@ -271,7 +280,7 @@ def get_recent_data_by_device_id(device_id, T):
         .filter(device_id=device_id)
         .order_by("-id")[:T + 1]
     )
-    return list(reversed(data_total_qs))
+    return data_total_qs
 
 
 """
@@ -440,7 +449,7 @@ def get_trust_level(config, secret_level, judge_device_ip, judge_device_site,
     return matrix
 
 
-def get_device_trust_level(config, judge_device_ip, judge_device_site, judge_cpu_id, judge_disk_id,
+def get_device_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
                      judge_device_type, judge_key_type, judge_cert, judge_device_result):
     """
     获取每个指标对应模糊等级的分数
@@ -465,6 +474,7 @@ def get_device_trust_level(config, judge_device_ip, judge_device_site, judge_cpu
 
     matrix['device_ip'] = get_level_by_weight(config, "device_ip", judge_device_ip)
     matrix['device_site'] = get_level_by_weight(config, "device_site", judge_device_site)
+    matrix['login_time'] = get_level_by_weight(config, "login_time", judge_login_time)
     matrix['cpu_id'] = get_level_by_weight(config, "cpu_id", judge_cpu_id)
     matrix['disk_id'] = get_level_by_weight(config, "disk_id", judge_disk_id)
     matrix['device_type'] = get_level_by_weight(config, "device_type", judge_device_type)

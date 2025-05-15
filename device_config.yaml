@@ -4,12 +4,13 @@ fce_config:
   t: 10  # 取最近T次记录
   indicator_weights:
     device_site: 0.15
-    device_ip: 0.1
+    device_ip: 0.15
+    login_time: 0.15
     cpu_id: 0.05
     disk_id: 0.05
     device_type: 0.05
-    cert: 0.15
-    key_type:
+    cert: 0.1
+    key_type: 0.1
     device_result: 0.2
 
   trust_levels:  # 模糊等级与其对应的权重
@@ -67,6 +68,19 @@ fce_config:
           weight: [ 4,4 ]
         - level: low
           weight: [ 5,5 ]
+    login_time:
+      threshold: 180 # 聚类的半径,单位分钟
+      section:
+        - level: high
+          weight: [ 0,45 ]
+        - level: above_average
+          weight: [ 45,90 ]
+        - level: average
+          weight: [ 90,120 ]
+        - level: below_average
+          weight: [ 120,150 ]
+        - level: low
+          weight: [ 150,180 ]
     cpu_id:
       threshold: 5
       section:
