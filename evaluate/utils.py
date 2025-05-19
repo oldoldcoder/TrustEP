@@ -100,12 +100,6 @@ def calculate_device_trust_score(device_id):
     其他judge处理的部分
     """
     judge_device_result = data_total[0].device_result
-    judge_cert = 0
-    for i in range(0, config["fce_config"]["t"]):
-        before, after = parse_cert_time(data_total[i].cert)
-        ltime = data_total[i].login_time.replace(tzinfo=None)
-        if not (before <= ltime <= after):
-            judge_cert += 1
     '''
     根据次数完成等级定义
     '''
@@ -116,7 +110,7 @@ def calculate_device_trust_score(device_id):
     judge_key_type = len(set(data_total[i].key_type for i in range(config["fce_config"]["t"]))) - 1
     # 获得每个指标的信任等级，此处直接转化为分数
     matrix = get_device_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
-                                    judge_device_type, judge_key_type, judge_cert, judge_device_result)
+                                    judge_device_type, judge_key_type, judge_device_result)
     # 获得信任分数
     historical_scores = [item.score for item in data_total[1:]]
     score = calculate_final_trust_score(config, matrix, historical_scores)
@@ -230,7 +224,7 @@ def get_first_device_from_database(device_id):
         disk_id=device.disk_id,
         key_type=device.key_type,
         device_type=device.device_type,
-        cert=device.cert,
+        # cert=device.cert,
         device_result=device.auth_result,
     )
 
@@ -450,7 +444,7 @@ def get_trust_level(config, secret_level, judge_device_ip, judge_device_site,
 
 
 def get_device_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
-                     judge_device_type, judge_key_type, judge_cert, judge_device_result):
+                     judge_device_type, judge_key_type, judge_device_result):
     """
     获取每个指标对应模糊等级的分数
     :param config: 读取到的YAML文件
@@ -479,7 +473,6 @@ def get_device_trust_level(config, judge_device_ip, judge_device_site, judge_log
     matrix['disk_id'] = get_level_by_weight(config, "disk_id", judge_disk_id)
     matrix['device_type'] = get_level_by_weight(config, "device_type", judge_device_type)
     matrix['key_type'] = get_level_by_weight(config, "key_type", judge_key_type)
-    matrix['cert'] = get_level_by_weight(config, "cert", judge_cert)
     matrix['device_result'] = 1 if judge_device_result == 0 else 0
 
     return matrix

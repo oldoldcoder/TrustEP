@@ -3,15 +3,14 @@
 fce_config:
   t: 10  # 取最近T次记录
   indicator_weights:
-    device_site: 0.15
-    device_ip: 0.15
+    device_site: 0.2
+    device_ip: 0.2
     login_time: 0.15
     cpu_id: 0.05
     disk_id: 0.05
     device_type: 0.05
-    cert: 0.1
-    key_type: 0.1
-    device_result: 0.2
+    key_type: 0.05
+    device_result: 0.25
 
   trust_levels:  # 模糊等级与其对应的权重
     - level: high

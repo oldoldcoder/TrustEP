@@ -58,7 +58,7 @@ class DeviceScore(models.Model):
     disk_id = models.CharField(max_length=256, default="")
     key_type = models.IntegerField(default=0)
     device_type = models.IntegerField(default=0)
-    cert = models.TextField()
+    # cert = models.TextField()
     device_result = models.IntegerField(default=0, db_column='auth_result')
     score = models.FloatField(default=0)
 
