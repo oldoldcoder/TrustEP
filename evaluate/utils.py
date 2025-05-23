@@ -9,7 +9,9 @@ from .models import Local, User, Biometric, Device, Software, Permission, Device
 
 
 # 负责计算用户的
-def calculate_trust_score(security_card_id, api_id, data_level, secret_level="public"):
+def calculate_trust_score(security_card_id, selected_items, secret_level="public"):
+    # 创建空字典
+    judge_dict = {}
     # 读取配置
     config = read_config()
     print("配置读取完毕，T值：", config["fce_config"]["t"])
@@ -20,46 +22,59 @@ def calculate_trust_score(security_card_id, api_id, data_level, secret_level="pu
     data_total = get_recent_data_by_security_card(security_card_id, config["fce_config"]["t"])
     # 提取设备的经纬度
     latest_record = data_total[0]  # 最近一条记录
-    current_position = list(map(float, latest_record.device_site.split(',')))
+    if 'device_site' in selected_items:
+        current_position = list(map(float, latest_record.device_site.split(',')))
 
-    positions = [
-        list(map(float, record.device_site.split(',')))
-        for record in data_total[1:]
-        if record.device_site
-    ]
-    judge_device_site = distance_to_nearest_cluster_center(positions, current_position)
+        positions = [
+            list(map(float, record.device_site.split(',')))
+            for record in data_total[1:]
+            if record.device_site
+        ]
+        judge_dict['device_site'] = distance_to_nearest_cluster_center(positions, current_position)
+    else:
+        judge_dict['device_site'] = -1
     """
     数据处理阶段，其次是时间的聚类
     """
-    current_login_time = latest_record.login_time
-    history_times = [
-        obj.login_time.strftime("%Y-%m-%d %H:%M:%S") for obj in data_total
-    ]
-    judge_login_time = time_cluster_distance(history_times, current_login_time)
+    if 'login_time' in selected_items:
+        current_login_time = latest_record.login_time
+        history_times = [
+            obj.login_time.strftime("%Y-%m-%d %H:%M:%S") for obj in data_total
+        ]
+        judge_dict['login_time'] = time_cluster_distance(history_times, current_login_time)
+    else:
+        judge_dict['login_time'] = -1
 
     """
     其他judge处理的部分
     """
 
-    judge_privilege_score = data_total[0].oa_result
-    judge_cert = 0
-    for i in range(0, config["fce_config"]["t"]):
-        before, after = parse_cert_time(data_total[i].cert)
-        ltime = data_total[i].login_time.replace(tzinfo=None)
-        if not (before <= ltime <= after):
-            judge_cert += 1
+    judge_dict['privilege_score'] = data_total[0].oa_result if 'oa_result' in selected_items else -1
+    if 'cert' in selected_items:
+        judge_dict['cert'] = 0
+        for i in range(0, config["fce_config"]["t"]):
+            before, after = parse_cert_time(data_total[i].cert)
+            ltime = data_total[i].login_time.replace(tzinfo=None)
+            if not (before <= ltime <= after):
+                judge_dict['cert'] += 1
+    else:
+        judge_dict['cert'] = -1
     '''
     根据次数完成等级定义
     '''
-    judge_device_ip = len(set(data_total[i].device_ip for i in range(config["fce_config"]["t"]))) - 1
-    judge_cpu_id = len(set(data_total[i].cpu_id for i in range(config["fce_config"]["t"]))) - 1
-    judge_disk_id = len(set(data_total[i].disk_id for i in range(config["fce_config"]["t"]))) - 1
-    judge_auth_type = len(set(data_total[i].auth_type for i in range(config["fce_config"]["t"]))) - 1
-    judge_device_type = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"]))) - 1
-    judge_os_type = sum(1 for item in data_total if item.os_type == 2)
+    judge_dict['device_ip'] = len(set(data_total[i].device_ip for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'device_ip' in selected_items else -1
+    judge_dict['cpu_id'] = len(set(data_total[i].cpu_id for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'cpu_id' in selected_items else -1
+    judge_dict['disk_id'] = len(set(data_total[i].disk_id for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'disk_id' in selected_items else -1
+    judge_dict['auth_type'] = len(set(data_total[i].auth_type for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'auth_type' in selected_items else -1
+    judge_dict['device_type'] = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'device_type' in selected_items else -1
+    judge_dict['os_type'] = sum(1 for item in data_total if item.os_type == 2) if 'os_type' in selected_items else -1
     # 获得每个指标的信任等级，此处直接转化为分数
-    matrix = get_trust_level(config, secret_level, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
-                             judge_auth_type, judge_device_type, judge_cert, judge_os_type, judge_privilege_score)
+    matrix = get_trust_level(config, secret_level, judge_dict)
     # 获得信任分数
     historical_scores = [item.score for item in data_total]
     score = calculate_final_trust_score(config, matrix, historical_scores)
@@ -69,7 +84,9 @@ def calculate_trust_score(security_card_id, api_id, data_level, secret_level="pu
     return score
 
 
-def calculate_device_trust_score(device_id):
+def calculate_device_trust_score(device_id, selected_items):
+    # 创建空字典
+    judge_dict = {}
     # 读取配置
     config = read_config('device_config.yaml')
     print("配置读取完毕，T值：", config["fce_config"]["t"])
@@ -78,39 +95,51 @@ def calculate_device_trust_score(device_id):
     # get_first_device_from_database(device_id)
     # 从大表读取数据
     data_total = get_recent_data_by_device_id(device_id, config["fce_config"]["t"])
-    # 提取设备的经纬度
     latest_record = data_total[0]  # 最近一条记录
-    current_position = list(map(float, latest_record.device_site.split(',')))
+    if 'device_site' in selected_items:
+        # 提取设备的经纬度
+        current_position = list(map(float, latest_record.device_site.split(',')))
 
-    positions = [
-        list(map(float, record.device_site.split(',')))
-        for record in data_total[1:]
-        if record.device_site
-    ]
-    judge_device_site = distance_to_nearest_cluster_center(positions, current_position)
-    """
-        数据处理阶段，其次是时间的聚类
+        positions = [
+            list(map(float, record.device_site.split(',')))
+            for record in data_total[1:]
+            if record.device_site
+        ]
+        judge_dict['device_site'] = distance_to_nearest_cluster_center(positions, current_position)
+    else:
+        # 如果未选到的指标就设为-1
+        judge_dict['device_site'] = -1
+
+    if 'login_time' in selected_items:
         """
-    current_login_time = latest_record.login_time
-    history_times = [
-        obj.login_time.strftime("%Y-%m-%d %H:%M:%S") for obj in data_total
-    ]
-    judge_login_time = time_cluster_distance(history_times, current_login_time)
+                数据处理阶段，其次是时间的聚类
+            """
+        current_login_time = latest_record.login_time
+        history_times = [
+            obj.login_time.strftime("%Y-%m-%d %H:%M:%S") for obj in data_total
+        ]
+        judge_dict['login_time'] = time_cluster_distance(history_times, current_login_time)
+    else:
+        judge_dict['login_time'] = -1
     """
     其他judge处理的部分
     """
-    judge_device_result = data_total[0].device_result
+    judge_dict['device_result'] = data_total[0].device_result if 'auth_result' in selected_items else -1
     '''
     根据次数完成等级定义
     '''
-    judge_device_ip = len(set(data_total[i].device_ip for i in range(config["fce_config"]["t"]))) - 1
-    judge_cpu_id = len(set(data_total[i].cpu_id for i in range(config["fce_config"]["t"]))) - 1
-    judge_disk_id = len(set(data_total[i].disk_id for i in range(config["fce_config"]["t"]))) - 1
-    judge_device_type = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"]))) - 1
-    judge_key_type = len(set(data_total[i].key_type for i in range(config["fce_config"]["t"]))) - 1
+    judge_dict['device_ip'] = len(set(data_total[i].device_ip for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'device_ip' in selected_items else -1
+    judge_dict['cpu_id'] = len(set(data_total[i].cpu_id for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'cpu_id' in selected_items else -1
+    judge_dict['disk_id'] = len(set(data_total[i].disk_id for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'disk_id' in selected_items else -1
+    judge_dict['device_type'] = len(set(data_total[i].device_type for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'device_type' in selected_items else -1
+    judge_dict['key_type'] = len(set(data_total[i].key_type for i in range(config["fce_config"]["t"]))) - 1 \
+        if 'key_type' in selected_items else -1
     # 获得每个指标的信任等级，此处直接转化为分数
-    matrix = get_device_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
-                                    judge_device_type, judge_key_type, judge_device_result)
+    matrix = get_device_trust_level(config, judge_dict)
     # 获得信任分数
     historical_scores = [item.score for item in data_total[1:]]
     score = calculate_final_trust_score(config, matrix, historical_scores)
@@ -404,10 +433,7 @@ def time_cluster_distance(historical_times, current_time):
     return min(distance_to_morning, distance_to_afternoon)
 
 
-def get_trust_level(config, secret_level, judge_device_ip, judge_device_site,
-                    judge_login_time, judge_cpu_id, judge_disk_id,
-                    judge_auth_type, judge_device_type, judge_cert,
-                    judge_os_type, judge_privilege_score):
+def get_trust_level(config, secret_level, judge_dict):
     """
     获取每个指标对应模糊等级的分数
     :param config: 读取到的YAML文件
@@ -422,6 +448,8 @@ def get_trust_level(config, secret_level, judge_device_ip, judge_device_site,
     trust_dict = {item["level"]: item["weight"] for item in config["fce_config"]["trust_levels"]}
 
     def get_level_by_weight(config, str, weight):
+        if weight == -1:
+            return -1
         if weight > config["fce_config"][secret_level]["membership_functions"][str]["threshold"]:
             return trust_dict["untrusted"]
         for section in config["fce_config"][secret_level]["membership_functions"][str]["section"]:
@@ -429,36 +457,33 @@ def get_trust_level(config, secret_level, judge_device_ip, judge_device_site,
             if start <= weight <= end:
                 return trust_dict[section['level']]
 
-    matrix['device_ip'] = get_level_by_weight(config, "device_ip", judge_device_ip)
-    matrix['device_site'] = get_level_by_weight(config, "device_site", judge_device_site)
-    matrix['login_time'] = get_level_by_weight(config, "login_time", judge_login_time)
-    matrix['cpu_id'] = get_level_by_weight(config, "cpu_id", judge_cpu_id)
-    matrix['disk_id'] = get_level_by_weight(config, "disk_id", judge_disk_id)
-    matrix['auth_type'] = get_level_by_weight(config, "auth_type", judge_auth_type)
-    matrix['device_type'] = get_level_by_weight(config, "device_type", judge_device_type)
-    matrix['cert'] = get_level_by_weight(config, "cert", judge_cert)
-    matrix['os_type'] = get_level_by_weight(config, "os_type", judge_os_type)
-    matrix['oa_result'] = 0.9 if judge_privilege_score == 0 else 0
+    matrix['device_ip'] = get_level_by_weight(config, "device_ip", judge_dict['device_ip'])
+    matrix['device_site'] = get_level_by_weight(config, "device_site", judge_dict['device_site'])
+    matrix['login_time'] = get_level_by_weight(config, "login_time", judge_dict['login_time'])
+    matrix['cpu_id'] = get_level_by_weight(config, "cpu_id", judge_dict['cpu_id'])
+    matrix['disk_id'] = get_level_by_weight(config, "disk_id", judge_dict['disk_id'])
+    matrix['auth_type'] = get_level_by_weight(config, "auth_type", judge_dict['auth_type'])
+    matrix['device_type'] = get_level_by_weight(config, "device_type", judge_dict['device_type'])
+    matrix['cert'] = get_level_by_weight(config, "cert", judge_dict['cert'])
+    matrix['os_type'] = get_level_by_weight(config, "os_type", judge_dict['os_type'])
+    matrix['oa_result'] = -1 if judge_dict['oa_result'] == -1 else judge_dict['oa_result'] ^ 1
 
     return matrix
 
 
-def get_device_trust_level(config, judge_device_ip, judge_device_site, judge_login_time, judge_cpu_id, judge_disk_id,
-                     judge_device_type, judge_key_type, judge_device_result):
+def get_device_trust_level(config, judge_dict):
     """
     获取每个指标对应模糊等级的分数
+    :param judge_dict: 存储指标和滑动窗口内变化次数的字典，如果值为-1表示未选择的指标
     :param config: 读取到的YAML文件
-    :param judge_cpu_id: 滑动窗口中CPU_ID变化次数
-    :param judge_disk_id: 滑动窗口中主板ID变化次数
-    :param judge_auth_type: 滑动窗口中认证类型的变化次数
-    :param judge_device_type: 滑动窗口的设备类型变化次数
-    :param judge_os_type:滑动窗口中操作类型变化次数
-    :return:包括每个指标对应模糊等级分数的字典
+    :return:包括每个指标对应模糊等级分数的字典，未选择的指标值为-1
     """
     matrix = {}
     trust_dict = {item["level"]: item["weight"] for item in config["fce_config"]["trust_levels"]}
 
     def get_level_by_weight(config, str, weight):
+        if weight == -1:
+            return -1
         if weight > config["fce_config"]["membership_functions"][str]["threshold"]:
             return trust_dict["untrusted"]
         for section in config["fce_config"]["membership_functions"][str]["section"]:
@@ -466,23 +491,26 @@ def get_device_trust_level(config, judge_device_ip, judge_device_site, judge_log
             if start <= weight <= end:
                 return trust_dict[section['level']]
 
-    matrix['device_ip'] = get_level_by_weight(config, "device_ip", judge_device_ip)
-    matrix['device_site'] = get_level_by_weight(config, "device_site", judge_device_site)
-    matrix['login_time'] = get_level_by_weight(config, "login_time", judge_login_time)
-    matrix['cpu_id'] = get_level_by_weight(config, "cpu_id", judge_cpu_id)
-    matrix['disk_id'] = get_level_by_weight(config, "disk_id", judge_disk_id)
-    matrix['device_type'] = get_level_by_weight(config, "device_type", judge_device_type)
-    matrix['key_type'] = get_level_by_weight(config, "key_type", judge_key_type)
-    matrix['device_result'] = 1 if judge_device_result == 0 else 0
+    matrix['device_ip'] = get_level_by_weight(config, "device_ip", judge_dict['device_ip'])
+    matrix['device_site'] = get_level_by_weight(config, "device_site", judge_dict['device_site'])
+    matrix['login_time'] = get_level_by_weight(config, "login_time", judge_dict['login_time'])
+    matrix['cpu_id'] = get_level_by_weight(config, "cpu_id", judge_dict['cpu_id'])
+    matrix['disk_id'] = get_level_by_weight(config, "disk_id", judge_dict['disk_id'])
+    matrix['device_type'] = get_level_by_weight(config, "device_type", judge_dict['device_type'])
+    matrix['key_type'] = get_level_by_weight(config, "key_type", judge_dict['key_type'])
+    matrix['device_result'] = -1 if judge_dict['device_result'] == -1 else judge_dict['device_result'] ^ 1
 
     return matrix
 
 
 def calculate_final_trust_score(config, matrix, historical_scores):
+    # 归一化
     current_score = 0
     weights_dict = config["fce_config"]["indicator_weights"]
+    selected_weight = sum(weights_dict[k] for k in matrix.keys() if matrix[k] != -1)
     for key, weight in weights_dict.items():
-        current_score += weight * matrix[key]
+        if matrix[key] != -1:
+            current_score += weight * matrix[key] / selected_weight
 
     print(matrix)
     print("current score = ", current_score)

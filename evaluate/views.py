@@ -14,18 +14,18 @@ def evaluate_trust(request):
         try:
             body = json.loads(request.body.decode('utf-8'))
             security_card_id = body.get('security_card_id')
-            api_id = body.get('api_id')
-            data_level = body.get('data_level')
+            # 选中的指标存储在列表里
+            selected_items = body.get('selected_items')
             secret_level = body.get('secret_level')
 
         except Exception:
             return JsonResponse({'CODE': 400, 'returnBody': {'error': 'Invalid JSON'}}, status=400)
 
-        if not all([security_card_id, api_id, data_level]):
+        if not all([security_card_id, selected_items]):
             return JsonResponse({'CODE': 400, 'returnBody': {'error': 'Missing parameters'}}, status=400)
 
         start_time = time.time()
-        score = calculate_trust_score(security_card_id, api_id, data_level,secret_level)
+        score = calculate_trust_score(security_card_id, selected_items, secret_level)
         end_time = time.time()
         duration = round(end_time - start_time, 4)  # 秒为单位，保留4位小数
         logger.info(f"用户分数计算结果为：{score}，运行耗时：{duration} 秒")
@@ -34,8 +34,6 @@ def evaluate_trust(request):
             'CODE': 200,
             'returnBody': {
                 'security_card_id': security_card_id,
-                'api_id': api_id,
-                'data_level': data_level,
                 'score': score
             }
         })
@@ -77,17 +75,17 @@ def evaluate_device(request):
     if request.method == 'POST':
         try:
             body = json.loads(request.body.decode('utf-8'))
-            security_card_id = body.get('security_card_id')
             device_id = body.get('device_id')
-            soft_id = body.get('soft_id')
+            # 选中的指标存储在列表里
+            selected_items = body.get('selected_items')
         except Exception:
             return JsonResponse({'CODE': 400, 'returnBody': {'error': 'Invalid JSON'}}, status=400)
 
-        if not (device_id is not None and security_card_id is None and soft_id is None):
+        if device_id is None:
             return JsonResponse({'CODE': 400, 'returnBody': {'error': 'Parameters setting error'}}, status=400)
 
         start_time = time.time()
-        score = calculate_device_trust_score(device_id)
+        score = calculate_device_trust_score(device_id, selected_items)
         end_time = time.time()
         duration = round(end_time - start_time, 4)  # 秒为单位，保留4位小数
         logger.info(f"The turst socre of the device: {score}，runtime: {duration} s")
