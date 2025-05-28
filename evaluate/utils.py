@@ -150,20 +150,39 @@ def calculate_device_trust_score(device_id, selected_items):
 
 
 # 负责计算软件的
-def calculate_trust_score_software(soft_id):
+def calculate_trust_score_software(soft_id, selected_items):
     # 读取配置
     config = read_config("config-software.yaml")
     weights = config["fce_config"]["indicator_weights"]
     print("配置读取完毕，T值：", config["fce_config"]["t"])
     # 从库里面查询一条软件的记录信息
     software = get_software_from_database(soft_id)
-    # 计算各指标得分
-    status_score = evaluate_status(software.status, weights["status"])
-    soft_type_score = evaluate_soft_type(software.soft_type, weights["soft_type"])
-    setup_type_score = evaluate_setup_type(software.setup_type, weights["setup_type"])
-    os_type_score = evaluate_os_type(software.os_type, weights["os_type"])
-    domain_score = evaluate_domain(software.domain, weights["domain"])
-    size_score = evaluate_size(software.size, weights["size"])
+    # 计算各指标得分，先判断在没在选择的指标里面selected_items这个id里面
+    status_score = 0
+    normalization_score = 0
+    if 'status' in selected_items:
+        status_score = evaluate_status(software.status, weights["status"])
+        normalization_score += weights["status"]
+    soft_type_score = 0
+    if 'soft_type' in selected_items:
+        soft_type_score = evaluate_soft_type(software.soft_type, weights["soft_type"])
+        normalization_score += weights["soft_type"]
+    setup_type_score = 0
+    if 'setup_type' in selected_items:
+        setup_type_score = evaluate_setup_type(software.setup_type, weights["setup_type"])
+        normalization_score += weights["setup_type"]
+    os_type_score = 0
+    if 'os_type' in selected_items:
+        os_type_score = evaluate_os_type(software.os_type, weights["os_type"])
+        normalization_score += weights["os_type"]
+    domain_score = 0
+    if 'domain' in selected_items:
+        domain_score = evaluate_domain(software.domain, weights["domain"])
+        normalization_score += weights["domain"]
+    size_score = 0
+    if 'size' in selected_items:
+        size_score = evaluate_size(software.size, weights["size"])
+        normalization_score += weights["size"]
 
     # 计算总分
     total_score = (
@@ -174,6 +193,10 @@ def calculate_trust_score_software(soft_id):
             domain_score +
             size_score
     )
+    # 在这里进行归一化的处理
+    in_fact_score = 0
+    if normalization_score != 0:
+        in_fact_score = total_score / normalization_score
 
     print(f"软件 {soft_id} 评分详情：")
     print(f"状态: {status_score}/{weights['status']}")
@@ -183,8 +206,9 @@ def calculate_trust_score_software(soft_id):
     print(f"域名可信度: {domain_score}/{weights['domain']}")
     print(f"软件大小: {size_score}/{weights['size']}")
     print(f"总分: {total_score}/100")
+    print(f"归一化总分: {in_fact_score}/100")
 
-    return total_score
+    return in_fact_score
 
 
 def get_software_from_database(soft_id):
@@ -258,6 +282,8 @@ def get_first_device_from_database(device_id):
     )
 
     device_score.save()
+
+
 #
 #
 # def read_config():
@@ -309,6 +335,7 @@ def get_recent_data_by_device_id(device_id, T):
 """
 聚类的算法:聚类距离
 """
+
 
 # 聚类的算法
 
